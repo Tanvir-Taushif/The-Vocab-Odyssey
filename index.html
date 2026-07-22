@@ -210,8 +210,9 @@
   <script>
     let csvData = [];
 
-    // Parse gangs.csv on load
-    Papa.parse('gangs.csv', {
+// Parse gangs.csv on load
+// Cache-busting fetch: ensures the browser ALWAYS loads the latest CSV file
+    Papa.parse('gangs.csv?v=' + new Date().getTime(), {
       download: true,
       header: true,
       complete: function(results) {
