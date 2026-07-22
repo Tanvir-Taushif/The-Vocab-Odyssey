@@ -219,7 +219,7 @@
       }
     });
 
-    // Parse raw text into array of { word, definition } objects
+    // Parse raw text into structured array of objects
     function parseWordList(rawText) {
       if (!rawText) return [];
       const regex = /([A-Za-z0-9\-\s\/\'\"]+):\s*([^:]+)(?=\s+[A-Za-z0-9\-\s\/\'\"]+:|$)/g;
@@ -269,15 +269,26 @@
         return;
       }
 
-      // 1. FIRST PASS: Extract EXACT word title matches (Case-Insensitive) across ALL groups
+      // 1. EXTRACT EXACT MATCHING MAIN WORDS ACROSS ALL GROUPS (Deduplicated)
       let exactMainMatches = [];
+      let seenWords = new Set();
+
       csvData.forEach(group => {
         const rawWords = group['Words with Meanings'] || '';
         const wordEntries = parseWordList(rawWords);
         
-        // Case-insensitive exact match (e.g., 'lavish' === 'Lavish')
-        const matches = wordEntries.filter(e => e.word.toLowerCase() === lowerQuery);
-        exactMainMatches.push(...matches);
+        wordEntries.forEach(entry => {
+          const cleanWord = entry.word.trim().toLowerCase();
+          
+          // Strict exact word comparison so 'lavish' != 'slavish'
+          if (cleanWord === lowerQuery) {
+            const uniqueKey = `${cleanWord}:::${entry.definition.trim().toLowerCase()}`;
+            if (!seenWords.has(uniqueKey)) {
+              seenWords.add(uniqueKey);
+              exactMainMatches.push(entry);
+            }
+          }
+        });
       });
 
       let finalHtml = '';
@@ -297,7 +308,7 @@
         });
       }
 
-      // 3. RENDER ALL MATCHING GROUPS BELOW THE TOP CARDS
+      // 3. RENDER ALL MATCHING GROUPS BELOW
       matchingGroups.forEach(group => {
         const groupNo = group['Group No'] || '';
         const groupMeaning = group['Group Meaning & Context'] || '';
