@@ -46,7 +46,7 @@
       margin: 0;
     }
 
-    /* Search input & button layout */
+    /* Search bar layout */
     .search-container {
       display: flex;
       gap: 8px;
@@ -198,7 +198,6 @@
       <p>Master English Vocabulary in One App</p>
     </div>
 
-    <!-- Search bar with dedicated button -->
     <div class="search-container">
       <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
       <button class="search-btn" onclick="searchWord()">Search</button>
@@ -220,7 +219,7 @@
       }
     });
 
-    // Parse raw text into structured array of objects
+    // Parse raw text into array of { word, definition } objects
     function parseWordList(rawText) {
       if (!rawText) return [];
       const regex = /([A-Za-z0-9\-\s\/\'\"]+):\s*([^:]+)(?=\s+[A-Za-z0-9\-\s\/\'\"]+:|$)/g;
@@ -257,7 +256,7 @@
 
       const lowerQuery = query.toLowerCase();
 
-      // Filter rows containing the query anywhere
+      // Find groups that contain the search query anywhere
       const matchingGroups = csvData.filter(row => {
         return (
           (row['Words with Meanings'] && row['Words with Meanings'].toLowerCase().includes(lowerQuery)) ||
@@ -270,22 +269,22 @@
         return;
       }
 
-      // STEP 1: Collect ALL Main Words across ALL matching groups FIRST
-      let allMainMatches = [];
-      matchingGroups.forEach(group => {
+      // 1. FIRST PASS: Extract EXACT word title matches (Case-Insensitive) across ALL groups
+      let exactMainMatches = [];
+      csvData.forEach(group => {
         const rawWords = group['Words with Meanings'] || '';
         const wordEntries = parseWordList(rawWords);
         
-        // Exact or partial word name matches (ending before colon)
-        const matches = wordEntries.filter(e => e.word.toLowerCase().includes(lowerQuery));
-        allMainMatches.push(...matches);
+        // Case-insensitive exact match (e.g., 'lavish' === 'Lavish')
+        const matches = wordEntries.filter(e => e.word.toLowerCase() === lowerQuery);
+        exactMainMatches.push(...matches);
       });
 
       let finalHtml = '';
 
-      // STEP 2: Render ALL Main Word Cards at the VERY TOP of the screen
-      if (allMainMatches.length > 0) {
-        allMainMatches.forEach(mainWord => {
+      // 2. RENDER ALL MAIN WORD CARDS AT THE VERY TOP FIRST
+      if (exactMainMatches.length > 0) {
+        exactMainMatches.forEach(mainWord => {
           const hWord = highlightText(mainWord.word, query);
           const hDef = highlightText(mainWord.definition, query);
           finalHtml += `
@@ -298,7 +297,7 @@
         });
       }
 
-      // STEP 3: Render Group Cards below the Main Word Card(s)
+      // 3. RENDER ALL MATCHING GROUPS BELOW THE TOP CARDS
       matchingGroups.forEach(group => {
         const groupNo = group['Group No'] || '';
         const groupMeaning = group['Group Meaning & Context'] || '';
