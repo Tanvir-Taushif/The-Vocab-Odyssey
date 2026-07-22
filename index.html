@@ -7,6 +7,7 @@
   <style>
     :root {
       --primary: #2563eb;
+      --primary-hover: #1d4ed8;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #1e293b;
@@ -45,8 +46,14 @@
       margin: 0;
     }
 
+    /* Search input & button layout */
+    .search-container {
+      display: flex;
+      gap: 8px;
+    }
+
     .search-box {
-      width: 100%;
+      flex: 1;
       padding: 14px 16px;
       font-size: 1rem;
       border: 2px solid var(--border);
@@ -61,10 +68,62 @@
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
 
+    .search-btn {
+      padding: 0 20px;
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .search-btn:hover {
+      background-color: var(--primary-hover);
+    }
+
     .results {
       margin-top: 20px;
     }
 
+    /* Featured Main Word Card at Top */
+    .main-word-card {
+      background: #f0fdf4;
+      border: 2px solid #86efac;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .main-word-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #166534;
+      background-color: #bbf7d0;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .main-word-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .main-word-def {
+      font-size: 1rem;
+      color: #1e293b;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* Group Card */
     .group-card {
       background: var(--card-bg);
       border-radius: 14px;
@@ -139,7 +198,11 @@
       <p>Master English Vocabulary in One App</p>
     </div>
 
-    <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeyup="searchWord()">
+    <!-- Search input and action button -->
+    <div class="search-container">
+      <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
+      <button class="search-btn" onclick="searchWord()">Search</button>
+    </div>
 
     <div id="results" class="results"></div>
   </div>
@@ -157,6 +220,7 @@
       }
     });
 
+    // Parse raw string into array of { word, definition } objects
     function parseWordList(rawText) {
       if (!rawText) return [];
       const regex = /([A-Za-z0-9\-\s\/\'\"]+):\s*([^:]+)(?=\s+[A-Za-z0-9\-\s\/\'\"]+:|$)/g;
@@ -173,10 +237,15 @@
 
     function highlightText(text, query) {
       if (!query) return text;
-      // Regex escape special characters
       const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${escapedQuery})`, 'gi');
       return text.replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        searchWord();
+      }
     }
 
     function searchWord() {
@@ -188,6 +257,7 @@
 
       const lowerQuery = query.toLowerCase();
 
+      // Find matching groups from CSV
       const matchingGroups = csvData.filter(row => {
         return (
           (row['Words with Meanings'] && row['Words with Meanings'].toLowerCase().includes(lowerQuery)) ||
@@ -206,9 +276,30 @@
         const rawWords = group['Words with Meanings'] || '';
 
         const wordEntries = parseWordList(rawWords);
-        const highlightedGroupMeaning = highlightText(groupMeaning, query);
 
-        let groupHtml = `
+        // 1. Identify Main Word(s) that match the search query directly
+        const mainMatches = wordEntries.filter(e => e.word.toLowerCase().includes(lowerQuery));
+
+        let html = '';
+
+        // 2. Render Main Word Card at the VERY TOP (if found)
+        if (mainMatches.length > 0) {
+          mainMatches.forEach(mainWord => {
+            const hWord = highlightText(mainWord.word, query);
+            const hDef = highlightText(mainWord.definition, query);
+            html += `
+              <div class="main-word-card">
+                <div class="main-word-badge">Main Word</div>
+                <div class="main-word-title">${hWord}:</div>
+                <div class="main-word-def">${hDef}</div>
+              </div>
+            `;
+          });
+        }
+
+        // 3. Render Group Header Below Main Word
+        const highlightedGroupMeaning = highlightText(groupMeaning, query);
+        html += `
           <div class="group-card">
             <div class="group-header">
               <div class="group-title">Group ${groupNo} : ${highlightedGroupMeaning}</div>
@@ -216,11 +307,12 @@
             <div class="word-list">
         `;
 
+        // 4. Render All Words in that Group
         wordEntries.forEach(entry => {
           const highlightedWord = highlightText(entry.word, query);
           const highlightedDef = highlightText(entry.definition, query);
 
-          groupHtml += `
+          html += `
             <div class="word-item">
               <div class="word-name">${highlightedWord}:</div>
               <div class="word-def">${highlightedDef}</div>
@@ -228,12 +320,12 @@
           `;
         });
 
-        groupHtml += `
+        html += `
             </div>
           </div>
         `;
 
-        resultsContainer.innerHTML += groupHtml;
+        resultsContainer.innerHTML += html;
       });
     }
   </script>
