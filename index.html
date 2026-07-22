@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Lookup</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input { padding: 10px; width: 300px; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 Vocabulary Instant Search</h2>
+  <input type="text" id="search" placeholder="Type a word..." onkeyup="searchWord()">
+
+  <table id="resultsTable">
+    <thead>
+      <tr id="tableHeader"></tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script>
+    let csvData = [];
+
+    // Fetch and parse CSV on load
+    Papa.parse('gangs.csv', {
+      download: true,
+      header: true,
+      complete: function(results) {
+        csvData = results.data;
+      }
+    });
+
+    function searchWord() {
+      const query = document.getElementById('search').value.toLowerCase().trim();
+      const body = document.getElementById('tableBody');
+      const header = document.getElementById('tableHeader');
+      
+      body.innerHTML = '';
+      header.innerHTML = '';
+
+      if (!query || csvData.length === 0) return;
+
+      // Filter rows containing the searched word
+      const matches = csvData.filter(row => 
+        Object.values(row).some(val => String(val).toLowerCase().includes(query))
+      );
+
+      if (matches.length > 0) {
+        // Build table header
+        Object.keys(matches[0]).forEach(key => {
+          header.innerHTML += `<th>${key}</th>`;
+        });
+
+        // Build table rows
+        matches.forEach(row => {
+          let tr = '<tr>';
+          Object.values(row).forEach(val => tr += `<td>${val}</td>`);
+          tr += '</tr>';
+          body.innerHTML += tr;
+        });
+      }
+    }
+  </script>
+</body>
+</html>
