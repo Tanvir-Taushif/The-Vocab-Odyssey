@@ -269,7 +269,7 @@
         return;
       }
 
-      // 1. EXTRACT EXACT MATCHING MAIN WORDS ACROSS ALL GROUPS (Deduplicated)
+      // 1. EXTRACT SINGLE UNIQUE MAIN WORD AT THE VERY TOP
       let exactMainMatches = [];
       let seenWords = new Set();
 
@@ -280,11 +280,10 @@
         wordEntries.forEach(entry => {
           const cleanWord = entry.word.trim().toLowerCase();
           
-          // Strict exact word comparison so 'lavish' != 'slavish'
+          // Strict exact word matching + strictly unique word tracking
           if (cleanWord === lowerQuery) {
-            const uniqueKey = `${cleanWord}:::${entry.definition.trim().toLowerCase()}`;
-            if (!seenWords.has(uniqueKey)) {
-              seenWords.add(uniqueKey);
+            if (!seenWords.has(cleanWord)) {
+              seenWords.add(cleanWord);
               exactMainMatches.push(entry);
             }
           }
@@ -293,7 +292,7 @@
 
       let finalHtml = '';
 
-      // 2. RENDER ALL MAIN WORD CARDS AT THE VERY TOP FIRST
+      // 2. RENDER THE SINGLE MAIN WORD CARD AT THE VERY TOP FIRST
       if (exactMainMatches.length > 0) {
         exactMainMatches.forEach(mainWord => {
           const hWord = highlightText(mainWord.word, query);
