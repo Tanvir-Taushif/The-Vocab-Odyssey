@@ -94,7 +94,7 @@
       border: 2px solid #86efac;
       border-radius: 14px;
       padding: 16px 18px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
@@ -111,13 +111,13 @@
     }
 
     .main-word-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 800;
       color: #0f172a;
     }
 
     .main-word-def {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #1e293b;
       margin-top: 4px;
       line-height: 1.5;
@@ -198,7 +198,7 @@
       <p>Master English Vocabulary in One App</p>
     </div>
 
-    <!-- Search input and action button -->
+    <!-- Search bar with dedicated button -->
     <div class="search-container">
       <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
       <button class="search-btn" onclick="searchWord()">Search</button>
@@ -220,7 +220,7 @@
       }
     });
 
-    // Parse raw string into array of { word, definition } objects
+    // Parse raw text into structured array of objects
     function parseWordList(rawText) {
       if (!rawText) return [];
       const regex = /([A-Za-z0-9\-\s\/\'\"]+):\s*([^:]+)(?=\s+[A-Za-z0-9\-\s\/\'\"]+:|$)/g;
@@ -257,7 +257,7 @@
 
       const lowerQuery = query.toLowerCase();
 
-      // Find matching groups from CSV
+      // Filter rows containing the query anywhere
       const matchingGroups = csvData.filter(row => {
         return (
           (row['Words with Meanings'] && row['Words with Meanings'].toLowerCase().includes(lowerQuery)) ||
@@ -270,36 +270,44 @@
         return;
       }
 
+      // STEP 1: Collect ALL Main Words across ALL matching groups FIRST
+      let allMainMatches = [];
+      matchingGroups.forEach(group => {
+        const rawWords = group['Words with Meanings'] || '';
+        const wordEntries = parseWordList(rawWords);
+        
+        // Exact or partial word name matches (ending before colon)
+        const matches = wordEntries.filter(e => e.word.toLowerCase().includes(lowerQuery));
+        allMainMatches.push(...matches);
+      });
+
+      let finalHtml = '';
+
+      // STEP 2: Render ALL Main Word Cards at the VERY TOP of the screen
+      if (allMainMatches.length > 0) {
+        allMainMatches.forEach(mainWord => {
+          const hWord = highlightText(mainWord.word, query);
+          const hDef = highlightText(mainWord.definition, query);
+          finalHtml += `
+            <div class="main-word-card">
+              <div class="main-word-badge">MAIN WORD</div>
+              <div class="main-word-title">${hWord} :</div>
+              <div class="main-word-def">${hDef}</div>
+            </div>
+          `;
+        });
+      }
+
+      // STEP 3: Render Group Cards below the Main Word Card(s)
       matchingGroups.forEach(group => {
         const groupNo = group['Group No'] || '';
         const groupMeaning = group['Group Meaning & Context'] || '';
         const rawWords = group['Words with Meanings'] || '';
 
         const wordEntries = parseWordList(rawWords);
-
-        // 1. Identify Main Word(s) that match the search query directly
-        const mainMatches = wordEntries.filter(e => e.word.toLowerCase().includes(lowerQuery));
-
-        let html = '';
-
-        // 2. Render Main Word Card at the VERY TOP (if found)
-        if (mainMatches.length > 0) {
-          mainMatches.forEach(mainWord => {
-            const hWord = highlightText(mainWord.word, query);
-            const hDef = highlightText(mainWord.definition, query);
-            html += `
-              <div class="main-word-card">
-                <div class="main-word-badge">Main Word</div>
-                <div class="main-word-title">${hWord}:</div>
-                <div class="main-word-def">${hDef}</div>
-              </div>
-            `;
-          });
-        }
-
-        // 3. Render Group Header Below Main Word
         const highlightedGroupMeaning = highlightText(groupMeaning, query);
-        html += `
+
+        finalHtml += `
           <div class="group-card">
             <div class="group-header">
               <div class="group-title">Group ${groupNo} : ${highlightedGroupMeaning}</div>
@@ -307,12 +315,11 @@
             <div class="word-list">
         `;
 
-        // 4. Render All Words in that Group
         wordEntries.forEach(entry => {
           const highlightedWord = highlightText(entry.word, query);
           const highlightedDef = highlightText(entry.definition, query);
 
-          html += `
+          finalHtml += `
             <div class="word-item">
               <div class="word-name">${highlightedWord}:</div>
               <div class="word-def">${highlightedDef}</div>
@@ -320,13 +327,13 @@
           `;
         });
 
-        html += `
+        finalHtml += `
             </div>
           </div>
         `;
-
-        resultsContainer.innerHTML += html;
       });
+
+      resultsContainer.innerHTML = finalHtml;
     }
   </script>
 </body>
