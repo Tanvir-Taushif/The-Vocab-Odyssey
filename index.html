@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vocab Gangs Search</title>
+  <title>Vocab Hub - Search & Quizzes</title>
   <style>
+    /* ==========================================================================
+       GLOBAL & NAVIGATION STYLES
+       ========================================================================== */
     :root {
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
@@ -12,6 +15,14 @@
       --card-bg: #ffffff;
       --text: #1e293b;
       --border: #e2e8f0;
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -19,14 +30,80 @@
       background-color: var(--bg);
       color: var(--text);
       margin: 0;
-      padding: 16px;
+      padding: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    .container {
+    /* Top Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 650px;
+      margin: 0 auto;
+      display: flex;
+      padding: 8px 16px;
+      gap: 8px;
+    }
+
+    .nav-tab {
+      flex: 1;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: transparent;
+      color: #64748b;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-tab:hover {
+      background-color: #f1f5f9;
+      color: var(--text);
+    }
+
+    .nav-tab.active {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Tab Views Wrapper */
+    .app-wrapper {
       width: 100%;
       max-width: 650px;
+      padding: 16px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* ==========================================================================
+       ORIGINAL VOCAB SEARCH STYLES (INTACT)
+       ========================================================================== */
+    .container {
+      width: 100%;
     }
 
     .header {
@@ -46,7 +123,6 @@
       margin: 0;
     }
 
-    /* Search bar layout */
     .search-container {
       display: flex;
       gap: 8px;
@@ -61,6 +137,7 @@
       outline: none;
       box-sizing: border-box;
       transition: border-color 0.2s, box-shadow 0.2s;
+      min-height: 44px;
     }
 
     .search-box:focus {
@@ -70,6 +147,7 @@
 
     .search-btn {
       padding: 0 20px;
+      min-height: 44px;
       background-color: var(--primary);
       color: #ffffff;
       font-size: 1rem;
@@ -88,7 +166,6 @@
       margin-top: 20px;
     }
 
-    /* Featured Main Word Card at Top */
     .main-word-card {
       background: #f0fdf4;
       border: 2px solid #86efac;
@@ -123,7 +200,6 @@
       line-height: 1.5;
     }
 
-    /* Group Card */
     .group-card {
       background: var(--card-bg);
       border-radius: 14px;
@@ -173,7 +249,6 @@
       margin-top: 4px;
     }
 
-    /* Highlight style */
     mark.highlight {
       background-color: #fef08a;
       color: #854d0e;
@@ -188,25 +263,337 @@
       margin-top: 30px;
       font-size: 1rem;
     }
+
+    /* ==========================================================================
+       QUIZ APP STYLES
+       ========================================================================== */
+    .quiz-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .quiz-select-box {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background-color: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .quiz-header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .quiz-header-card h2 {
+      margin: 0 0 4px 0;
+      font-size: 1.3rem;
+      color: #0f172a;
+    }
+
+    .quiz-subtitle {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .quiz-instructions {
+      font-size: 0.95rem;
+      color: #475569;
+      margin: 8px 0 16px 0;
+      line-height: 1.4;
+    }
+
+    .word-bank-box {
+      background-color: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .word-bank-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .word-bank-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .word-tag {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Set Switcher Sub-tabs */
+    .set-tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .set-btn {
+      flex: 1;
+      min-height: 44px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-weight: 600;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .set-btn.active {
+      background: #eff6ff;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Timer & Banner */
+    .timer-sticky {
+      position: sticky;
+      top: 60px;
+      z-index: 100;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .start-banner {
+      text-align: center;
+      padding: 30px 20px;
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-action {
+      min-height: 48px;
+      padding: 0 24px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .btn-action:hover {
+      background-color: var(--primary-hover);
+    }
+
+    /* Questions List */
+    .questions-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .question-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #f1f5f9;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .question-item:last-child {
+      border-bottom: none;
+    }
+
+    .q-number {
+      font-weight: 700;
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .quiz-inline-select {
+      min-height: 40px;
+      padding: 6px 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      background-color: #ffffff;
+      margin: 0 4px;
+      outline: none;
+    }
+
+    /* Feedback Styling */
+    .question-item.correct-bg {
+      background-color: var(--success-bg);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .question-item.incorrect-bg {
+      background-color: var(--danger-bg);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .correct-answer-inline {
+      color: var(--success);
+      font-weight: 800;
+      margin-left: 8px;
+      display: inline-block;
+    }
+
+    .score-summary-box {
+      background: #eff6ff;
+      border: 2px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .score-summary-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #1e40af;
+    }
+
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="header">
-      <h1>📚 Vocab Gangs Search</h1>
-      <p>Master English Vocabulary in One App</p>
+  <!-- 2. Main Layout & Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <button class="nav-tab active" id="tab-btn-search" onclick="switchMainTab('search')">
+        🔍 Search Vocab
+      </button>
+      <button class="nav-tab" id="tab-btn-quiz" onclick="switchMainTab('quiz')">
+        📝 Take Quizzes
+      </button>
+    </div>
+  </nav>
+
+  <main class="app-wrapper">
+
+    <!-- 1. VOCAB SEARCH COMPONENT WRAPPER (PRESERVED INTACT) -->
+    <div id="search-app-tab" class="tab-content active">
+      <div class="container">
+        <div class="header">
+          <h1>📚 Vocab Gangs Search</h1>
+          <p>Master English Vocabulary in One App</p>
+        </div>
+
+        <div class="search-container">
+          <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
+          <button class="search-btn" onclick="searchWord()">Search</button>
+        </div>
+
+        <div id="results" class="results"></div>
+      </div>
     </div>
 
-    <div class="search-container">
-      <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
-      <button class="search-btn" onclick="searchWord()">Search</button>
+    <!-- 3. QUIZ APP COMPONENT -->
+    <div id="quiz-app-tab" class="tab-content">
+      <div class="quiz-container">
+
+        <!-- Selector -->
+        <div>
+          <select id="quiz-selector" class="quiz-select-box" onchange="handleQuizChange()">
+            <option value="">-- Select a Quiz --</option>
+          </select>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-display" class="hidden">
+          
+          <!-- Header Info -->
+          <div class="quiz-header-card">
+            <div id="quiz-subtitle" class="quiz-subtitle"></div>
+            <h2 id="quiz-title"></h2>
+            <div id="quiz-instructions" class="quiz-instructions"></div>
+            
+            <div class="word-bank-box">
+              <div class="word-bank-title">Word Bank Reference</div>
+              <div id="word-bank-tags" class="word-bank-tags"></div>
+            </div>
+          </div>
+
+          <!-- Set Switcher Tabs -->
+          <div style="margin-top: 16px;">
+            <div class="set-tabs">
+              <button class="set-btn active" id="set-a-btn" onclick="switchQuizSet('Set A')">Set A</button>
+              <button class="set-btn" id="set-b-btn" onclick="switchQuizSet('Set B')">Set B</button>
+            </div>
+          </div>
+
+          <!-- Score View Area -->
+          <div id="score-summary" class="score-summary-box hidden" style="margin-top: 16px;"></div>
+
+          <!-- Idle / Start Banner -->
+          <div id="start-banner" class="start-banner" style="margin-top: 16px;">
+            <p id="time-info-text" style="margin-bottom: 16px; color: #64748b; font-weight: 600;"></p>
+            <button class="btn-action" onclick="startQuizTimer()">Start Quiz</button>
+          </div>
+
+          <!-- Active Timer Display -->
+          <div id="timer-bar" class="timer-sticky hidden" style="margin-top: 16px;">
+            <span>Time Remaining</span>
+            <span id="timer-clock" style="font-size: 1.2rem; font-family: monospace;">00:00</span>
+          </div>
+
+          <!-- Question Set Display Area -->
+          <div id="questions-card" class="questions-card hidden" style="margin-top: 16px;">
+            <div id="questions-list"></div>
+            <div style="text-align: center; margin-top: 20px;">
+              <button id="submit-quiz-btn" class="btn-action" onclick="submitQuiz(false)">Submit Quiz</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="quiz-loading" class="no-results">Loading quiz data...</div>
+      </div>
     </div>
 
-    <div id="results" class="results"></div>
-  </div>
+  </main>
 
+  <!-- External PapaParse Script for Search Engine -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+  <!-- VOCAB SEARCH ENGINE SCRIPT (INTACT) -->
   <script>
     let csvData = [];
 
@@ -349,6 +736,244 @@
 
       resultsContainer.innerHTML = finalHtml;
     }
+  </script>
+
+  <!-- NAVIGATION & QUIZ APP SCRIPT -->
+  <script>
+    // Tab Navigation Switcher
+    function switchMainTab(tab) {
+      document.getElementById('search-app-tab').classList.remove('active');
+      document.getElementById('quiz-app-tab').classList.remove('active');
+      document.getElementById('tab-btn-search').classList.remove('active');
+      document.getElementById('tab-btn-quiz').classList.remove('active');
+
+      if (tab === 'search') {
+        document.getElementById('search-app-tab').classList.add('active');
+        document.getElementById('tab-btn-search').classList.add('active');
+      } else {
+        document.getElementById('quiz-app-tab').classList.add('active');
+        document.getElementById('tab-btn-quiz').classList.add('active');
+      }
+    }
+
+    // Quiz App State Management
+    let allQuizzes = [];
+    let currentQuiz = null;
+    let currentSetKey = 'Set A';
+    let countdownInterval = null;
+    let timeRemaining = 0;
+    let quizSubmitted = false;
+
+    // Fetch quiz JSON source
+    async function initQuizEngine() {
+      const loadingEl = document.getElementById('quiz-loading');
+      try {
+        const response = await fetch('word_smart_quizzes.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('Could not load word_smart_quizzes.json');
+        allQuizzes = await response.json();
+        
+        populateQuizSelector();
+        loadingEl.classList.add('hidden');
+      } catch (err) {
+        loadingEl.textContent = 'Failed to load quiz data. Ensure word_smart_quizzes.json exists in the root directory.';
+        console.error(err);
+      }
+    }
+
+    function populateQuizSelector() {
+      const selector = document.getElementById('quiz-selector');
+      selector.innerHTML = '<option value="">-- Select a Quiz --</option>';
+      allQuizzes.forEach((q, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = q.quiz_title;
+        selector.appendChild(opt);
+      });
+    }
+
+    function handleQuizChange() {
+      const selector = document.getElementById('quiz-selector');
+      const val = selector.value;
+      
+      if (val === '') {
+        document.getElementById('quiz-display').classList.add('hidden');
+        currentQuiz = null;
+        return;
+      }
+
+      currentQuiz = allQuizzes[parseInt(val, 10)];
+      currentSetKey = 'Set A';
+      
+      document.getElementById('quiz-display').classList.remove('hidden');
+      renderQuizHeader();
+      switchQuizSet('Set A');
+    }
+
+    function renderQuizHeader() {
+      if (!currentQuiz) return;
+      document.getElementById('quiz-title').textContent = currentQuiz.quiz_title;
+      document.getElementById('quiz-subtitle').textContent = currentQuiz.section || 'Vocabulary Quiz';
+      document.getElementById('quiz-instructions').textContent = currentQuiz.instructions || 'Complete the blanks using the word bank.';
+
+      const tagsContainer = document.getElementById('word-bank-tags');
+      tagsContainer.innerHTML = '';
+      
+      const bank = currentQuiz.display_word_bank || [];
+      bank.forEach(word => {
+        const span = document.createElement('span');
+        span.className = 'word-tag';
+        span.textContent = word;
+        tagsContainer.appendChild(span);
+      });
+    }
+
+    function switchQuizSet(setName) {
+      currentSetKey = setName;
+      quizSubmitted = false;
+      clearInterval(countdownInterval);
+
+      // Toggle UI tab active states
+      document.getElementById('set-a-btn').classList.toggle('active', setName === 'Set A');
+      document.getElementById('set-b-btn').classList.toggle('active', setName === 'Set B');
+
+      // Reset score banner and questions
+      document.getElementById('score-summary').classList.add('hidden');
+      document.getElementById('questions-card').classList.add('hidden');
+      document.getElementById('timer-bar').classList.add('hidden');
+      document.getElementById('start-banner').classList.remove('hidden');
+
+      const questions = (currentQuiz.sets && currentQuiz.sets[setName]) ? currentQuiz.sets[setName] : [];
+      const totalTime = questions.length * 30; // 30 seconds per question
+      timeRemaining = totalTime;
+
+      document.getElementById('time-info-text').textContent = 
+        `${setName} (${questions.length} questions) • Time allowed: ${formatTime(totalTime)}`;
+    }
+
+    function startQuizTimer() {
+      const questions = (currentQuiz.sets && currentQuiz.sets[currentSetKey]) ? currentQuiz.sets[currentSetKey] : [];
+      if (questions.length === 0) return;
+
+      renderQuestions(questions);
+
+      document.getElementById('start-banner').classList.add('hidden');
+      document.getElementById('timer-bar').classList.remove('hidden');
+      document.getElementById('questions-card').classList.remove('hidden');
+
+      updateTimerClock();
+      countdownInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerClock();
+
+        if (timeRemaining <= 0) {
+          clearInterval(countdownInterval);
+          submitQuiz(true);
+        }
+      }, 1000);
+    }
+
+    function updateTimerClock() {
+      document.getElementById('timer-clock').textContent = formatTime(Math.max(0, timeRemaining));
+    }
+
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+      const s = (seconds % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    function renderQuestions(questions) {
+      const container = document.getElementById('questions-list');
+      container.innerHTML = '';
+
+      const dropOptions = currentQuiz.dropdown_options || [];
+
+      questions.forEach((q, index) => {
+        const item = document.createElement('div');
+        item.className = 'question-item';
+        item.id = `q-item-${index}`;
+
+        // Create Dropdown HTML
+        let selectHtml = `<select class="quiz-inline-select" id="q-select-${index}">`;
+        selectHtml += `<option value="">-- Select --</option>`;
+        dropOptions.forEach(opt => {
+          selectHtml += `<option value="${escapeHtml(opt)}">${escapeHtml(opt)}</option>`;
+        });
+        selectHtml += `</select>`;
+
+        // Replace blank underscores (_____ or ___) with dropdown select element
+        let questionText = q.question_text || '';
+        if (questionText.includes('____')) {
+          questionText = questionText.replace(/_+/g, selectHtml);
+        } else {
+          questionText += ' ' + selectHtml;
+        }
+
+        item.innerHTML = `
+          <span class="q-number">${index + 1}.</span>
+          <span class="q-text-body">${questionText}</span>
+          <span id="feedback-inline-${index}"></span>
+        `;
+
+        container.appendChild(item);
+      });
+
+      document.getElementById('submit-quiz-btn').disabled = false;
+      document.getElementById('submit-quiz-btn').style.opacity = '1';
+    }
+
+    function submitQuiz(isAuto) {
+      if (quizSubmitted) return;
+      quizSubmitted = true;
+      clearInterval(countdownInterval);
+
+      const questions = (currentQuiz.sets && currentQuiz.sets[currentSetKey]) ? currentQuiz.sets[currentSetKey] : [];
+      let score = 0;
+
+      questions.forEach((q, index) => {
+        const selectEl = document.getElementById(`q-select-${index}`);
+        const itemEl = document.getElementById(`q-item-${index}`);
+        const feedbackEl = document.getElementById(`feedback-inline-${index}`);
+
+        selectEl.disabled = true;
+        const userChoice = selectEl.value.trim().toLowerCase();
+        const correctAnswer = (q.correct_answer || '').trim().toLowerCase();
+
+        if (userChoice && userChoice === correctAnswer) {
+          score++;
+          itemEl.classList.add('correct-bg');
+        } else {
+          itemEl.classList.add('incorrect-bg');
+          feedbackEl.className = 'correct-answer-inline';
+          feedbackEl.innerHTML = ` (Correct: <strong>${escapeHtml(q.correct_answer)}</strong>)`;
+        }
+      });
+
+      // Disable submit button
+      const submitBtn = document.getElementById('submit-quiz-btn');
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.5';
+
+      // Summary Box
+      const scoreBox = document.getElementById('score-summary');
+      const timeUpPrefix = isAuto ? '<span style="color:var(--danger)">Time\'s up! </span>' : '';
+      scoreBox.innerHTML = `
+        <div class="score-summary-title">${timeUpPrefix}Quiz Completed</div>
+        <p style="margin: 6px 0 0 0; color: #334155;">Your Score: <strong>${score} / ${questions.length}</strong></p>
+      `;
+      scoreBox.classList.remove('hidden');
+
+      // Scroll smoothly to score box
+      scoreBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    // Initialize Quiz Data on load
+    document.addEventListener('DOMContentLoaded', initQuizEngine);
   </script>
 </body>
 </html>
