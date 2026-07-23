@@ -336,6 +336,7 @@
       gap: 6px;
     }
 
+    /* Clickable Word Bank Tag */
     .word-tag {
       background: #ffffff;
       border: 1px solid #cbd5e1;
@@ -344,6 +345,16 @@
       font-size: 0.85rem;
       font-weight: 600;
       color: #334155;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .word-tag:hover {
+      background-color: #eff6ff;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
     }
 
     /* Set Switcher Sub-tabs */
@@ -558,7 +569,7 @@
             <div id="quiz-instructions" class="quiz-instructions"></div>
             
             <div class="word-bank-box">
-              <div class="word-bank-title">Word Bank Reference</div>
+              <div class="word-bank-title">Word Bank Reference (Click word to search)</div>
               <div id="word-bank-tags" class="word-bank-tags"></div>
             </div>
           </div>
@@ -768,6 +779,24 @@
       }
     }
 
+    // Bridge Function: Lookup Clicked Word from Bank in Search App
+    function lookupWordFromBank(word) {
+      if (!word) return;
+      
+      // 1. Populate Search Box
+      const searchInput = document.getElementById('search');
+      searchInput.value = word;
+
+      // 2. Trigger Search
+      searchWord();
+
+      // 3. Switch View to Search Tab
+      switchMainTab('search');
+
+      // 4. Scroll to top for smooth UX
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     // Quiz App Engine State
     let allQuizzes = [];
     let currentQuiz = null;
@@ -835,6 +864,8 @@
         const span = document.createElement('span');
         span.className = 'word-tag';
         span.textContent = word;
+        // Make word bank items clickable to jump to Vocab Search
+        span.onclick = () => lookupWordFromBank(word);
         tagsContainer.appendChild(span);
       });
     }
