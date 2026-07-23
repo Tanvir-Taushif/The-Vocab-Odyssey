@@ -37,53 +37,73 @@
       min-height: 100vh;
     }
 
-    /* Top Navigation Bar */
+    /* Top Navigation Bar - Classy & Responsive */
     .top-nav {
       width: 100%;
-      background-color: #ffffff;
-      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
     }
 
     .nav-container {
       max-width: 650px;
       margin: 0 auto;
       display: flex;
-      padding: 8px 16px;
-      gap: 8px;
+      padding: 8px 12px;
+      gap: 6px;
+      background-color: #f1f5f9;
+      border-radius: 14px;
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
 
     .nav-tab {
       flex: 1;
-      min-height: 44px;
-      padding: 10px 12px;
-      border: 1px solid transparent;
-      border-radius: 8px;
+      min-height: 42px;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 10px;
       background: transparent;
       color: #64748b;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      transition: all 0.2s ease;
+      white-space: nowrap; /* Prevents text wrapping on small screens */
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav-tab:hover {
-      background-color: #f1f5f9;
-      color: var(--text);
+      color: var(--primary);
     }
 
     .nav-tab.active {
-      background-color: var(--primary);
-      color: #ffffff;
+      background-color: #ffffff;
+      color: var(--primary);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
-
+    /* Mobile Fine-Tuning */
+    @media (max-width: 480px) {
+      .nav-container {
+        padding: 4px;
+        gap: 4px;
+      }
+      
+      .nav-tab {
+        font-size: 0.82rem;
+        padding: 6px 4px;
+        gap: 4px;
+      }
+    }
     /* Tab Views Wrapper */
     .app-wrapper {
       width: 100%;
@@ -608,16 +628,17 @@
 <body>
 
   <!-- Top Navigation Bar -->
+<!-- Top Navigation -->
   <nav class="top-nav">
     <div class="nav-container">
       <button class="nav-tab active" id="tab-btn-home" onclick="switchMainTab('home')">
         🏠 Home
       </button>
       <button class="nav-tab" id="tab-btn-search" onclick="switchMainTab('search')">
-        🔍 Search Vocab
+        🔍 Search
       </button>
       <button class="nav-tab" id="tab-btn-quiz" onclick="switchMainTab('quiz')">
-        📝 Take Quizzes
+        📝 Quizzes
       </button>
     </div>
   </nav>
