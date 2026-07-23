@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vocab Hub - Search & Quizzes</title>
+  <title>Vocab Odyssey</title>
   <style>
     /* ==========================================================================
        GLOBAL & NAVIGATION STYLES
@@ -11,7 +11,7 @@
     :root {
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
-      --bg: #f8fafc;
+      --bg: #0f172a;
       --card-bg: #ffffff;
       --text: #1e293b;
       --border: #e2e8f0;
@@ -27,7 +27,7 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
+      background-color: #f8fafc;
       color: var(--text);
       margin: 0;
       padding: 0;
@@ -59,12 +59,12 @@
     .nav-tab {
       flex: 1;
       min-height: 44px;
-      padding: 10px 16px;
+      padding: 10px 12px;
       border: 1px solid transparent;
       border-radius: 8px;
       background: transparent;
       color: #64748b;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
@@ -97,6 +97,101 @@
 
     .tab-content.active {
       display: block;
+    }
+
+    /* ==========================================================================
+       LANDING PAGE (VOCAB ODYSSEY) STYLES
+       ========================================================================== */
+    .landing-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .hero-image-container {
+      width: 100%;
+      max-height: 480px;
+      overflow: hidden;
+      background-color: #0b0d19;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .landing-body {
+      padding: 24px 20px;
+    }
+
+    .landing-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .landing-subtitle {
+      font-size: 1rem;
+      color: #64748b;
+      margin: 0 0 24px 0;
+      font-weight: 500;
+    }
+
+    .landing-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .btn-landing {
+      min-height: 52px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-landing-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-landing-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-landing-secondary {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid var(--border);
+    }
+
+    .btn-landing-secondary:hover {
+      background-color: #e2e8f0;
     }
 
     /* ==========================================================================
@@ -336,7 +431,6 @@
       gap: 6px;
     }
 
-    /* Clickable Word Bank Tag */
     .word-tag {
       background: #ffffff;
       border: 1px solid #cbd5e1;
@@ -357,7 +451,6 @@
       transform: translateY(-1px);
     }
 
-    /* Set Switcher Sub-tabs */
     .set-tabs {
       display: flex;
       gap: 8px;
@@ -383,7 +476,6 @@
       color: var(--primary);
     }
 
-    /* Timer & Banner */
     .timer-sticky {
       position: sticky;
       top: 60px;
@@ -426,7 +518,6 @@
       background-color: var(--primary-hover);
     }
 
-    /* Questions List */
     .questions-card {
       background: #ffffff;
       border: 1px solid var(--border);
@@ -475,7 +566,6 @@
       color: #991b1b;
     }
 
-    /* Feedback Styling */
     .question-item.correct-bg {
       background-color: var(--success-bg);
       padding: 12px;
@@ -517,10 +607,13 @@
 </head>
 <body>
 
-  <!-- Top Navigation -->
+  <!-- Top Navigation Bar -->
   <nav class="top-nav">
     <div class="nav-container">
-      <button class="nav-tab active" id="tab-btn-search" onclick="switchMainTab('search')">
+      <button class="nav-tab active" id="tab-btn-home" onclick="switchMainTab('home')">
+        🏠 Home
+      </button>
+      <button class="nav-tab" id="tab-btn-search" onclick="switchMainTab('search')">
         🔍 Search Vocab
       </button>
       <button class="nav-tab" id="tab-btn-quiz" onclick="switchMainTab('quiz')">
@@ -531,8 +624,31 @@
 
   <main class="app-wrapper">
 
+    <!-- LANDING PAGE VIEW (HOME) -->
+    <div id="home-app-tab" class="tab-content active">
+      <div class="landing-card">
+        <div class="hero-image-container">
+          <!-- Update src to match your image file name uploaded to your GitHub repository -->
+          <img src="landing-hero.png" alt="Vocab Odyssey" onerror="this.src='https://placehold.co/600x800/0f172a/ffffff?text=Vocab+Odyssey'">
+        </div>
+        <div class="landing-body">
+          <h1 class="landing-title">Vocab Odyssey</h1>
+          <p class="landing-subtitle">Master English Vocabulary in One App</p>
+          
+          <div class="landing-actions">
+            <button class="btn-landing btn-landing-primary" onclick="switchMainTab('search')">
+              🚀 Begin Odyssey (Search)
+            </button>
+            <button class="btn-landing btn-landing-secondary" onclick="switchMainTab('quiz')">
+              📝 Practice Quizzes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1. VOCAB SEARCH COMPONENT WRAPPER (PRESERVED INTACT) -->
-    <div id="search-app-tab" class="tab-content active">
+    <div id="search-app-tab" class="tab-content">
       <div class="container">
         <div class="header">
           <h1>📚 Vocab Gangs Search</h1>
@@ -765,47 +881,47 @@
   <script>
     // Tab Navigation Switcher
     function switchMainTab(tab) {
+      document.getElementById('home-app-tab').classList.remove('active');
       document.getElementById('search-app-tab').classList.remove('active');
       document.getElementById('quiz-app-tab').classList.remove('active');
+      
+      document.getElementById('tab-btn-home').classList.remove('active');
       document.getElementById('tab-btn-search').classList.remove('active');
       document.getElementById('tab-btn-quiz').classList.remove('active');
 
-      if (tab === 'search') {
+      if (tab === 'home') {
+        document.getElementById('home-app-tab').classList.add('active');
+        document.getElementById('tab-btn-home').classList.add('active');
+      } else if (tab === 'search') {
         document.getElementById('search-app-tab').classList.add('active');
         document.getElementById('tab-btn-search').classList.add('active');
-      } else {
+      } else if (tab === 'quiz') {
         document.getElementById('quiz-app-tab').classList.add('active');
         document.getElementById('tab-btn-quiz').classList.add('active');
       }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Bridge Function: Lookup Clicked Word from Bank in Search App
     function lookupWordFromBank(word) {
       if (!word) return;
       
-      // 1. Populate Search Box
       const searchInput = document.getElementById('search');
       searchInput.value = word;
 
-      // 2. Trigger Search
       searchWord();
-
-      // 3. Switch View to Search Tab
       switchMainTab('search');
-
-      // 4. Scroll to top for smooth UX
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Quiz App Engine State
     let allQuizzes = [];
     let currentQuiz = null;
-    let currentSetId = 'A'; // 'A' or 'B'
+    let currentSetId = 'A';
     let countdownInterval = null;
     let timeRemaining = 0;
     let quizSubmitted = false;
 
-    // Fetch word_smart_quizzes.json asynchronously
     async function initQuizEngine() {
       const loadingEl = document.getElementById('quiz-loading');
       try {
@@ -864,13 +980,11 @@
         const span = document.createElement('span');
         span.className = 'word-tag';
         span.textContent = word;
-        // Make word bank items clickable to jump to Vocab Search
         span.onclick = () => lookupWordFromBank(word);
         tagsContainer.appendChild(span);
       });
     }
 
-    // Helper: Find current active set object based on set_id ("A" or "B")
     function getActiveSetObject() {
       if (!currentQuiz || !Array.isArray(currentQuiz.sets)) return null;
       return currentQuiz.sets.find(s => String(s.set_id).toUpperCase() === String(currentSetId).toUpperCase()) || currentQuiz.sets[0];
@@ -881,11 +995,9 @@
       quizSubmitted = false;
       clearInterval(countdownInterval);
 
-      // Toggle UI button active states
       document.getElementById('set-a-btn').classList.toggle('active', setId === 'A');
       document.getElementById('set-b-btn').classList.toggle('active', setId === 'B');
 
-      // Hide active questions/timer and show idle banner
       document.getElementById('score-summary').classList.add('hidden');
       document.getElementById('questions-card').classList.add('hidden');
       document.getElementById('timer-bar').classList.add('hidden');
@@ -894,7 +1006,6 @@
       const activeSet = getActiveSetObject();
       const questions = activeSet && activeSet.questions ? activeSet.questions : [];
       
-      // Calculate dynamic allowed time: 30s per question
       const totalTime = questions.length * 30;
       timeRemaining = totalTime;
 
@@ -947,7 +1058,6 @@
         item.className = 'question-item';
         item.id = `q-item-${index}`;
 
-        // Build inline dropdown selection menu
         let selectHtml = `<select class="quiz-inline-select" id="q-select-${index}">`;
         selectHtml += `<option value="">Select word...</option>`;
         dropOptions.forEach(opt => {
@@ -955,7 +1065,6 @@
         });
         selectHtml += `</select>`;
 
-        // Regex replaces underline blank patterns (_____, ___, ____________) with dropdown element
         let questionText = q.text || q.question_text || '';
         if (/_+/.test(questionText)) {
           questionText = questionText.replace(/_+/g, selectHtml);
@@ -1010,12 +1119,10 @@
         }
       });
 
-      // Disable submission button
       const submitBtn = document.getElementById('submit-quiz-btn');
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.5';
 
-      // Summary Box
       const percentage = Math.round((score / questions.length) * 100) || 0;
       const scoreBox = document.getElementById('score-summary');
       const alertPrefix = isAuto ? '<div style="color:var(--danger); font-size:0.95rem; font-weight:bold; margin-bottom:4px;">Time\'s up! Your quiz has been automatically submitted.</div>' : '';
@@ -1039,7 +1146,6 @@
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
-    // Initialize Quiz Engine on DOM load
     document.addEventListener('DOMContentLoaded', initQuizEngine);
   </script>
 </body>
