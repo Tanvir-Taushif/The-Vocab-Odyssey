@@ -1,57 +1,77 @@
-# 📚 Vocab Gangs Search
+# 🌌 Vocab Odyssey
 
-> **Master English Vocabulary in One App**  
-> An instant, mobile-friendly vocabulary lookup engine powered by thematic word groupings for competitive exam preparation (IBA Admission Test, GRE, SAT, Word Smart I & II).
+> **Master English Vocabulary in One Unified App**
+
+Welcome to **Vocab Odyssey**—your all-in-one digital hub for exploring advanced English vocabulary, discovering word clusters, and testing your retention with timed practice quizzes!
+
+Built with pure vanilla HTML, CSS, and JavaScript, **Vocab Odyssey** is optimized for seamless performance across both mobile touchscreens and desktop displays.
 
 ---
 
-## 💡 Created By
+## 👨‍💻 Developed By
 
 **Tanvir Taushif**  
-*BSc. in Information & Communication Engineering*  
-*Bangladesh University of Professionals (BUP)*
+*Data Scientist*  
+*B.Sc. in Information & Communication Engineering (ICE)*  
+**Bangladesh University of Professionals (BUP)**
+
+Combining an engineering background from BUP with data science, I built **Vocab Odyssey** to transform dense vocabulary prep into an interactive, efficient, and data-driven learning experience.
 
 ---
 
-## 🌟 About the App
+## 📚 Vocabulary Sources & Data
 
-**Vocab Gangs Search** is an interactive web application designed to accelerate English vocabulary learning. Instead of memorizing words in isolation, this app groups target vocabulary into **semantic "gangs"** (thematic clusters), enabling users to learn synonyms, nuances, and contextual meanings together.
+The vocabulary database and quiz questions in this application are carefully curated from high-yield, proven preparation materials:
 
-Whether you're looking up a specific word or exploring word clusters, the app instantly parses raw dataset records into clean, mobile-responsive word cards with real-time text highlighting.
-
----
-
-## ✨ Key Features
-
-* 🔍 **Instant Semantic Search:** Type any word or context keyword to search across the entire vocabulary dataset in real time.
-* 🏷️ **Thematic Grouping:** Results display the overall **Group Number & Core Meaning/Context** at the top, followed by individual words.
-* 🗂️ **Clean Word Card Layout:** Automatically breaks dense blocks of text into individual, easy-to-read word cards on separate lines.
-* 💡 **Real-Time Highlighting:** Dynamically highlights searched keywords in bright yellow across both word titles and definitions for rapid scanning.
-* 📱 **Mobile-First & Responsive UI:** Optimized with high-contrast headers, touch-friendly padding, and scalable fonts that work seamlessly on phones and desktops alike.
+* 📖 **Word Smart I & II** (Princeton Review)
+* 🎓 **IBA, Dhaka University** — Previous Years' Admission Test Vocabulary Questions
 
 ---
 
-## 📂 Dataset Source
+## ✨ Features at a Glance
 
-The core data powers vocabulary from high-yield prep sources:
-* **Word Smart I & II**
-* **IBA Admission Test Previous Year Words**
+### 🔮 1. Vocab Gangs Search
+* **Contextual Word Lookup**: Search for any word to view its definitions, main entries, and associated word groups/contexts instantly.
+* **Instant Word Highlighting**: Query terms are dynamically highlighted to make scanning definitions fast and effortless.
+* **Smart Matching Engine**: Whole-word matching ensures accurate results without irrelevant partial keyword noise.
+
+### ⚔️ 2. Word Smart Quizzes
+* **Dynamic Quiz Selection**: Switch easily between various structured vocabulary quizzes.
+* **Set Navigation (Set A / Set B)**: Organize your practice into distinct question sets.
+* **Smart Word Bank & Quick Lookup**: Click on any word inside the Word Bank reference box to jump instantly to its detailed entry in the **Search App**!
+* **Timed Challenge Engine**: Enjoy an automatic countdown timer allocated dynamically based on question count (30s per question).
+* **Auto-Submission & Instant Grading**: Automatically locks inputs and submits when the clock hits zero. Get real-time color-coded feedback and score percentages.
 
 ---
 
-## 🛠️ How to Use
+## 🚀 How to Use
 
-1. **Open the App** in your web browser.
-2. In the search box, **type any target word** (e.g., `abate`, `candor`, `ephemeral`) or a **context keyword** (e.g., `lessen`, `criticize`).
-3. View the matching **Group Header** (e.g., *Group 1 : To Lessen, Reduce, Shorten, or Diminish*).
-4. Review the formatted list of words beneath the group header with your search query highlighted.
+1. **Explore the Landing Page**:
+   * Tap **🚀 Begin Odyssey** to dive straight into searching vocabulary groups.
+   * Tap **📝 Practice Quizzes** to jump into testing your skills.
+
+2. **Searching for Words**:
+   * Navigate to the **🔍 Search** tab.
+   * Type any word in the search box and press **Enter** or tap **Search**.
+   * View the featured **Main Word Card** at the top alongside all contextual word clusters below.
+
+3. **Taking a Quiz**:
+   * Navigate to the **📝 Quizzes** tab.
+   * Select your desired quiz from the top dropdown menu.
+   * Pick **Set A** or **Set B**.
+   * Review the **Word Bank Reference** at the top. *(Tip: Click any word chip in the bank to search its meaning!)*
+   * Tap **Start Quiz** to unleash the questions and start the sticky countdown clock.
+   * Select your answers from the inline sentence dropdowns and tap **Submit Quiz** when finished!
+   * View your score!!
 
 ---
 
-## 🚀 How to Run Locally / Host on GitHub Pages
+## 📁 Repository Structure
 
-### Option 1: GitHub Pages (HTML/JS)
+Ensure your repository contains the following root files for the app to function properly on GitHub Pages:
 
-1. Clone or download this repository:
-   ```bash
-   git clone [https://github.com/your-username/vocab-gangs-search.git](https://github.com/your-username/vocab-gangs-search.git)
+```text
+├── index.html                # Main single-page web app source
+├── gangs.csv                 # Dataset containing vocabulary groups and meanings
+├── word_smart_quizzes.json   # Structured JSON containing quiz sets & questions
+└── landing-hero.png          # Hero image for the main landing page
