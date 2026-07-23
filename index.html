@@ -210,8 +210,7 @@
   <script>
     let csvData = [];
 
-// Parse gangs.csv on load
-// Cache-busting fetch: ensures the browser ALWAYS loads the latest CSV file
+    // Cache-busting fetch: ensures the browser ALWAYS loads the latest CSV file
     Papa.parse('gangs.csv?v=' + new Date().getTime(), {
       download: true,
       header: true,
@@ -235,10 +234,11 @@
       return matches;
     }
 
+    // Whole-word highlighting using \b word boundaries
     function highlightText(text, query) {
       if (!query) return text;
       const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(`(${escapedQuery})`, 'gi');
+      const regex = new RegExp(`\\b(${escapedQuery})\\b`, 'gi');
       return text.replace(regex, '<mark class="highlight">$1</mark>');
     }
 
@@ -256,13 +256,17 @@
       if (!query || csvData.length === 0) return;
 
       const lowerQuery = query.toLowerCase();
+      const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      
+      // Whole-word regex match pattern (\b restricts matches to whole words)
+      const wholeWordRegex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
 
-      // Find groups that contain the search query anywhere
+      // Filter groups that contain the search query ONLY as a whole word
       const matchingGroups = csvData.filter(row => {
-        return (
-          (row['Words with Meanings'] && row['Words with Meanings'].toLowerCase().includes(lowerQuery)) ||
-          (row['Group Meaning & Context'] && row['Group Meaning & Context'].toLowerCase().includes(lowerQuery))
-        );
+        const wordsContent = row['Words with Meanings'] || '';
+        const groupContent = row['Group Meaning & Context'] || '';
+        
+        return wholeWordRegex.test(wordsContent) || wholeWordRegex.test(groupContent);
       });
 
       if (matchingGroups.length === 0) {
