@@ -452,6 +452,18 @@
       outline: none;
     }
 
+    .quiz-inline-select.is-correct {
+      border-color: var(--success);
+      background-color: var(--success-bg);
+      color: #166534;
+    }
+
+    .quiz-inline-select.is-incorrect {
+      border-color: var(--danger);
+      background-color: var(--danger-bg);
+      color: #991b1b;
+    }
+
     /* Feedback Styling */
     .question-item.correct-bg {
       background-color: var(--success-bg);
@@ -494,7 +506,7 @@
 </head>
 <body>
 
-  <!-- 2. Main Layout & Top Navigation -->
+  <!-- Top Navigation -->
   <nav class="top-nav">
     <div class="nav-container">
       <button class="nav-tab active" id="tab-btn-search" onclick="switchMainTab('search')">
@@ -525,7 +537,7 @@
       </div>
     </div>
 
-    <!-- 3. QUIZ APP COMPONENT -->
+    <!-- 2. QUIZ APP COMPONENT -->
     <div id="quiz-app-tab" class="tab-content">
       <div class="quiz-container">
 
@@ -554,8 +566,8 @@
           <!-- Set Switcher Tabs -->
           <div style="margin-top: 16px;">
             <div class="set-tabs">
-              <button class="set-btn active" id="set-a-btn" onclick="switchQuizSet('Set A')">Set A</button>
-              <button class="set-btn" id="set-b-btn" onclick="switchQuizSet('Set B')">Set B</button>
+              <button class="set-btn active" id="set-a-btn" onclick="switchQuizSet('A')">Set A</button>
+              <button class="set-btn" id="set-b-btn" onclick="switchQuizSet('B')">Set B</button>
             </div>
           </div>
 
@@ -756,15 +768,15 @@
       }
     }
 
-    // Quiz App State Management
+    // Quiz App Engine State
     let allQuizzes = [];
     let currentQuiz = null;
-    let currentSetKey = 'Set A';
+    let currentSetId = 'A'; // 'A' or 'B'
     let countdownInterval = null;
     let timeRemaining = 0;
     let quizSubmitted = false;
 
-    // Fetch quiz JSON source
+    // Fetch word_smart_quizzes.json asynchronously
     async function initQuizEngine() {
       const loadingEl = document.getElementById('quiz-loading');
       try {
@@ -775,7 +787,7 @@
         populateQuizSelector();
         loadingEl.classList.add('hidden');
       } catch (err) {
-        loadingEl.textContent = 'Failed to load quiz data. Ensure word_smart_quizzes.json exists in the root directory.';
+        loadingEl.textContent = 'Failed to load quiz data. Ensure word_smart_quizzes.json exists in the root folder.';
         console.error(err);
       }
     }
@@ -802,18 +814,18 @@
       }
 
       currentQuiz = allQuizzes[parseInt(val, 10)];
-      currentSetKey = 'Set A';
+      currentSetId = 'A';
       
       document.getElementById('quiz-display').classList.remove('hidden');
       renderQuizHeader();
-      switchQuizSet('Set A');
+      switchQuizSet('A');
     }
 
     function renderQuizHeader() {
       if (!currentQuiz) return;
       document.getElementById('quiz-title').textContent = currentQuiz.quiz_title;
       document.getElementById('quiz-subtitle').textContent = currentQuiz.section || 'Vocabulary Quiz';
-      document.getElementById('quiz-instructions').textContent = currentQuiz.instructions || 'Complete the blanks using the word bank.';
+      document.getElementById('quiz-instructions').textContent = currentQuiz.instructions || 'Fill in the gaps using the appropriate words from the box.';
 
       const tagsContainer = document.getElementById('word-bank-tags');
       tagsContainer.innerHTML = '';
@@ -827,34 +839,44 @@
       });
     }
 
-    function switchQuizSet(setName) {
-      currentSetKey = setName;
+    // Helper: Find current active set object based on set_id ("A" or "B")
+    function getActiveSetObject() {
+      if (!currentQuiz || !Array.isArray(currentQuiz.sets)) return null;
+      return currentQuiz.sets.find(s => String(s.set_id).toUpperCase() === String(currentSetId).toUpperCase()) || currentQuiz.sets[0];
+    }
+
+    function switchQuizSet(setId) {
+      currentSetId = setId;
       quizSubmitted = false;
       clearInterval(countdownInterval);
 
-      // Toggle UI tab active states
-      document.getElementById('set-a-btn').classList.toggle('active', setName === 'Set A');
-      document.getElementById('set-b-btn').classList.toggle('active', setName === 'Set B');
+      // Toggle UI button active states
+      document.getElementById('set-a-btn').classList.toggle('active', setId === 'A');
+      document.getElementById('set-b-btn').classList.toggle('active', setId === 'B');
 
-      // Reset score banner and questions
+      // Hide active questions/timer and show idle banner
       document.getElementById('score-summary').classList.add('hidden');
       document.getElementById('questions-card').classList.add('hidden');
       document.getElementById('timer-bar').classList.add('hidden');
       document.getElementById('start-banner').classList.remove('hidden');
 
-      const questions = (currentQuiz.sets && currentQuiz.sets[setName]) ? currentQuiz.sets[setName] : [];
-      const totalTime = questions.length * 30; // 30 seconds per question
+      const activeSet = getActiveSetObject();
+      const questions = activeSet && activeSet.questions ? activeSet.questions : [];
+      
+      // Calculate dynamic allowed time: 30s per question
+      const totalTime = questions.length * 30;
       timeRemaining = totalTime;
 
       document.getElementById('time-info-text').textContent = 
-        `${setName} (${questions.length} questions) • Time allowed: ${formatTime(totalTime)}`;
+        `Set ${setId} (${questions.length} questions) • Time allowed: ${formatTime(totalTime)}`;
     }
 
     function startQuizTimer() {
-      const questions = (currentQuiz.sets && currentQuiz.sets[currentSetKey]) ? currentQuiz.sets[currentSetKey] : [];
+      const activeSet = getActiveSetObject();
+      const questions = activeSet && activeSet.questions ? activeSet.questions : [];
       if (questions.length === 0) return;
 
-      renderQuestions(questions);
+      renderQuestions(activeSet);
 
       document.getElementById('start-banner').classList.add('hidden');
       document.getElementById('timer-bar').classList.remove('hidden');
@@ -882,35 +904,38 @@
       return `${m}:${s}`;
     }
 
-    function renderQuestions(questions) {
+    function renderQuestions(activeSet) {
       const container = document.getElementById('questions-list');
       container.innerHTML = '';
 
-      const dropOptions = currentQuiz.dropdown_options || [];
+      const questions = activeSet.questions || [];
+      const dropOptions = activeSet.dropdown_options || currentQuiz.display_word_bank || [];
 
       questions.forEach((q, index) => {
         const item = document.createElement('div');
         item.className = 'question-item';
         item.id = `q-item-${index}`;
 
-        // Create Dropdown HTML
+        // Build inline dropdown selection menu
         let selectHtml = `<select class="quiz-inline-select" id="q-select-${index}">`;
-        selectHtml += `<option value="">-- Select --</option>`;
+        selectHtml += `<option value="">Select word...</option>`;
         dropOptions.forEach(opt => {
           selectHtml += `<option value="${escapeHtml(opt)}">${escapeHtml(opt)}</option>`;
         });
         selectHtml += `</select>`;
 
-        // Replace blank underscores (_____ or ___) with dropdown select element
-        let questionText = q.question_text || '';
-        if (questionText.includes('____')) {
+        // Regex replaces underline blank patterns (_____, ___, ____________) with dropdown element
+        let questionText = q.text || q.question_text || '';
+        if (/_+/.test(questionText)) {
           questionText = questionText.replace(/_+/g, selectHtml);
         } else {
           questionText += ' ' + selectHtml;
         }
 
+        const qNum = q.question_number || (index + 1);
+
         item.innerHTML = `
-          <span class="q-number">${index + 1}.</span>
+          <span class="q-number">${qNum}.</span>
           <span class="q-text-body">${questionText}</span>
           <span id="feedback-inline-${index}"></span>
         `;
@@ -918,8 +943,9 @@
         container.appendChild(item);
       });
 
-      document.getElementById('submit-quiz-btn').disabled = false;
-      document.getElementById('submit-quiz-btn').style.opacity = '1';
+      const submitBtn = document.getElementById('submit-quiz-btn');
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
     }
 
     function submitQuiz(isAuto) {
@@ -927,7 +953,8 @@
       quizSubmitted = true;
       clearInterval(countdownInterval);
 
-      const questions = (currentQuiz.sets && currentQuiz.sets[currentSetKey]) ? currentQuiz.sets[currentSetKey] : [];
+      const activeSet = getActiveSetObject();
+      const questions = activeSet && activeSet.questions ? activeSet.questions : [];
       let score = 0;
 
       questions.forEach((q, index) => {
@@ -942,28 +969,37 @@
         if (userChoice && userChoice === correctAnswer) {
           score++;
           itemEl.classList.add('correct-bg');
+          selectEl.classList.add('is-correct');
+          feedbackEl.innerHTML = `<span style="color:var(--success); font-weight:bold; margin-left:6px;">✓</span>`;
         } else {
           itemEl.classList.add('incorrect-bg');
+          selectEl.classList.add('is-incorrect');
           feedbackEl.className = 'correct-answer-inline';
           feedbackEl.innerHTML = ` (Correct: <strong>${escapeHtml(q.correct_answer)}</strong>)`;
         }
       });
 
-      // Disable submit button
+      // Disable submission button
       const submitBtn = document.getElementById('submit-quiz-btn');
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.5';
 
       // Summary Box
+      const percentage = Math.round((score / questions.length) * 100) || 0;
       const scoreBox = document.getElementById('score-summary');
-      const timeUpPrefix = isAuto ? '<span style="color:var(--danger)">Time\'s up! </span>' : '';
+      const alertPrefix = isAuto ? '<div style="color:var(--danger); font-size:0.95rem; font-weight:bold; margin-bottom:4px;">Time\'s up! Your quiz has been automatically submitted.</div>' : '';
+      
       scoreBox.innerHTML = `
-        <div class="score-summary-title">${timeUpPrefix}Quiz Completed</div>
-        <p style="margin: 6px 0 0 0; color: #334155;">Your Score: <strong>${score} / ${questions.length}</strong></p>
+        ${alertPrefix}
+        <div class="score-summary-title">Quiz Completed</div>
+        <p style="margin: 6px 0 0 0; color: #334155;">Score: <strong>${score} / ${questions.length} (${percentage}%)</strong></p>
       `;
       scoreBox.classList.remove('hidden');
 
-      // Scroll smoothly to score box
+      if (isAuto) {
+        alert("Time's up! Your quiz has been automatically submitted.");
+      }
+
       scoreBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
@@ -972,7 +1008,7 @@
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
-    // Initialize Quiz Data on load
+    // Initialize Quiz Engine on DOM load
     document.addEventListener('DOMContentLoaded', initQuizEngine);
   </script>
 </body>
