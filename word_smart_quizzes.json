@@ -27603,5 +27603,5392 @@
         ]
       }
     ]
+  },
+    {
+    "quiz_id": "IBA_QQ_01",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 01",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "abacus",
+      "abash",
+      "abate",
+      "aberrant",
+      "abnegate",
+      "aborigine",
+      "abridge",
+      "abysmal",
+      "acquiescent",
+      "acumen"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "abacus",
+          "abash",
+          "abate",
+          "aberrant",
+          "abnegate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The old merchant used an ____________ to calculate large sums before modern calculators were invented.",
+            "correct_answer": "abacus"
+          },
+          {
+            "question_number": 2,
+            "text": "She felt completely ____________ when she forgot her speech in front of the large audience.",
+            "correct_answer": "abash"
+          },
+          {
+            "question_number": 3,
+            "text": "The storm began to ____________ after hours of heavy rainfall and strong winds.",
+            "correct_answer": "abate"
+          },
+          {
+            "question_number": 4,
+            "text": "His ____________ behavior made everyone question his true intentions.",
+            "correct_answer": "aberrant"
+          },
+          {
+            "question_number": 5,
+            "text": "The monk chose to ____________ material wealth in pursuit of a spiritual life.",
+            "correct_answer": "abnegate"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "aborigine",
+          "abridge",
+          "abysmal",
+          "acquiescent",
+          "acumen"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The ____________ of Australia have a rich cultural heritage that dates back thousands of years.",
+            "correct_answer": "aborigine"
+          },
+          {
+            "question_number": 2,
+            "text": "The publisher decided to ____________ the novel to make it more suitable for younger readers.",
+            "correct_answer": "abridge"
+          },
+          {
+            "question_number": 3,
+            "text": "The team's performance in the tournament was ____________, disappointing fans and critics alike.",
+            "correct_answer": "abysmal"
+          },
+          {
+            "question_number": 4,
+            "text": "She remained ____________ to the demands of her supervisor, never questioning his decisions.",
+            "correct_answer": "acquiescent"
+          },
+          {
+            "question_number": 5,
+            "text": "His business ____________ allowed him to make smart investments and grow his company successfully.",
+            "correct_answer": "acumen"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_02",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 02",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "adept",
+      "adroit",
+      "adulterate",
+      "aggravate",
+      "aggrieve",
+      "agility",
+      "agitate",
+      "agony",
+      "alacrity",
+      "alienate"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "adept",
+          "adroit",
+          "adulterate",
+          "aggravate",
+          "aggrieve"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She is highly ____________ at solving complex mathematical problems with ease.",
+            "correct_answer": "adept"
+          },
+          {
+            "question_number": 2,
+            "text": "His ____________ handling of the negotiations impressed both parties.",
+            "correct_answer": "adroit"
+          },
+          {
+            "question_number": 3,
+            "text": "Adding too much water will ____________ the quality of the juice and diminish its flavor.",
+            "correct_answer": "adulterate"
+          },
+          {
+            "question_number": 4,
+            "text": "Scratching the mosquito bite will only ____________ the irritation.",
+            "correct_answer": "aggravate"
+          },
+          {
+            "question_number": 5,
+            "text": "The unfair treatment by his employer seemed to ____________ him deeply.",
+            "correct_answer": "aggrieve"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "agility",
+          "agitate",
+          "agony",
+          "alacrity",
+          "alienate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The gymnast’s ____________ allowed her to perform difficult stunts effortlessly.",
+            "correct_answer": "agility"
+          },
+          {
+            "question_number": 2,
+            "text": "The protesters tried to ____________ the crowd by shouting slogans against the new policy.",
+            "correct_answer": "agitate"
+          },
+          {
+            "question_number": 3,
+            "text": "He screamed in ____________ as the doctor treated his wound.",
+            "correct_answer": "agony"
+          },
+          {
+            "question_number": 4,
+            "text": "She accepted the new job offer with great ____________, excited for the opportunity.",
+            "correct_answer": "alacrity"
+          },
+          {
+            "question_number": 5,
+            "text": "His rude behavior began to ____________ his closest friends, pushing them away.",
+            "correct_answer": "alienate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_03",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 03",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "alight",
+      "allay",
+      "alleviate",
+      "allusion",
+      "aloof",
+      "amalgamate",
+      "amass",
+      "ambiguous",
+      "ambivalent",
+      "ameliorate"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "alight",
+          "allay",
+          "alleviate",
+          "allusion",
+          "aloof"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The passengers were told to ____________ from the bus carefully at the next stop.",
+            "correct_answer": "alight"
+          },
+          {
+            "question_number": 2,
+            "text": "The teacher tried to ____________ the students' fears before the big exam.",
+            "correct_answer": "allay"
+          },
+          {
+            "question_number": 3,
+            "text": "The painkiller helped to ____________ his headache after a few minutes.",
+            "correct_answer": "alleviate"
+          },
+          {
+            "question_number": 4,
+            "text": "The poet made an ____________ to Greek mythology in her latest work.",
+            "correct_answer": "allusion"
+          },
+          {
+            "question_number": 5,
+            "text": "He always remained ____________ at social gatherings, rarely engaging in conversations.",
+            "correct_answer": "aloof"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "amalgamate",
+          "amass",
+          "ambiguous",
+          "ambivalent",
+          "ameliorate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The two companies decided to ____________ to form a stronger business entity.",
+            "correct_answer": "amalgamate"
+          },
+          {
+            "question_number": 2,
+            "text": "Over the years, he managed to ____________ a large collection of rare coins.",
+            "correct_answer": "amass"
+          },
+          {
+            "question_number": 3,
+            "text": "His instructions were so ____________ that no one knew exactly what to do.",
+            "correct_answer": "ambiguous"
+          },
+          {
+            "question_number": 4,
+            "text": "She felt ____________ about moving to a new city, both excited and nervous at the same time.",
+            "correct_answer": "ambivalent"
+          },
+          {
+            "question_number": 5,
+            "text": "The new policies aim to ____________ the working conditions of employees.",
+            "correct_answer": "ameliorate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_04",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 04",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "amenable",
+      "amiable",
+      "anecdote",
+      "annihilate",
+      "annotation",
+      "annul",
+      "anoint",
+      "anomalous",
+      "antagonism",
+      "antidote"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "amenable",
+          "amiable",
+          "anecdote",
+          "annihilate",
+          "annotation"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The manager was ____________ to suggestions for improving the work environment.",
+            "correct_answer": "amenable"
+          },
+          {
+            "question_number": 2,
+            "text": "Her ____________ personality made her well-liked by everyone in the office.",
+            "correct_answer": "amiable"
+          },
+          {
+            "question_number": 3,
+            "text": "He shared a funny ____________ about his childhood during the family dinner.",
+            "correct_answer": "anecdote"
+          },
+          {
+            "question_number": 4,
+            "text": "The powerful explosion was enough to ____________ the entire building.",
+            "correct_answer": "annihilate"
+          },
+          {
+            "question_number": 5,
+            "text": "The professor’s ____________ in the textbook helped students understand difficult concepts.",
+            "correct_answer": "annotation"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "annul",
+          "anoint",
+          "anomalous",
+          "antagonism",
+          "antidote"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The court decided to ____________ the unfair contract due to legal violations.",
+            "correct_answer": "annul"
+          },
+          {
+            "question_number": 2,
+            "text": "The priest will ____________ the new leader with sacred oil during the ceremony.",
+            "correct_answer": "anoint"
+          },
+          {
+            "question_number": 3,
+            "text": "The scientist observed an ____________ result that did not match the expected pattern.",
+            "correct_answer": "anomalous"
+          },
+          {
+            "question_number": 4,
+            "text": "The two political rivals showed clear ____________ during the heated debate.",
+            "correct_answer": "antagonism"
+          },
+          {
+            "question_number": 5,
+            "text": "The doctor quickly gave him an ____________ to counteract the snake venom.",
+            "correct_answer": "antidote"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_05",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 05",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "apathy",
+      "aphorism",
+      "apogee",
+      "appalling",
+      "apparent",
+      "applaud",
+      "apprehend",
+      "arbitrate",
+      "ardor",
+      "armament"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "apathy",
+          "aphorism",
+          "apogee",
+          "appalling",
+          "apparent"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The manager was frustrated by the employee’s ____________ toward important deadlines.",
+            "correct_answer": "apathy"
+          },
+          {
+            "question_number": 2,
+            "text": "The philosopher shared an insightful ____________ about life and human nature.",
+            "correct_answer": "aphorism"
+          },
+          {
+            "question_number": 3,
+            "text": "At the ____________ of his career, the athlete broke several world records.",
+            "correct_answer": "apogee"
+          },
+          {
+            "question_number": 4,
+            "text": "The conditions in the abandoned shelter were absolutely ____________.",
+            "correct_answer": "appalling"
+          },
+          {
+            "question_number": 5,
+            "text": "There was no ____________ reason for his sudden resignation from the company.",
+            "correct_answer": "apparent"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "applaud",
+          "apprehend",
+          "arbitrate",
+          "ardor",
+          "armament"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The audience rose to ____________ the speaker’s powerful and inspiring message.",
+            "correct_answer": "applaud"
+          },
+          {
+            "question_number": 2,
+            "text": "It took her a moment to fully ____________ the complexity of the philosophical argument.",
+            "correct_answer": "apprehend"
+          },
+          {
+            "question_number": 3,
+            "text": "To resolve the dispute fairly, a neutral party was called in to ____________ between the two sides.",
+            "correct_answer": "arbitrate"
+          },
+          {
+            "question_number": 4,
+            "text": "She spoke with such ____________ about the cause that everyone felt inspired to join.",
+            "correct_answer": "ardor"
+          },
+          {
+            "question_number": 5,
+            "text": "The country increased its ____________ in preparation for potential conflict.",
+            "correct_answer": "armament"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_06",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 06",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "array",
+      "articulate",
+      "ascendant",
+      "ascribe",
+      "assert",
+      "assuage",
+      "astute",
+      "augmentation",
+      "averse",
+      "aversion"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "array",
+          "articulate",
+          "ascendant",
+          "ascribe",
+          "assert"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The general inspected the impressive ____________ of troops lined up on the parade ground.",
+            "correct_answer": "array"
+          },
+          {
+            "question_number": 2,
+            "text": "Despite his nerves, he managed to ____________ his ideas clearly during the debate.",
+            "correct_answer": "articulate"
+          },
+          {
+            "question_number": 3,
+            "text": "In the current political climate, the young leader is clearly the ____________ force.",
+            "correct_answer": "ascendant"
+          },
+          {
+            "question_number": 4,
+            "text": "Many historians ____________ the decline of the empire to internal corruption.",
+            "correct_answer": "ascribe"
+          },
+          {
+            "question_number": 5,
+            "text": "The activist continued to ____________ her right to speak out, even under pressure.",
+            "correct_answer": "assert"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "assuage",
+          "astute",
+          "augmentation",
+          "averse",
+          "aversion"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The kind words helped to ____________ his fears before the performance.",
+            "correct_answer": "assuage"
+          },
+          {
+            "question_number": 2,
+            "text": "Her ____________ analysis of the market helped the company avoid a major loss.",
+            "correct_answer": "astute"
+          },
+          {
+            "question_number": 3,
+            "text": "The company announced an ____________ of its workforce to boost productivity.",
+            "correct_answer": "augmentation"
+          },
+          {
+            "question_number": 4,
+            "text": "He was clearly ____________ to taking on additional responsibilities at work.",
+            "correct_answer": "averse"
+          },
+          {
+            "question_number": 5,
+            "text": "She has a strong ____________ to loud, crowded places and prefers quiet settings.",
+            "correct_answer": "aversion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_07",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 07",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "avert",
+      "avow",
+      "banal",
+      "barter",
+      "bashful",
+      "belligerent",
+      "bemuse",
+      "benign",
+      "bereft",
+      "bewilder"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "avert",
+          "avow",
+          "banal",
+          "barter",
+          "bashful"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The quick-thinking driver managed to ____________ a serious accident.",
+            "correct_answer": "avert"
+          },
+          {
+            "question_number": 2,
+            "text": "In court, the witness chose to ____________ his role in the incident openly.",
+            "correct_answer": "avow"
+          },
+          {
+            "question_number": 3,
+            "text": "The movie’s plot was so ____________ that many viewers lost interest halfway through.",
+            "correct_answer": "banal"
+          },
+          {
+            "question_number": 4,
+            "text": "In ancient times, people would often ____________ goods instead of using money.",
+            "correct_answer": "barter"
+          },
+          {
+            "question_number": 5,
+            "text": "The ____________ child hid behind his mother when introduced to the guests.",
+            "correct_answer": "bashful"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "belligerent",
+          "bemuse",
+          "benign",
+          "bereft",
+          "bewilder"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ attitude during the negotiations made compromise impossible.",
+            "correct_answer": "belligerent"
+          },
+          {
+            "question_number": 2,
+            "text": "The complex instructions seemed to ____________ the new employees.",
+            "correct_answer": "bemuse"
+          },
+          {
+            "question_number": 3,
+            "text": "The tumor was found to be ____________, posing no serious health threat.",
+            "correct_answer": "benign"
+          },
+          {
+            "question_number": 4,
+            "text": "She felt utterly ____________ after hearing the unexpected and heartbreaking news.",
+            "correct_answer": "bereft"
+          },
+          {
+            "question_number": 5,
+            "text": "The magician’s tricks continued to ____________ the audience throughout the show.",
+            "correct_answer": "bewilder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_08",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 08",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "blatant",
+      "bloat",
+      "boisterous",
+      "bombastic",
+      "brag",
+      "brazen",
+      "brisk",
+      "brunt",
+      "bureaucracy",
+      "burgeon"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "blatant",
+          "bloat",
+          "boisterous",
+          "bombastic",
+          "brag"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Despite the rules, his ____________ disregard for authority went unpunished.",
+            "correct_answer": "blatant"
+          },
+          {
+            "question_number": 2,
+            "text": "Eating too quickly can cause your stomach to ____________ uncomfortably.",
+            "correct_answer": "bloat"
+          },
+          {
+            "question_number": 3,
+            "text": "The children grew ____________ during the party, making it hard for the adults to talk.",
+            "correct_answer": "boisterous"
+          },
+          {
+            "question_number": 4,
+            "text": "His ____________ speech impressed no one, as it was full of empty, inflated language.",
+            "correct_answer": "bombastic"
+          },
+          {
+            "question_number": 5,
+            "text": "He tends to ____________ about his achievements, which often annoys his peers.",
+            "correct_answer": "brag"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "brazen",
+          "brisk",
+          "brunt",
+          "bureaucracy",
+          "burgeon"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "It was a ____________ move to ignore the warnings and proceed without permission.",
+            "correct_answer": "brazen"
+          },
+          {
+            "question_number": 2,
+            "text": "They took a ____________ walk through the park to enjoy the cool morning air.",
+            "correct_answer": "brisk"
+          },
+          {
+            "question_number": 3,
+            "text": "Small businesses often bear the ____________ of sudden economic downturns.",
+            "correct_answer": "brunt"
+          },
+          {
+            "question_number": 4,
+            "text": "The new manager struggled to cut through the red tape of the existing ____________.",
+            "correct_answer": "bureaucracy"
+          },
+          {
+            "question_number": 5,
+            "text": "As demand increased, the startup began to ____________ and expand rapidly.",
+            "correct_answer": "burgeon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_09",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 09",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "callow",
+      "candor",
+      "capitulate",
+      "capricious",
+      "cathartic",
+      "cautious",
+      "cease",
+      "celerity",
+      "censure",
+      "census"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "callow",
+          "candor",
+          "capitulate",
+          "capricious",
+          "cathartic"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Though talented, the intern was still too ____________ to handle the project alone.",
+            "correct_answer": "callow"
+          },
+          {
+            "question_number": 2,
+            "text": "She spoke with refreshing ____________, never hiding the truth from her colleagues.",
+            "correct_answer": "candor"
+          },
+          {
+            "question_number": 3,
+            "text": "After months of resistance, the rebels were forced to ____________ to the stronger army.",
+            "correct_answer": "capitulate"
+          },
+          {
+            "question_number": 4,
+            "text": "His ____________ decisions made it hard for others to rely on him for consistent leadership.",
+            "correct_answer": "capricious"
+          },
+          {
+            "question_number": 5,
+            "text": "Writing in her journal every night was a ____________ experience, allowing her to release built-up stress and process her emotions.",
+            "correct_answer": "cathartic"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "cautious",
+          "cease",
+          "celerity",
+          "censure",
+          "census"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He remained ____________ when investing, preferring low-risk opportunities.",
+            "correct_answer": "cautious"
+          },
+          {
+            "question_number": 2,
+            "text": "The two sides agreed to ____________ hostilities while peace talks continued.",
+            "correct_answer": "cease"
+          },
+          {
+            "question_number": 3,
+            "text": "The emergency team acted with impressive ____________ during the crisis.",
+            "correct_answer": "celerity"
+          },
+          {
+            "question_number": 4,
+            "text": "The mayor faced public ____________ after misusing government funds.",
+            "correct_answer": "censure"
+          },
+          {
+            "question_number": 5,
+            "text": "The government conducted a national ____________ to update population data.",
+            "correct_answer": "census"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_10",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 10",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "chaotic",
+      "charade",
+      "circuitous",
+      "circumspect",
+      "clamor",
+      "cling",
+      "clunky",
+      "cluster",
+      "cognizance",
+      "coherent"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "chaotic",
+          "charade",
+          "circuitous",
+          "circumspect",
+          "clamor"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The evacuation became ____________ when the alarms failed and no clear instructions were given.",
+            "correct_answer": "chaotic"
+          },
+          {
+            "question_number": 2,
+            "text": "The meeting felt like a ____________, as everyone pretended to agree while avoiding the real issues.",
+            "correct_answer": "charade"
+          },
+          {
+            "question_number": 3,
+            "text": "They took a ____________ route through the hills to avoid the heavy traffic on the highway.",
+            "correct_answer": "circuitous"
+          },
+          {
+            "question_number": 4,
+            "text": "She remained ____________ about sharing personal details with people she had just met.",
+            "correct_answer": "circumspect"
+          },
+          {
+            "question_number": 5,
+            "text": "A ____________ of voices erupted from the crowd, demanding answers from the officials.",
+            "correct_answer": "clamor"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "cling",
+          "clunky",
+          "cluster",
+          "cognizance",
+          "coherent"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Children often ____________ to their parents when they feel scared or insecure.",
+            "correct_answer": "cling"
+          },
+          {
+            "question_number": 2,
+            "text": "The old computer had a ____________ interface that made even simple tasks frustrating.",
+            "correct_answer": "clunky"
+          },
+          {
+            "question_number": 3,
+            "text": "A small ____________ of tourists gathered around the street performer to watch his tricks.",
+            "correct_answer": "cluster"
+          },
+          {
+            "question_number": 4,
+            "text": "The judge took full ____________ of the new evidence before making a final ruling.",
+            "correct_answer": "cognizance"
+          },
+          {
+            "question_number": 5,
+            "text": "Her argument was logical and ____________, making it easy for the audience to follow.",
+            "correct_answer": "coherent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_11",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 11",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "collateral",
+      "commence",
+      "commensurate",
+      "commotion",
+      "complacent",
+      "concealment",
+      "conceit",
+      "concession",
+      "concoct",
+      "concur"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "collateral",
+          "commence",
+          "commensurate",
+          "commotion",
+          "complacent"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The bank required some form of ____________ before approving the loan.",
+            "correct_answer": "collateral"
+          },
+          {
+            "question_number": 2,
+            "text": "The ceremony will officially ____________ once all guests have been seated.",
+            "correct_answer": "commence"
+          },
+          {
+            "question_number": 3,
+            "text": "The employee expected a salary ____________ with his experience and qualifications.",
+            "correct_answer": "commensurate"
+          },
+          {
+            "question_number": 4,
+            "text": "There was a sudden ____________ in the hallway when the fire alarm went off.",
+            "correct_answer": "commotion"
+          },
+          {
+            "question_number": 5,
+            "text": "He grew ____________ after several small successes and stopped striving for improvement.",
+            "correct_answer": "complacent"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "concealment",
+          "conceit",
+          "concession",
+          "concoct",
+          "concur"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The thief relied on darkness for the ____________ of his movements.",
+            "correct_answer": "concealment"
+          },
+          {
+            "question_number": 2,
+            "text": "His arrogant ____________ made it difficult for others to work with him.",
+            "correct_answer": "conceit"
+          },
+          {
+            "question_number": 3,
+            "text": "After hours of negotiation, the company made a small ____________ to resolve the dispute.",
+            "correct_answer": "concession"
+          },
+          {
+            "question_number": 4,
+            "text": "The spy managed to ____________ a believable story to cover his true identity.",
+            "correct_answer": "concoct"
+          },
+          {
+            "question_number": 5,
+            "text": "Many experts ____________ with the theory that climate change is accelerating.",
+            "correct_answer": "concur"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_12",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 12",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "condone",
+      "conduit",
+      "confound",
+      "congenial",
+      "congregation",
+      "congruent",
+      "conjure",
+      "connive",
+      "connotation",
+      "conscience"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "condone",
+          "conduit",
+          "confound",
+          "congenial",
+          "congregation"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The principal refused to ____________ the student’s repeated acts of dishonesty.",
+            "correct_answer": "condone"
+          },
+          {
+            "question_number": 2,
+            "text": "The organization served as a ____________ for delivering aid to remote villages.",
+            "correct_answer": "conduit"
+          },
+          {
+            "question_number": 3,
+            "text": "The sudden change in behavior seemed to ____________ even the most experienced psychologist.",
+            "correct_answer": "confound"
+          },
+          {
+            "question_number": 4,
+            "text": "He was looking for a roommate who would be ____________ with his quiet lifestyle and work schedule.",
+            "correct_answer": "congenial"
+          },
+          {
+            "question_number": 5,
+            "text": "A large ____________ gathered at the church for the holiday service.",
+            "correct_answer": "congregation"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "congruent",
+          "conjure",
+          "connive",
+          "connotation",
+          "conscience"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Their goals are ____________ with the overall mission of the organization.",
+            "correct_answer": "congruent"
+          },
+          {
+            "question_number": 2,
+            "text": "During the hearing, the lawyer stood to ____________ the jury to consider the evidence carefully before reaching a verdict.",
+            "correct_answer": "conjure"
+          },
+          {
+            "question_number": 3,
+            "text": "It's wrong to ____________ at repeated violations of the rules just because the employee is popular.",
+            "correct_answer": "connive"
+          },
+          {
+            "question_number": 4,
+            "text": "The word \"home\" carries a warm and comforting ____________ beyond its literal meaning.",
+            "correct_answer": "connotation"
+          },
+          {
+            "question_number": 5,
+            "text": "Her strong ____________ prevented her from lying, even to protect herself.",
+            "correct_answer": "conscience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_13",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 13",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "conscientious",
+      "consent",
+      "consignment",
+      "constitute",
+      "constrain",
+      "consummate",
+      "contemporary",
+      "contentious",
+      "contravene",
+      "conveyor"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "conscientious",
+          "consent",
+          "consignment",
+          "constitute",
+          "constrain"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He was a ____________ worker who paid close attention to every detail of the project.",
+            "correct_answer": "conscientious"
+          },
+          {
+            "question_number": 2,
+            "text": "The patient must give written ____________ before undergoing surgery.",
+            "correct_answer": "consent"
+          },
+          {
+            "question_number": 3,
+            "text": "The store received a large ____________ of imported goods last week.",
+            "correct_answer": "consignment"
+          },
+          {
+            "question_number": 4,
+            "text": "Freedom of speech and religion ____________ fundamental rights in many democratic societies.",
+            "correct_answer": "constitute"
+          },
+          {
+            "question_number": 5,
+            "text": "Strict regulations often ____________ innovation by limiting creative freedom.",
+            "correct_answer": "constrain"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "consummate",
+          "contemporary",
+          "contentious",
+          "contravene",
+          "conveyor"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She is a ____________ artist known for her exceptional mastery of the craft.",
+            "correct_answer": "consummate"
+          },
+          {
+            "question_number": 2,
+            "text": "The museum featured works by ____________ artists who are shaping today's art scene.",
+            "correct_answer": "contemporary"
+          },
+          {
+            "question_number": 3,
+            "text": "The new law became ____________, sparking fierce arguments among politicians and citizens alike.",
+            "correct_answer": "contentious"
+          },
+          {
+            "question_number": 4,
+            "text": "It is illegal to ____________ traffic laws, as doing so endangers public safety.",
+            "correct_answer": "contravene"
+          },
+          {
+            "question_number": 5,
+            "text": "The airport's luggage is moved from one terminal to another by a long ____________ belt.",
+            "correct_answer": "conveyor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_14",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 14",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "conviction",
+      "copious",
+      "corroborate",
+      "countenance",
+      "credible",
+      "cronyism",
+      "curtail",
+      "dais",
+      "dart",
+      "dauntless"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "conviction",
+          "copious",
+          "corroborate",
+          "countenance",
+          "credible"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His strong ____________ that justice would prevail kept him optimistic throughout the trial.",
+            "correct_answer": "conviction"
+          },
+          {
+            "question_number": 2,
+            "text": "The library had a ____________ collection of historical documents that filled several rooms.",
+            "correct_answer": "copious"
+          },
+          {
+            "question_number": 3,
+            "text": "The witness was able to ____________ the suspect's alibi with solid evidence.",
+            "correct_answer": "corroborate"
+          },
+          {
+            "question_number": 4,
+            "text": "The manager refused to ____________ any form of misconduct in the workplace.",
+            "correct_answer": "countenance"
+          },
+          {
+            "question_number": 5,
+            "text": "The journalist's report was considered ____________ due to its well-researched facts.",
+            "correct_answer": "credible"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "cronyism",
+          "curtail",
+          "dais",
+          "dart",
+          "dauntless"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Widespread ____________ in the government led to public outrage, as unqualified friends of officials were given powerful positions over deserving candidates.",
+            "correct_answer": "cronyism"
+          },
+          {
+            "question_number": 2,
+            "text": "Due to budget cuts, the school had to ____________ several extracurricular programs.",
+            "correct_answer": "curtail"
+          },
+          {
+            "question_number": 3,
+            "text": "The guest speaker stood confidently on the ____________, addressing the audience with authority.",
+            "correct_answer": "dais"
+          },
+          {
+            "question_number": 4,
+            "text": "The rabbit made a quick ____________ into the bushes to avoid being seen.",
+            "correct_answer": "dart"
+          },
+          {
+            "question_number": 5,
+            "text": "Despite the harsh conditions, the ____________ explorer continued his journey across the frozen landscape without fear.",
+            "correct_answer": "dauntless"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_15",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 15",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "dazzle",
+      "deadlock",
+      "dearth",
+      "debris",
+      "deceitful",
+      "decisive",
+      "deliberation",
+      "delicate",
+      "delinquent",
+      "deluge"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "dazzle",
+          "deadlock",
+          "dearth",
+          "debris",
+          "deceitful"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The magician's performance managed to ____________ the audience with stunning illusions and tricks.",
+            "correct_answer": "dazzle"
+          },
+          {
+            "question_number": 2,
+            "text": "The negotiations reached a ____________ when neither side was willing to compromise.",
+            "correct_answer": "deadlock"
+          },
+          {
+            "question_number": 3,
+            "text": "The severe drought led to a ____________ of fresh water in the region.",
+            "correct_answer": "dearth"
+          },
+          {
+            "question_number": 4,
+            "text": "After the storm, the streets were littered with ____________ from fallen trees and broken signs.",
+            "correct_answer": "debris"
+          },
+          {
+            "question_number": 5,
+            "text": "His ____________ behavior made it hard for others to trust him with important matters.",
+            "correct_answer": "deceitful"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "decisive",
+          "deliberation",
+          "delicate",
+          "delinquent",
+          "deluge"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ leadership during the crisis helped the team recover quickly and efficiently.",
+            "correct_answer": "decisive"
+          },
+          {
+            "question_number": 2,
+            "text": "The jury's verdict came only after hours of careful ____________ over the evidence presented.",
+            "correct_answer": "deliberation"
+          },
+          {
+            "question_number": 3,
+            "text": "The artist's ____________ brushwork brought the painting to life with intricate details.",
+            "correct_answer": "delicate"
+          },
+          {
+            "question_number": 4,
+            "text": "The bank sent multiple warnings to the ____________ borrower who had missed several payments.",
+            "correct_answer": "delinquent"
+          },
+          {
+            "question_number": 5,
+            "text": "The heavy rains caused a ____________ that flooded the entire village within hours.",
+            "correct_answer": "deluge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_16",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 16",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "demise",
+      "demographic",
+      "denunciation",
+      "deplete",
+      "deprivation",
+      "deregulate",
+      "deride",
+      "despise",
+      "destitute",
+      "deter"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "demise",
+          "demographic",
+          "denunciation",
+          "deplete",
+          "deprivation"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The sudden ____________ of the company shocked its employees and investors.",
+            "correct_answer": "demise"
+          },
+          {
+            "question_number": 2,
+            "text": "The city conducted a ____________ survey to understand the age distribution of its population.",
+            "correct_answer": "demographic"
+          },
+          {
+            "question_number": 3,
+            "text": "The politician faced harsh ____________ from the media for his controversial statements.",
+            "correct_answer": "denunciation"
+          },
+          {
+            "question_number": 4,
+            "text": "Overfishing continues to ____________ marine life, threatening the ocean's ecological balance.",
+            "correct_answer": "deplete"
+          },
+          {
+            "question_number": 5,
+            "text": "Many children in poverty suffer from food ____________ and lack of proper shelter.",
+            "correct_answer": "deprivation"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "deregulate",
+          "deride",
+          "despise",
+          "destitute",
+          "deter"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The government decided to ____________ the telecommunications industry to encourage competition.",
+            "correct_answer": "deregulate"
+          },
+          {
+            "question_number": 2,
+            "text": "The critics did not hesitate to ____________ the new movie, calling it poorly written and unoriginal.",
+            "correct_answer": "deride"
+          },
+          {
+            "question_number": 3,
+            "text": "She couldn't help but ____________ dishonesty in any form, valuing integrity above all else.",
+            "correct_answer": "despise"
+          },
+          {
+            "question_number": 4,
+            "text": "The charity's primary mission is to provide support for the ____________ who lack basic necessities.",
+            "correct_answer": "destitute"
+          },
+          {
+            "question_number": 5,
+            "text": "Strict security measures are in place to ____________ potential threats from entering the facility.",
+            "correct_answer": "deter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_17",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 17",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "deviant",
+      "devious",
+      "devoid",
+      "devotion",
+      "diabolical",
+      "digress",
+      "discard",
+      "discern",
+      "discreet",
+      "discrepancy"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "deviant",
+          "devious",
+          "devoid",
+          "devotion",
+          "diabolical"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ behavior made others uncomfortable, as he consistently broke social norms.",
+            "correct_answer": "deviant"
+          },
+          {
+            "question_number": 2,
+            "text": "He used ____________ tactics to manipulate others into doing what he wanted without them realizing it.",
+            "correct_answer": "devious"
+          },
+          {
+            "question_number": 3,
+            "text": "The desert landscape was almost entirely ____________ of vegetation, stretching for miles without a single tree.",
+            "correct_answer": "devoid"
+          },
+          {
+            "question_number": 4,
+            "text": "Her lifelong ____________ to animal welfare inspired many to volunteer at shelters.",
+            "correct_answer": "devotion"
+          },
+          {
+            "question_number": 5,
+            "text": "The villain's ____________ plan aimed to bring chaos and destruction to the entire city.",
+            "correct_answer": "diabolical"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "digress",
+          "discard",
+          "discern",
+          "discreet",
+          "discrepancy"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "During his speech, the professor began to ____________ from the main topic and told a personal story.",
+            "correct_answer": "digress"
+          },
+          {
+            "question_number": 2,
+            "text": "She decided to ____________ the broken toys instead of trying to repair them.",
+            "correct_answer": "discard"
+          },
+          {
+            "question_number": 3,
+            "text": "With careful observation, the scientist could ____________ slight changes in the experiment’s results.",
+            "correct_answer": "discern"
+          },
+          {
+            "question_number": 4,
+            "text": "He was always ____________ about his opinions in public, avoiding anything that might offend others.",
+            "correct_answer": "discreet"
+          },
+          {
+            "question_number": 5,
+            "text": "There was a clear ____________ between the two reports, suggesting an error in the data.",
+            "correct_answer": "discrepancy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_18",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 18",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "discretion",
+      "disdain",
+      "disguise",
+      "dither",
+      "divisive",
+      "divulge",
+      "docile",
+      "dogged",
+      "drench",
+      "dune"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "discretion",
+          "disdain",
+          "disguise",
+          "dither",
+          "divisive"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He handled the confidential information with great ____________, ensuring that nothing was accidentally revealed.",
+            "correct_answer": "discretion"
+          },
+          {
+            "question_number": 2,
+            "text": "He looked at the rude comment with ____________ and chose not to respond.",
+            "correct_answer": "disdain"
+          },
+          {
+            "question_number": 3,
+            "text": "The spy wore a fake beard as a clever ____________ to avoid being recognized.",
+            "correct_answer": "disguise"
+          },
+          {
+            "question_number": 4,
+            "text": "Don’t ____________ over the decision—just choose the option that feels right.",
+            "correct_answer": "dither"
+          },
+          {
+            "question_number": 5,
+            "text": "The politician's speech was highly ____________, causing arguments even among close allies.",
+            "correct_answer": "divisive"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "divulge",
+          "docile",
+          "dogged",
+          "drench",
+          "dune"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She refused to ____________ the details of the agreement, citing confidentiality.",
+            "correct_answer": "divulge"
+          },
+          {
+            "question_number": 2,
+            "text": "The normally ____________ puppy suddenly barked at the stranger, surprising everyone.",
+            "correct_answer": "docile"
+          },
+          {
+            "question_number": 3,
+            "text": "His ____________ effort to finish the project, despite the obstacles, impressed everyone.",
+            "correct_answer": "dogged"
+          },
+          {
+            "question_number": 4,
+            "text": "The sudden downpour began to ____________ the hikers before they could find shelter.",
+            "correct_answer": "drench"
+          },
+          {
+            "question_number": 5,
+            "text": "The desert was dotted with a single towering ____________ rising above the flat sands.",
+            "correct_answer": "dune"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_19",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 19",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "dwarf",
+      "dwindle",
+      "efficacy",
+      "elate",
+      "eloquence",
+      "elude",
+      "embezzlement",
+      "emergence",
+      "emit",
+      "emphasize"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "dwarf",
+          "dwindle",
+          "efficacy",
+          "elate",
+          "eloquence"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The skyscraper seemed to ____________ all the surrounding buildings in the city skyline.",
+            "correct_answer": "dwarf"
+          },
+          {
+            "question_number": 2,
+            "text": "As winter approached, the supply of firewood began to ____________ rapidly.",
+            "correct_answer": "dwindle"
+          },
+          {
+            "question_number": 3,
+            "text": "The ____________ of the new drug was proven through several successful clinical trials.",
+            "correct_answer": "efficacy"
+          },
+          {
+            "question_number": 4,
+            "text": "The good news about her promotion seemed to ____________ her and lift her spirits instantly.",
+            "correct_answer": "elate"
+          },
+          {
+            "question_number": 5,
+            "text": "The speaker’s ____________ captivated the audience and made the message unforgettable.",
+            "correct_answer": "eloquence"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "elude",
+          "embezzlement",
+          "emergence",
+          "emit",
+          "emphasize"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The suspect managed to ____________ capture by escaping through the back alley.",
+            "correct_answer": "elude"
+          },
+          {
+            "question_number": 2,
+            "text": "The accountant was arrested for the ____________ of company funds over several years.",
+            "correct_answer": "embezzlement"
+          },
+          {
+            "question_number": 3,
+            "text": "The sudden ____________ of new technologies has transformed how we communicate.",
+            "correct_answer": "emergence"
+          },
+          {
+            "question_number": 4,
+            "text": "Volcanoes can ____________ gases and ash into the atmosphere during an eruption.",
+            "correct_answer": "emit"
+          },
+          {
+            "question_number": 5,
+            "text": "The coach used bold gestures to ____________ the importance of teamwork during practice.",
+            "correct_answer": "emphasize"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_20",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 20",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "emulate",
+      "enact",
+      "enamour",
+      "endowment",
+      "engulf",
+      "enigmatic",
+      "enrage",
+      "entail",
+      "enunciate",
+      "environ"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "emulate",
+          "enact",
+          "enamour",
+          "endowment",
+          "engulf"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Young artists often try to ____________ the style of their favorite painters to learn new techniques.",
+            "correct_answer": "emulate"
+          },
+          {
+            "question_number": 2,
+            "text": "The government plans to ____________ a new law aimed at reducing plastic waste.",
+            "correct_answer": "enact"
+          },
+          {
+            "question_number": 3,
+            "text": "She seemed to ____________ everyone with her charm and graceful manners.",
+            "correct_answer": "enamour"
+          },
+          {
+            "question_number": 4,
+            "text": "The university received a generous ____________ to support scholarships for underprivileged students.",
+            "correct_answer": "endowment"
+          },
+          {
+            "question_number": 5,
+            "text": "The wildfire threatened to ____________ the entire village if not contained quickly.",
+            "correct_answer": "engulf"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "enigmatic",
+          "enrage",
+          "entail",
+          "enunciate",
+          "environ"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ smile left everyone wondering what he was really thinking.",
+            "correct_answer": "enigmatic"
+          },
+          {
+            "question_number": 2,
+            "text": "The unfair accusation seemed to ____________ her, and she responded with visible fury.",
+            "correct_answer": "enrage"
+          },
+          {
+            "question_number": 3,
+            "text": "Building a new highway will ____________ years of planning, construction, and environmental review.",
+            "correct_answer": "entail"
+          },
+          {
+            "question_number": 4,
+            "text": "The speaker made sure to clearly ____________ each word so the audience could understand.",
+            "correct_answer": "enunciate"
+          },
+          {
+            "question_number": 5,
+            "text": "Thick forests and hills ____________ the ancient temple, hiding it from view.",
+            "correct_answer": "environ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_21",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 21",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "erratic",
+      "erudite",
+      "estranged",
+      "evasive",
+      "exacerbate",
+      "exaggerate",
+      "exile",
+      "exodus",
+      "expedite",
+      "exploit"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "erratic",
+          "erudite",
+          "estranged",
+          "evasive",
+          "exacerbate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Her ____________ behavior made it difficult for her coworkers to rely on her.",
+            "correct_answer": "erratic"
+          },
+          {
+            "question_number": 2,
+            "text": "The professor was known for her ____________ lectures, rich with insight and deep knowledge.",
+            "correct_answer": "erudite"
+          },
+          {
+            "question_number": 3,
+            "text": "After years of conflict, he became ____________ from his family and stopped visiting altogether.",
+            "correct_answer": "estranged"
+          },
+          {
+            "question_number": 4,
+            "text": "When asked about the missing files, she gave an ____________ response and avoided eye contact.",
+            "correct_answer": "evasive"
+          },
+          {
+            "question_number": 5,
+            "text": "Continued arguments will only ____________ the situation instead of solving it.",
+            "correct_answer": "exacerbate"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "exaggerate",
+          "exile",
+          "exodus",
+          "expedite",
+          "exploit"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "It’s common for people to ____________ their achievements on social media to impress others.",
+            "correct_answer": "exaggerate"
+          },
+          {
+            "question_number": 2,
+            "text": "The rebel leader was forced into ____________ after the government seized control.",
+            "correct_answer": "exile"
+          },
+          {
+            "question_number": 3,
+            "text": "There was a mass ____________ of residents fleeing the city after the natural disaster.",
+            "correct_answer": "exodus"
+          },
+          {
+            "question_number": 4,
+            "text": "The company hired extra staff to ____________ the processing of customer orders.",
+            "correct_answer": "expedite"
+          },
+          {
+            "question_number": 5,
+            "text": "Some factories ____________ cheap labor in developing countries to increase their profits.",
+            "correct_answer": "exploit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_22",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 22",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "extol",
+      "extradition",
+      "extrapolate",
+      "extravagant",
+      "exude",
+      "fable",
+      "facade",
+      "faint",
+      "falter",
+      "fanciful"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "extol",
+          "extradition",
+          "extrapolate",
+          "extravagant",
+          "exude"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The teacher took a moment to ____________ the student’s creative solution in front of the class.",
+            "correct_answer": "extol"
+          },
+          {
+            "question_number": 2,
+            "text": "The suspect was arrested abroad and is now facing ____________ back to his home country to stand trial.",
+            "correct_answer": "extradition"
+          },
+          {
+            "question_number": 3,
+            "text": "Based on the current sales trend, we can ____________ that profits will rise again next quarter.",
+            "correct_answer": "extrapolate"
+          },
+          {
+            "question_number": 4,
+            "text": "Her ____________ spending habits left her deep in debt despite earning a good salary.",
+            "correct_answer": "extravagant"
+          },
+          {
+            "question_number": 5,
+            "text": "He managed to ____________ confidence even though he was nervous inside.",
+            "correct_answer": "exude"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "fable",
+          "facade",
+          "faint",
+          "falter",
+          "fanciful"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The story about the talking animals was clearly a ____________ meant to teach a lesson.",
+            "correct_answer": "fable"
+          },
+          {
+            "question_number": 2,
+            "text": "Behind the building’s elegant ____________ was a crumbling structure in need of repair.",
+            "correct_answer": "facade"
+          },
+          {
+            "question_number": 3,
+            "text": "She felt so weak and tired that she began to ____________ during the long hike.",
+            "correct_answer": "faint"
+          },
+          {
+            "question_number": 4,
+            "text": "His voice began to ____________ as he lost confidence halfway through the speech.",
+            "correct_answer": "falter"
+          },
+          {
+            "question_number": 5,
+            "text": "The idea that clouds are made of candy is clearly a ____________ notion.",
+            "correct_answer": "fanciful"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_23",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 23",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "fastidious",
+      "feign",
+      "fervent",
+      "fickle",
+      "fiduciary",
+      "flamboyant",
+      "flatter",
+      "flaunt",
+      "fling",
+      "flout"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "fastidious",
+          "feign",
+          "fervent",
+          "fickle",
+          "fiduciary"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The chef was so ____________ that he rejected a dish because the garnish wasn’t placed perfectly.",
+            "correct_answer": "fastidious"
+          },
+          {
+            "question_number": 2,
+            "text": "She tried to ____________ interest in the lecture, but her yawns gave her away.",
+            "correct_answer": "feign"
+          },
+          {
+            "question_number": 3,
+            "text": "He gave a ____________ speech that moved everyone in the audience to tears.",
+            "correct_answer": "fervent"
+          },
+          {
+            "question_number": 4,
+            "text": "Public opinion can be ____________, changing drastically from one week to the next.",
+            "correct_answer": "fickle"
+          },
+          {
+            "question_number": 5,
+            "text": "As a ____________, she was legally bound to act in the best interest of her clients.",
+            "correct_answer": "fiduciary"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "flamboyant",
+          "flatter",
+          "flaunt",
+          "fling",
+          "flout"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The actor’s ____________ outfit drew all eyes on the red carpet.",
+            "correct_answer": "flamboyant"
+          },
+          {
+            "question_number": 2,
+            "text": "He would often ____________ his boss just to stay in her good graces.",
+            "correct_answer": "flatter"
+          },
+          {
+            "question_number": 3,
+            "text": "They loved to ____________ their wealth with expensive cars and designer clothes.",
+            "correct_answer": "flaunt"
+          },
+          {
+            "question_number": 4,
+            "text": "In a fit of rage, he decided to ____________ the book across the room.",
+            "correct_answer": "fling"
+          },
+          {
+            "question_number": 5,
+            "text": "She chose to ____________ the school’s dress code by wearing a protest shirt, fully aware she was defying authority.",
+            "correct_answer": "flout"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_24",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 24",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "foe",
+      "forfeit",
+      "fragile",
+      "fragment",
+      "frantically",
+      "frown",
+      "fugitive",
+      "fumble",
+      "furtive",
+      "fury"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "foe",
+          "forfeit",
+          "fragile",
+          "fragment",
+          "frantically"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The soldier faced his lifelong ____________ on the battlefield, knowing only one of them might survive.",
+            "correct_answer": "foe"
+          },
+          {
+            "question_number": 2,
+            "text": "By missing the deadline, he had to ____________ his right to appeal the decision.",
+            "correct_answer": "forfeit"
+          },
+          {
+            "question_number": 3,
+            "text": "The package was labeled “Handle with care” because its contents were extremely ____________.",
+            "correct_answer": "fragile"
+          },
+          {
+            "question_number": 4,
+            "text": "He could only recall a small ____________ of the conversation, not enough to understand its full meaning.",
+            "correct_answer": "fragment"
+          },
+          {
+            "question_number": 5,
+            "text": "She searched ____________ through her bag, tossing items everywhere in a panic to find her passport.",
+            "correct_answer": "frantically"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "frown",
+          "fugitive",
+          "fumble",
+          "furtive",
+          "fury"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He began to ____________ in disapproval when he saw the mess they had made in the kitchen.",
+            "correct_answer": "frown"
+          },
+          {
+            "question_number": 2,
+            "text": "The authorities launched a manhunt to track down the escaped ____________, who had been on the run for days.",
+            "correct_answer": "fugitive"
+          },
+          {
+            "question_number": 3,
+            "text": "Nervously, he began to ____________ with the keys, dropping them several times before opening the door.",
+            "correct_answer": "fumble"
+          },
+          {
+            "question_number": 4,
+            "text": "The spy cast a ____________ glance over his shoulder before slipping the document into his coat.",
+            "correct_answer": "furtive"
+          },
+          {
+            "question_number": 5,
+            "text": "The driver’s reckless behavior unleashed the ____________ of other angry motorists.",
+            "correct_answer": "fury"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_25",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 25",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "fuss",
+      "futile",
+      "geyser",
+      "gingerly",
+      "girth",
+      "glaring",
+      "gleaned",
+      "gleeful",
+      "gloat",
+      "goblet"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "fuss",
+          "futile",
+          "geyser",
+          "gingerly",
+          "girth"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "There was a big ____________ over the seating arrangement at the wedding reception.",
+            "correct_answer": "fuss"
+          },
+          {
+            "question_number": 2,
+            "text": "Without the proper tools, trying to fix the broken engine was completely ____________.",
+            "correct_answer": "futile"
+          },
+          {
+            "question_number": 3,
+            "text": "The hot spring erupted like a ____________, shooting water high into the air.",
+            "correct_answer": "geyser"
+          },
+          {
+            "question_number": 4,
+            "text": "She placed the antique vase ____________ on the shelf, handling it as delicately as possible to avoid any damage.",
+            "correct_answer": "gingerly"
+          },
+          {
+            "question_number": 5,
+            "text": "The tree’s thick ____________ made it difficult to wrap your arms around the trunk.",
+            "correct_answer": "girth"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "glaring",
+          "gleaned",
+          "gleeful",
+          "gloat",
+          "goblet"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ disregard for the rules caused problems for the entire team.",
+            "correct_answer": "glaring"
+          },
+          {
+            "question_number": 2,
+            "text": "The researcher painstakingly ____________ data from reports, surveys, and interviews to support her thesis.",
+            "correct_answer": "gleaned"
+          },
+          {
+            "question_number": 3,
+            "text": "She wore a ____________ smile as she opened the acceptance letter to her dream university.",
+            "correct_answer": "gleeful"
+          },
+          {
+            "question_number": 4,
+            "text": "It’s rude to ____________ over someone’s failure, especially when they’ve already had a tough day.",
+            "correct_answer": "gloat"
+          },
+          {
+            "question_number": 5,
+            "text": "He raised his silver ____________ in a toast, the wine shimmering in the candlelight.",
+            "correct_answer": "goblet"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_26",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 26",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "goof",
+      "graft",
+      "grape-vine",
+      "grapevine",
+      "grasp",
+      "gregarious",
+      "haggard",
+      "halo",
+      "handicap",
+      "hanker"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "goof",
+          "graft",
+          "grape-vine",
+          "grapevine",
+          "grasp"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "I made a silly ____________ on my first day at work by sending the email to the wrong department.",
+            "correct_answer": "goof"
+          },
+          {
+            "question_number": 2,
+            "text": "The investigation revealed widespread ____________, with officials taking bribes in exchange for contracts.",
+            "correct_answer": "graft"
+          },
+          {
+            "question_number": 3,
+            "text": "The old cottage was covered in a thick ____________, its twisting tendrils climbing the stone walls and shading the windows.",
+            "correct_answer": "grape-vine"
+          },
+          {
+            "question_number": 4,
+            "text": "I heard through the ____________ that the manager might be leaving soon, but nothing’s official.",
+            "correct_answer": "grapevine"
+          },
+          {
+            "question_number": 5,
+            "text": "She tried to ____________ the complex theory, but the professor's explanation only left her more confused.",
+            "correct_answer": "grasp"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "gregarious",
+          "haggard",
+          "halo",
+          "handicap",
+          "hanker"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She was so ____________ that she made friends easily wherever she went.",
+            "correct_answer": "gregarious"
+          },
+          {
+            "question_number": 2,
+            "text": "After several sleepless nights, his face looked ____________ and worn out.",
+            "correct_answer": "haggard"
+          },
+          {
+            "question_number": 3,
+            "text": "The angel in the painting was depicted with a glowing ____________ above her head.",
+            "correct_answer": "halo"
+          },
+          {
+            "question_number": 4,
+            "text": "His poor eyesight was a serious ____________ when trying to drive at night.",
+            "correct_answer": "handicap"
+          },
+          {
+            "question_number": 5,
+            "text": "After years abroad, he began to ____________ for the familiar tastes of his hometown cuisine.",
+            "correct_answer": "hanker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_27",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 27",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "hasty",
+      "hedge",
+      "hedonist",
+      "heed",
+      "helm",
+      "hem",
+      "heretical",
+      "heterogeneous",
+      "hinder"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "hasty",
+          "hedge",
+          "hedonist",
+          "heed",
+          "helm"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "In a ____________ decision, she signed the contract without reading the fine print.",
+            "correct_answer": "hasty"
+          },
+          {
+            "question_number": 2,
+            "text": "They trimmed the ____________, a dense row of small trees, to form a natural fence around the property.",
+            "correct_answer": "hedge"
+          },
+          {
+            "question_number": 3,
+            "text": "As a ____________, he pursued pleasure above all else, seeking joy in every moment.",
+            "correct_answer": "hedonist"
+          },
+          {
+            "question_number": 4,
+            "text": "You should ____________ good advice from experienced mentors to avoid mistakes.",
+            "correct_answer": "heed"
+          },
+          {
+            "question_number": 5,
+            "text": "After the sudden resignation of the CEO, Sabbir was chosen to ____________ the company and lead it through the challenging times ahead.",
+            "correct_answer": "helm"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "helm",
+          "hem",
+          "heretical",
+          "heterogeneous",
+          "hinder"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "During the fierce storm, the experienced sailor took the ____________ of the ship, carefully controlling the wheel to keep it on course.",
+            "correct_answer": "helm"
+          },
+          {
+            "question_number": 2,
+            "text": "She carefully sewed the ____________ of her dress to prevent it from fraying.",
+            "correct_answer": "hem"
+          },
+          {
+            "question_number": 3,
+            "text": "His ____________ ideas were rejected by the traditional scholars as they went against established beliefs.",
+            "correct_answer": "heretical"
+          },
+          {
+            "question_number": 4,
+            "text": "The team was ____________, consisting of members from various countries and backgrounds.",
+            "correct_answer": "heterogeneous"
+          },
+          {
+            "question_number": 5,
+            "text": "Heavy traffic can ____________ emergency vehicles from reaching the hospital quickly.",
+            "correct_answer": "hinder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_28",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 28",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "hoard",
+      "homogeneous",
+      "hospice",
+      "humdrum",
+      "hurtle",
+      "imbue",
+      "immaculate",
+      "imminent",
+      "immune",
+      "impasse"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "hoard",
+          "homogeneous",
+          "hospice",
+          "humdrum",
+          "hurtle"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "During the crisis, some people began to ____________ supplies, causing shortages for others.",
+            "correct_answer": "hoard"
+          },
+          {
+            "question_number": 2,
+            "text": "The students were all from the same region, making the class fairly ____________ in culture and language.",
+            "correct_answer": "homogeneous"
+          },
+          {
+            "question_number": 3,
+            "text": "The terminally ill patients received compassionate care at the local ____________.",
+            "correct_answer": "hospice"
+          },
+          {
+            "question_number": 4,
+            "text": "His daily routine had become so ____________ that every day felt exactly the same.",
+            "correct_answer": "humdrum"
+          },
+          {
+            "question_number": 5,
+            "text": "The car seemed to ____________ down the highway, barely slowing as it approached the exit.",
+            "correct_answer": "hurtle"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "imbue",
+          "immaculate",
+          "imminent",
+          "immune",
+          "impasse"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The teacher aimed to ____________ her students with a love for literature and critical thinking.",
+            "correct_answer": "imbue"
+          },
+          {
+            "question_number": 2,
+            "text": "She wore an ____________ white dress, spotless and perfectly pressed for the ceremony.",
+            "correct_answer": "immaculate"
+          },
+          {
+            "question_number": 3,
+            "text": "The dark clouds signaled that a storm was ____________, prompting everyone to seek shelter.",
+            "correct_answer": "imminent"
+          },
+          {
+            "question_number": 4,
+            "text": "Because of his vaccination, he was ____________ to the disease and never showed any symptoms.",
+            "correct_answer": "immune"
+          },
+          {
+            "question_number": 5,
+            "text": "The negotiations reached an ____________ when neither side was willing to compromise.",
+            "correct_answer": "impasse"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_29",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 29",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "impede",
+      "impediment",
+      "impend",
+      "imperious",
+      "impertinent",
+      "implausible",
+      "implore",
+      "importune",
+      "impromptu",
+      "improvident"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "impede",
+          "impediment",
+          "impend",
+          "imperious",
+          "impertinent"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Bad weather and roadblocks may ____________ rescue efforts in the flood-affected region.",
+            "correct_answer": "impede"
+          },
+          {
+            "question_number": 2,
+            "text": "His speech problem was a serious ____________ to clear communication.",
+            "correct_answer": "impediment"
+          },
+          {
+            "question_number": 3,
+            "text": "With dark clouds gathering quickly, a storm seemed to ____________.",
+            "correct_answer": "impend"
+          },
+          {
+            "question_number": 4,
+            "text": "Her ____________ tone made everyone feel as if she were issuing commands, not making suggestions.",
+            "correct_answer": "imperious"
+          },
+          {
+            "question_number": 5,
+            "text": "It was ____________ of him to interrupt the speaker with off-topic and rude comments.",
+            "correct_answer": "impertinent"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "implausible",
+          "implore",
+          "importune",
+          "impromptu",
+          "improvident"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The idea that she finished the entire project alone in one night seemed completely ____________.",
+            "correct_answer": "implausible"
+          },
+          {
+            "question_number": 2,
+            "text": "He dropped to his knees to ____________ for mercy, tears streaming down his face.",
+            "correct_answer": "implore"
+          },
+          {
+            "question_number": 3,
+            "text": "Reporters continued to ____________ the celebrity with questions despite her clear discomfort.",
+            "correct_answer": "importune"
+          },
+          {
+            "question_number": 4,
+            "text": "We held an ____________ meeting in the hallway when the power went out and the room was locked.",
+            "correct_answer": "impromptu"
+          },
+          {
+            "question_number": 5,
+            "text": "His ____________ spending habits left him with no savings for emergencies.",
+            "correct_answer": "improvident"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_30",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 30",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "imprudent",
+      "inadvertent",
+      "inauspicious",
+      "incoherent",
+      "incongruous",
+      "incumbent",
+      "indigenous",
+      "indigent",
+      "indignant",
+      "indolence"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "imprudent",
+          "inadvertent",
+          "inauspicious",
+          "incoherent",
+          "incongruous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "It would be ____________ to invest all your money in a risky venture without research.",
+            "correct_answer": "imprudent"
+          },
+          {
+            "question_number": 2,
+            "text": "The company issued an apology for the ____________ error in the report.",
+            "correct_answer": "inadvertent"
+          },
+          {
+            "question_number": 3,
+            "text": "The dark clouds and sudden drop in temperature were an ____________ start to the outdoor wedding.",
+            "correct_answer": "inauspicious"
+          },
+          {
+            "question_number": 4,
+            "text": "His speech was so ____________ that no one could follow what he was trying to say.",
+            "correct_answer": "incoherent"
+          },
+          {
+            "question_number": 5,
+            "text": "Wearing a clown costume to a formal dinner party would be completely ____________.",
+            "correct_answer": "incongruous"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "incumbent",
+          "indigenous",
+          "indigent",
+          "indignant",
+          "indolence"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "It is ____________ upon every citizen to vote in a democratic society.",
+            "correct_answer": "incumbent"
+          },
+          {
+            "question_number": 2,
+            "text": "The cactus is ____________ to arid desert regions and thrives in dry climates.",
+            "correct_answer": "indigenous"
+          },
+          {
+            "question_number": 3,
+            "text": "The charity provides food and shelter for the most ____________ members of the community.",
+            "correct_answer": "indigent"
+          },
+          {
+            "question_number": 4,
+            "text": "She was ____________ when the manager accused her of lying in front of everyone.",
+            "correct_answer": "indignant"
+          },
+          {
+            "question_number": 5,
+            "text": "His repeated failures were due not to lack of talent, but to sheer ____________ and laziness.",
+            "correct_answer": "indolence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_31",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 31",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "induct",
+      "indulge",
+      "ineffectuality",
+      "inept",
+      "infer",
+      "infest",
+      "ingenious",
+      "ingest",
+      "inkling",
+      "inmate"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "induct",
+          "indulge",
+          "ineffectuality",
+          "inept",
+          "infer"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The coach will ____________ the new players into the team during tomorrow’s practice.",
+            "correct_answer": "induct"
+          },
+          {
+            "question_number": 2,
+            "text": "It’s okay to ____________ in a sweet treat once in a while, as long as it’s in moderation.",
+            "correct_answer": "indulge"
+          },
+          {
+            "question_number": 3,
+            "text": "The government’s ____________ in dealing with inflation led to widespread public frustration.",
+            "correct_answer": "ineffectuality"
+          },
+          {
+            "question_number": 4,
+            "text": "His ____________ handling of the presentation embarrassed the whole team.",
+            "correct_answer": "inept"
+          },
+          {
+            "question_number": 5,
+            "text": "From the tone of her voice, we can ____________ that she was clearly upset.",
+            "correct_answer": "infer"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "infest",
+          "ingenious",
+          "ingest",
+          "inkling",
+          "inmate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "After the flood, mosquitoes began to ____________ the area, increasing the risk of disease.",
+            "correct_answer": "infest"
+          },
+          {
+            "question_number": 2,
+            "text": "The child’s ____________ solution to the puzzle impressed even the adults.",
+            "correct_answer": "ingenious"
+          },
+          {
+            "question_number": 3,
+            "text": "Always check what you ____________ when foraging; some wild berries can be poisonous.",
+            "correct_answer": "ingest"
+          },
+          {
+            "question_number": 4,
+            "text": "I had no ____________ that they were planning a surprise party for me.",
+            "correct_answer": "inkling"
+          },
+          {
+            "question_number": 5,
+            "text": "The prison guard carefully monitored each ____________ during the daily roll call.",
+            "correct_answer": "inmate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_32",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 32",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "innate",
+      "innocuous",
+      "insidious",
+      "insipid",
+      "insistence",
+      "intervention",
+      "intimidate",
+      "intrinsic",
+      "intuitive",
+      "inundate"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "innate",
+          "innocuous",
+          "insidious",
+          "insipid",
+          "insistence"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Her ____________ sense of rhythm made her a natural dancer without any formal training.",
+            "correct_answer": "innate"
+          },
+          {
+            "question_number": 2,
+            "text": "Though it looked dangerous, the snake was actually ____________ and posed no threat.",
+            "correct_answer": "innocuous"
+          },
+          {
+            "question_number": 3,
+            "text": "The scam was so ____________ that victims didn’t realize they were being cheated until it was too late.",
+            "correct_answer": "insidious"
+          },
+          {
+            "question_number": 4,
+            "text": "The soup was so ____________ that it tasted like warm water with no seasoning.",
+            "correct_answer": "insipid"
+          },
+          {
+            "question_number": 5,
+            "text": "His ____________ on doing things his way often led to conflict with the rest of the team.",
+            "correct_answer": "insistence"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "intervention",
+          "intimidate",
+          "intrinsic",
+          "intuitive",
+          "inundate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The doctor’s timely ____________ prevented the patient’s condition from worsening.",
+            "correct_answer": "intervention"
+          },
+          {
+            "question_number": 2,
+            "text": "The bullies tried to ____________ him into giving up his lunch money.",
+            "correct_answer": "intimidate"
+          },
+          {
+            "question_number": 3,
+            "text": "Compassion is an ____________ part of her personality, not something she had to learn.",
+            "correct_answer": "intrinsic"
+          },
+          {
+            "question_number": 4,
+            "text": "She had an ____________ sense that something was wrong, even before anyone said a word.",
+            "correct_answer": "intuitive"
+          },
+          {
+            "question_number": 5,
+            "text": "After the scandal broke, the company was ____________ with calls from angry customers.",
+            "correct_answer": "inundate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_33",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 33",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "inured",
+      "invade",
+      "itinerary",
+      "jeopardy",
+      "jest",
+      "jovial",
+      "jubilant",
+      "kindle",
+      "lackluster",
+      "languid"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "inured",
+          "invade",
+          "itinerary",
+          "jeopardy",
+          "jest"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Years of hardship had ____________ him to pain and loss, making him emotionally resilient.",
+            "correct_answer": "inured"
+          },
+          {
+            "question_number": 2,
+            "text": "The army planned to ____________ the neighboring country under the cover of night.",
+            "correct_answer": "invade"
+          },
+          {
+            "question_number": 3,
+            "text": "Our travel agent sent us a detailed ____________ outlining each stop on our European tour.",
+            "correct_answer": "itinerary"
+          },
+          {
+            "question_number": 4,
+            "text": "His reckless driving put everyone’s lives in serious ____________.",
+            "correct_answer": "jeopardy"
+          },
+          {
+            "question_number": 5,
+            "text": "His comment was clearly made in ____________ and wasn’t meant to offend anyone.",
+            "correct_answer": "jest"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "jovial",
+          "jubilant",
+          "kindle",
+          "lackluster",
+          "languid"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Her ____________ personality made her the life of every party.",
+            "correct_answer": "jovial"
+          },
+          {
+            "question_number": 2,
+            "text": "The team was ____________ after their unexpected victory in the final match.",
+            "correct_answer": "jubilant"
+          },
+          {
+            "question_number": 3,
+            "text": "The motivational speech helped ____________ a spark of hope in the struggling students.",
+            "correct_answer": "kindle"
+          },
+          {
+            "question_number": 4,
+            "text": "The film received ____________ reviews, with critics calling it dull and uninspired.",
+            "correct_answer": "lackluster"
+          },
+          {
+            "question_number": 5,
+            "text": "After weeks in bed, she gave a ____________ wave to her friends, still too weak to speak.",
+            "correct_answer": "languid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_34",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 34",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "latent",
+      "laudable",
+      "lavish",
+      "legislature",
+      "lenient",
+      "leverage",
+      "linguist",
+      "loathsome",
+      "lump",
+      "magnanimous"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "latent",
+          "laudable",
+          "lavish",
+          "legislature",
+          "lenient"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ talent for leadership became evident when he effortlessly organized the entire event.",
+            "correct_answer": "latent"
+          },
+          {
+            "question_number": 2,
+            "text": "Her efforts to provide free education to underprivileged children were truly ____________.",
+            "correct_answer": "laudable"
+          },
+          {
+            "question_number": 3,
+            "text": "They threw a ____________ wedding with gourmet food, a live orchestra, and fireworks.",
+            "correct_answer": "lavish"
+          },
+          {
+            "question_number": 4,
+            "text": "The new bill was passed after a long debate in the state ____________.",
+            "correct_answer": "legislature"
+          },
+          {
+            "question_number": 5,
+            "text": "The judge was ____________ with the first-time offender and gave him a warning instead of jail time.",
+            "correct_answer": "lenient"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "leverage",
+          "linguist",
+          "loathsome",
+          "lump",
+          "magnanimous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She used her experience and network to gain ____________ in the business negotiation.",
+            "correct_answer": "leverage"
+          },
+          {
+            "question_number": 2,
+            "text": "As a skilled ____________, he could fluently speak and translate seven languages.",
+            "correct_answer": "linguist"
+          },
+          {
+            "question_number": 3,
+            "text": "The dictator’s ____________ actions, including torture and censorship, sparked international outrage.",
+            "correct_answer": "loathsome"
+          },
+          {
+            "question_number": 4,
+            "text": "She found a small ____________ of coal in the corner of the fireplace.",
+            "correct_answer": "lump"
+          },
+          {
+            "question_number": 5,
+            "text": "Despite being insulted, she remained ____________, choosing to forgive rather than retaliate.",
+            "correct_answer": "magnanimous"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_35",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 35",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "malefactor",
+      "malign",
+      "meager",
+      "mediator",
+      "meek",
+      "melancholy",
+      "memoranda",
+      "menial",
+      "merger",
+      "meticulous"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "malefactor",
+          "malign",
+          "meager",
+          "mediator",
+          "meek"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The ____________ was finally caught and brought to justice after a long investigation.",
+            "correct_answer": "malefactor"
+          },
+          {
+            "question_number": 2,
+            "text": "His former colleague tried to ____________ him with false accusations during the trial.",
+            "correct_answer": "malign"
+          },
+          {
+            "question_number": 3,
+            "text": "The villagers survived on a ____________ diet of rice and boiled vegetables during the drought.",
+            "correct_answer": "meager"
+          },
+          {
+            "question_number": 4,
+            "text": "The union and management appointed a ____________ to help settle the labor dispute.",
+            "correct_answer": "mediator"
+          },
+          {
+            "question_number": 5,
+            "text": "Though he had every right to complain, he remained ____________ and accepted the decision quietly.",
+            "correct_answer": "meek"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "melancholy",
+          "memoranda",
+          "menial",
+          "merger",
+          "meticulous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "A sense of ____________ hung in the air as the town mourned the loss of its beloved mayor.",
+            "correct_answer": "melancholy"
+          },
+          {
+            "question_number": 2,
+            "text": "The manager kept a stack of ____________ on her desk to remind her of upcoming meetings.",
+            "correct_answer": "memoranda"
+          },
+          {
+            "question_number": 3,
+            "text": "He was tired of doing the same ____________ tasks every day, like cleaning and filing papers.",
+            "correct_answer": "menial"
+          },
+          {
+            "question_number": 4,
+            "text": "The two tech companies agreed to a ____________ to increase their market share.",
+            "correct_answer": "merger"
+          },
+          {
+            "question_number": 5,
+            "text": "She was ____________ in organizing the event, ensuring every detail was perfect.",
+            "correct_answer": "meticulous"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_36",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 36",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "facade",
+      "ministration",
+      "mirth",
+      "miscreant",
+      "misdemeanor",
+      "monotonous",
+      "monumental",
+      "moratorium",
+      "mutter",
+      "nebula"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "ministration",
+          "mirth",
+          "miscreant",
+          "misdemeanor",
+          "monotonous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The nurse’s gentle ____________ helped comfort the patient during recovery.",
+            "correct_answer": "ministration"
+          },
+          {
+            "question_number": 2,
+            "text": "The room was filled with ____________ as the friends laughed and shared stories.",
+            "correct_answer": "mirth"
+          },
+          {
+            "question_number": 3,
+            "text": "The ____________ vandalized the school walls and fled before the police arrived.",
+            "correct_answer": "miscreant"
+          },
+          {
+            "question_number": 4,
+            "text": "He was charged with a ____________ for causing a disturbance in public.",
+            "correct_answer": "misdemeanor"
+          },
+          {
+            "question_number": 5,
+            "text": "The factory job became unbearable due to its slow, repetitive, and ____________ nature.",
+            "correct_answer": "monotonous"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "facade",
+          "monumental",
+          "moratorium",
+          "mutter",
+          "nebula"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The scientist made a ____________ discovery that changed the course of medical research.",
+            "correct_answer": "monumental"
+          },
+          {
+            "question_number": 2,
+            "text": "The government announced a ____________ on logging to protect the endangered forest.",
+            "correct_answer": "moratorium"
+          },
+          {
+            "question_number": 3,
+            "text": "She began to ____________ complaints under her breath when asked to stay late again.",
+            "correct_answer": "mutter"
+          },
+          {
+            "question_number": 4,
+            "text": "His cheerful personality was just a ____________ hiding deep sadness.",
+            "correct_answer": "facade"
+          },
+          {
+            "question_number": 5,
+            "text": "Through the telescope, we could see the glowing clouds of a distant ____________.",
+            "correct_answer": "nebula"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_37",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 37",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "notorious",
+      "numb",
+      "nurture",
+      "obligation",
+      "obstinate",
+      "obtrusive",
+      "obtuse",
+      "obviate",
+      "offspring",
+      "ominous"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "notorious",
+          "numb",
+          "nurture",
+          "obligation",
+          "obstinate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The criminal was ____________ for his ruthless actions and repeated offenses.",
+            "correct_answer": "notorious"
+          },
+          {
+            "question_number": 2,
+            "text": "After receiving the shocking news, he sat there completely ____________ and speechless.",
+            "correct_answer": "numb"
+          },
+          {
+            "question_number": 3,
+            "text": "Good teachers not only educate but also ____________ the talents and confidence of their students.",
+            "correct_answer": "nurture"
+          },
+          {
+            "question_number": 4,
+            "text": "Parents have a moral and legal ____________ to care for their children.",
+            "correct_answer": "obligation"
+          },
+          {
+            "question_number": 5,
+            "text": "Despite all the evidence, he remained ____________ in his opinion and refused to change his mind.",
+            "correct_answer": "obstinate"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "obtrusive",
+          "obtuse",
+          "obviate",
+          "offspring",
+          "ominous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The security camera was placed in an ____________ spot, making everyone in the room feel watched and uncomfortable.",
+            "correct_answer": "obtrusive"
+          },
+          {
+            "question_number": 2,
+            "text": "He was too ____________ to understand the irony in her statement.",
+            "correct_answer": "obtuse"
+          },
+          {
+            "question_number": 3,
+            "text": "Regular maintenance can help ____________ the need for costly repairs.",
+            "correct_answer": "obviate"
+          },
+          {
+            "question_number": 4,
+            "text": "The proud mother introduced each of her ____________ with a smile.",
+            "correct_answer": "offspring"
+          },
+          {
+            "question_number": 5,
+            "text": "Dark clouds and howling winds created an ____________ feeling before the storm hit.",
+            "correct_answer": "ominous"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_38",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 38",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "opaque",
+      "opulence",
+      "orate",
+      "ordeal",
+      "ornate",
+      "outskirts",
+      "pacify",
+      "palisade",
+      "pang",
+      "paradoxical"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "opaque",
+          "opulence",
+          "orate",
+          "ordeal",
+          "ornate"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The explanation was so ____________ that no one could figure out what he actually meant.",
+            "correct_answer": "opaque"
+          },
+          {
+            "question_number": 2,
+            "text": "The palace was a symbol of royal ____________, with gold-plated walls and crystal chandeliers.",
+            "correct_answer": "opulence"
+          },
+          {
+            "question_number": 3,
+            "text": "The politician continued to ____________ for nearly an hour, barely pausing for breath.",
+            "correct_answer": "orate"
+          },
+          {
+            "question_number": 4,
+            "text": "Surviving the desert with no food or water for days was a true ____________ for the lost hikers.",
+            "correct_answer": "ordeal"
+          },
+          {
+            "question_number": 5,
+            "text": "The ballroom was decorated with ____________ chandeliers and gold-trimmed walls.",
+            "correct_answer": "ornate"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "outskirts",
+          "pacify",
+          "palisade",
+          "pang",
+          "paradoxical"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "They built their new house on the ____________ of the city to enjoy more peace and space.",
+            "correct_answer": "outskirts"
+          },
+          {
+            "question_number": 2,
+            "text": "The mother tried to ____________ the crying baby by gently rocking her to sleep.",
+            "correct_answer": "pacify"
+          },
+          {
+            "question_number": 3,
+            "text": "A wooden ____________ surrounded the ancient village, protecting it from wild animals.",
+            "correct_answer": "palisade"
+          },
+          {
+            "question_number": 4,
+            "text": "He felt a sharp ____________ of guilt after shouting at his younger brother.",
+            "correct_answer": "pang"
+          },
+          {
+            "question_number": 5,
+            "text": "It's ____________ that the more we learn, the more we realize how little we actually know.",
+            "correct_answer": "paradoxical"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_39",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 39",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "patron",
+      "paucity",
+      "peccadillo",
+      "pecuniary",
+      "peddler",
+      "peddling",
+      "peers",
+      "penultimate",
+      "perceive",
+      "perennial"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "patron",
+          "paucity",
+          "peccadillo",
+          "pecuniary",
+          "peddler"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The artist thanked his long-time ____________ who had supported his work for over a decade.",
+            "correct_answer": "patron"
+          },
+          {
+            "question_number": 2,
+            "text": "The rescue effort was hampered by a ____________ of resources in the remote region.",
+            "correct_answer": "paucity"
+          },
+          {
+            "question_number": 3,
+            "text": "He was quick to forgive his friend's minor ____________ and moved on without resentment.",
+            "correct_answer": "peccadillo"
+          },
+          {
+            "question_number": 4,
+            "text": "He faced a ____________ penalty, having to pay a heavy fine instead of serving jail time.",
+            "correct_answer": "pecuniary"
+          },
+          {
+            "question_number": 5,
+            "text": "The ____________ wandered through the village, selling handmade trinkets and herbs.",
+            "correct_answer": "peddler"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "peddling",
+          "peers",
+          "penultimate",
+          "perceive",
+          "perennial"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He was arrested for illegally ____________ fake medicine in the local market.",
+            "correct_answer": "peddling"
+          },
+          {
+            "question_number": 2,
+            "text": "She is highly respected among her ____________ for her honesty and dedication.",
+            "correct_answer": "peers"
+          },
+          {
+            "question_number": 3,
+            "text": "In a relay race, the ____________ runner must pass the baton with precision to the final runner.",
+            "correct_answer": "penultimate"
+          },
+          {
+            "question_number": 4,
+            "text": "Children often ____________ emotions in others more deeply than adults realize.",
+            "correct_answer": "perceive"
+          },
+          {
+            "question_number": 5,
+            "text": "The rose is a ____________ plant that blooms year after year without replanting.",
+            "correct_answer": "perennial"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_40",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 40",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "perpetual",
+      "persistent",
+      "pertain",
+      "perturb",
+      "perusal",
+      "pervasive",
+      "petty",
+      "placate",
+      "placid",
+      "portrait"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "perpetual",
+          "persistent",
+          "pertain",
+          "perturb",
+          "perusal"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "His ____________ lateness eventually led to him losing his job.",
+            "correct_answer": "perpetual"
+          },
+          {
+            "question_number": 2,
+            "text": "Despite numerous failures, her ____________ efforts finally led to success.",
+            "correct_answer": "persistent"
+          },
+          {
+            "question_number": 3,
+            "text": "The documents you’re requesting do not ____________ to this case.",
+            "correct_answer": "pertain"
+          },
+          {
+            "question_number": 4,
+            "text": "The sudden noise seemed to ____________ the normally calm speaker.",
+            "correct_answer": "perturb"
+          },
+          {
+            "question_number": 5,
+            "text": "After a careful ____________ of the contract, she decided not to sign it.",
+            "correct_answer": "perusal"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "pervasive",
+          "petty",
+          "placate",
+          "placid",
+          "portrait"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The influence of social media is so ____________ that it affects almost every aspect of modern life.",
+            "correct_answer": "pervasive"
+          },
+          {
+            "question_number": 2,
+            "text": "They argued over ____________ issues instead of focusing on the real problem.",
+            "correct_answer": "petty"
+          },
+          {
+            "question_number": 3,
+            "text": "The manager tried to ____________ the angry customer by offering a full refund and a sincere apology.",
+            "correct_answer": "placate"
+          },
+          {
+            "question_number": 4,
+            "text": "The lake was so ____________ that its surface looked like a mirror reflecting the sky.",
+            "correct_answer": "placid"
+          },
+          {
+            "question_number": 5,
+            "text": "The artist painted a detailed ____________ of the queen, capturing her expression and posture perfectly.",
+            "correct_answer": "portrait"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_41",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 41",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "posit",
+      "posterity",
+      "pragmatic",
+      "precarious",
+      "precedent",
+      "precipitate",
+      "precocious",
+      "predecessor",
+      "predicament",
+      "presumptuous"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "posit",
+          "posterity",
+          "pragmatic",
+          "precarious",
+          "precedent"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The philosopher chose to ____________ that all humans are inherently good, using this assumption as the foundation for his argument.",
+            "correct_answer": "posit"
+          },
+          {
+            "question_number": 2,
+            "text": "They buried a time capsule for the benefit of ____________, hoping future generations would learn about their era.",
+            "correct_answer": "posterity"
+          },
+          {
+            "question_number": 3,
+            "text": "Rather than dreaming of perfect solutions, she took a ____________ approach and focused on what could actually be done.",
+            "correct_answer": "pragmatic"
+          },
+          {
+            "question_number": 4,
+            "text": "Climbing without proper gear on the icy cliff was a ____________ decision that put their lives at risk.",
+            "correct_answer": "precarious"
+          },
+          {
+            "question_number": 5,
+            "text": "The court's ruling set a legal ____________ that would influence similar cases for years to come.",
+            "correct_answer": "precedent"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "precipitate",
+          "precocious",
+          "predecessor",
+          "predicament",
+          "presumptuous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The government's sudden decision to raise taxes could ____________ economic instability across the region.",
+            "correct_answer": "precipitate"
+          },
+          {
+            "question_number": 2,
+            "text": "The ____________ child amazed everyone by solving high school math problems at age eight.",
+            "correct_answer": "precocious"
+          },
+          {
+            "question_number": 3,
+            "text": "The new manager had a very different leadership style from her ____________.",
+            "correct_answer": "predecessor"
+          },
+          {
+            "question_number": 4,
+            "text": "She found herself in a financial ____________ after unexpectedly losing her job and having no savings to fall back on.",
+            "correct_answer": "predicament"
+          },
+          {
+            "question_number": 5,
+            "text": "It was ____________ of him to assume he’d be invited to the private meeting without being asked.",
+            "correct_answer": "presumptuous"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_42",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 42",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "prevalent",
+      "prey",
+      "prodigality",
+      "profligate",
+      "profound",
+      "profuse",
+      "proliferation",
+      "propensity",
+      "propriety",
+      "prosecute"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "prevalent",
+          "prey",
+          "prodigality",
+          "profligate",
+          "profound"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Flu cases are especially ____________ during the winter months.",
+            "correct_answer": "prevalent"
+          },
+          {
+            "question_number": 2,
+            "text": "The lion waited in silence, watching its ____________ from a distance before pouncing.",
+            "correct_answer": "prey"
+          },
+          {
+            "question_number": 3,
+            "text": "His ____________ during his youth left him with nothing but debt in adulthood.",
+            "correct_answer": "prodigality"
+          },
+          {
+            "question_number": 4,
+            "text": "The king was known for his ____________ lifestyle, wasting enormous sums on lavish feasts and luxuries.",
+            "correct_answer": "profligate"
+          },
+          {
+            "question_number": 5,
+            "text": "The speaker's words had a ____________ impact on the audience, leaving many deep in thought.",
+            "correct_answer": "profound"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "profuse",
+          "proliferation",
+          "propensity",
+          "propriety",
+          "prosecute"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "After the long hike, he was covered in ____________ sweat and needed to rest.",
+            "correct_answer": "profuse"
+          },
+          {
+            "question_number": 2,
+            "text": "There has been a rapid ____________ of online learning platforms in recent years.",
+            "correct_answer": "proliferation"
+          },
+          {
+            "question_number": 3,
+            "text": "She has a natural ____________ for learning languages and picks them up with ease.",
+            "correct_answer": "propensity"
+          },
+          {
+            "question_number": 4,
+            "text": "He questioned the ____________ of her behavior at the formal event, as she kept interrupting the host.",
+            "correct_answer": "propriety"
+          },
+          {
+            "question_number": 5,
+            "text": "The state decided to ____________ the company for violating environmental laws.",
+            "correct_answer": "prosecute"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_43",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 43",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "prudence",
+      "puny",
+      "quarry",
+      "quay",
+      "quiver",
+      "radiant",
+      "radical",
+      "ramification",
+      "rampant",
+      "rancor"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "prudence",
+          "puny",
+          "quarry",
+          "quay",
+          "quiver"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Out of ____________, she saved most of her earnings rather than spending them immediately.",
+            "correct_answer": "prudence"
+          },
+          {
+            "question_number": 2,
+            "text": "Compared to the towering players on the opposing team, the young boy looked ____________.",
+            "correct_answer": "puny"
+          },
+          {
+            "question_number": 3,
+            "text": "The workers spent months extracting stone from the ____________ to supply materials for the new building.",
+            "correct_answer": "quarry"
+          },
+          {
+            "question_number": 4,
+            "text": "The boat was tied securely to the ____________ as passengers disembarked.",
+            "correct_answer": "quay"
+          },
+          {
+            "question_number": 5,
+            "text": "He couldn’t help but ____________ with excitement before going on stage for the first time.",
+            "correct_answer": "quiver"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "radiant",
+          "radical",
+          "ramification",
+          "rampant",
+          "rancor"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Her smile was so ____________ that it seemed to light up the entire room.",
+            "correct_answer": "radiant"
+          },
+          {
+            "question_number": 2,
+            "text": "The scientist proposed a ____________ new approach that challenged decades of accepted theory.",
+            "correct_answer": "radical"
+          },
+          {
+            "question_number": 3,
+            "text": "The new law has many unintended ____________ that could affect small businesses.",
+            "correct_answer": "ramification"
+          },
+          {
+            "question_number": 4,
+            "text": "Corruption was ____________ in the department, spreading unchecked through every level of management.",
+            "correct_answer": "rampant"
+          },
+          {
+            "question_number": 5,
+            "text": "Even years later, he still spoke of his rival with a tone of deep ____________.",
+            "correct_answer": "rancor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_44",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 44",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "reclusive",
+      "reconcile",
+      "reconnoiter",
+      "redeem",
+      "redundant",
+      "reel",
+      "refract",
+      "regret",
+      "rein",
+      "reinforce"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "reclusive",
+          "reconcile",
+          "reconnoiter",
+          "redeem",
+          "redundant"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The author lived a ____________ life in the mountains, rarely interacting with anyone.",
+            "correct_answer": "reclusive"
+          },
+          {
+            "question_number": 2,
+            "text": "They met to ____________ their differences and rebuild their friendship after years of tension.",
+            "correct_answer": "reconcile"
+          },
+          {
+            "question_number": 3,
+            "text": "The soldiers were sent ahead to ____________ the area before the main force arrived.",
+            "correct_answer": "reconnoiter"
+          },
+          {
+            "question_number": 4,
+            "text": "He hoped to ____________ himself by volunteering after his earlier mistakes.",
+            "correct_answer": "redeem"
+          },
+          {
+            "question_number": 5,
+            "text": "The paragraph was full of ____________ phrases that repeated the same idea.",
+            "correct_answer": "redundant"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "reel",
+          "refract",
+          "regret",
+          "rein",
+          "reinforce"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The boxer began to ____________ backward after taking a powerful punch to the jaw.",
+            "correct_answer": "reel"
+          },
+          {
+            "question_number": 2,
+            "text": "A prism can ____________ sunlight, splitting it into a spectrum of colors.",
+            "correct_answer": "refract"
+          },
+          {
+            "question_number": 3,
+            "text": "He didn’t study for the exam and would later ____________ not having prepared.",
+            "correct_answer": "regret"
+          },
+          {
+            "question_number": 4,
+            "text": "She tried to keep a tight ____________ on her emotions during the stressful meeting.",
+            "correct_answer": "rein"
+          },
+          {
+            "question_number": 5,
+            "text": "The engineers added extra steel beams to ____________ the structure and prevent collapse.",
+            "correct_answer": "reinforce"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_45",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 45",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "reiterate",
+      "relic",
+      "reluctant",
+      "render",
+      "renegade",
+      "renounce",
+      "repercussion",
+      "reprehensible",
+      "reprimand",
+      "repulsive"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "reiterate",
+          "relic",
+          "reluctant",
+          "render",
+          "renegade"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The teacher had to ____________ the instructions several times before the class understood.",
+            "correct_answer": "reiterate"
+          },
+          {
+            "question_number": 2,
+            "text": "The ancient coin found at the site was believed to be a ____________ of a lost civilization.",
+            "correct_answer": "relic"
+          },
+          {
+            "question_number": 3,
+            "text": "He was ____________ to speak in public, despite knowing the topic well.",
+            "correct_answer": "reluctant"
+          },
+          {
+            "question_number": 4,
+            "text": "The sudden storm will likely ____________ the outdoor event impossible.",
+            "correct_answer": "render"
+          },
+          {
+            "question_number": 5,
+            "text": "The soldier turned ____________, abandoning his unit and siding with the enemy.",
+            "correct_answer": "renegade"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "renounce",
+          "repercussion",
+          "reprehensible",
+          "reprimand",
+          "repulsive"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She decided to ____________ her claim to the inheritance and let her brother have it instead.",
+            "correct_answer": "renounce"
+          },
+          {
+            "question_number": 2,
+            "text": "The decision to cut jobs had a serious economic ____________ that affected the whole community.",
+            "correct_answer": "repercussion"
+          },
+          {
+            "question_number": 3,
+            "text": "Cheating on the exam was a ____________ act that disappointed both his peers and teachers.",
+            "correct_answer": "reprehensible"
+          },
+          {
+            "question_number": 4,
+            "text": "The manager had to ____________ the employee for repeatedly arriving late.",
+            "correct_answer": "reprimand"
+          },
+          {
+            "question_number": 5,
+            "text": "The smell from the garbage was so ____________ that everyone avoided the area.",
+            "correct_answer": "repulsive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_46",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 46",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "resentment",
+      "resilient",
+      "retaliation",
+      "reticence",
+      "retreat",
+      "reverence",
+      "ridicule",
+      "rife",
+      "rigidity",
+      "rigorous"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "resentment",
+          "resilient",
+          "retaliation",
+          "reticence",
+          "retreat"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She held deep ____________ toward her colleague for taking credit for her work.",
+            "correct_answer": "resentment"
+          },
+          {
+            "question_number": 2,
+            "text": "Despite the challenges, the team remained ____________ and quickly bounced back after the defeat.",
+            "correct_answer": "resilient"
+          },
+          {
+            "question_number": 3,
+            "text": "The attack was seen as an act of ____________ for previous aggression.",
+            "correct_answer": "retaliation"
+          },
+          {
+            "question_number": 4,
+            "text": "His natural ____________ made him an excellent listener but a hesitant public speaker.",
+            "correct_answer": "reticence"
+          },
+          {
+            "question_number": 5,
+            "text": "The soldiers were forced to ____________ when they were outnumbered and running low on supplies.",
+            "correct_answer": "retreat"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "reverence",
+          "ridicule",
+          "rife",
+          "rigidity",
+          "rigorous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The monk was treated with great ____________ by the villagers, who saw him as a holy man.",
+            "correct_answer": "reverence"
+          },
+          {
+            "question_number": 2,
+            "text": "The comedian's joke was met with laughter, but some took offense at the apparent ____________ of serious issues.",
+            "correct_answer": "ridicule"
+          },
+          {
+            "question_number": 3,
+            "text": "Rumors were ____________ throughout the office, causing tension among the staff.",
+            "correct_answer": "rife"
+          },
+          {
+            "question_number": 4,
+            "text": "The ____________ of the rules left no room for flexibility or adaptation.",
+            "correct_answer": "rigidity"
+          },
+          {
+            "question_number": 5,
+            "text": "The training program was so ____________ that only a few candidates made it through to the end.",
+            "correct_answer": "rigorous"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_47",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 47",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "rookie",
+      "roster",
+      "roundabout",
+      "rub",
+      "rudder",
+      "ruination",
+      "rumination",
+      "rung",
+      "rust",
+      "rustle"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "rookie",
+          "roster",
+          "roundabout",
+          "rub",
+          "rudder"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "As a ____________, he still had a lot to learn about the pace and pressure of professional sports.",
+            "correct_answer": "rookie"
+          },
+          {
+            "question_number": 2,
+            "text": "The coach posted the team ____________ on the locker room wall before the game.",
+            "correct_answer": "roster"
+          },
+          {
+            "question_number": 3,
+            "text": "We took a ____________ route to avoid the traffic, which added an hour to our trip.",
+            "correct_answer": "roundabout"
+          },
+          {
+            "question_number": 4,
+            "text": "The rough fabric began to ____________ against his skin, causing irritation on his arm.",
+            "correct_answer": "rub"
+          },
+          {
+            "question_number": 5,
+            "text": "The ship’s ____________ broke during the storm, leaving the crew unable to steer.",
+            "correct_answer": "rudder"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "ruination",
+          "rumination",
+          "rung",
+          "rust",
+          "rustle"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Poor financial decisions eventually led to the complete ____________ of his business.",
+            "correct_answer": "ruination"
+          },
+          {
+            "question_number": 2,
+            "text": "After much ____________, she finally made peace with her past mistakes.",
+            "correct_answer": "rumination"
+          },
+          {
+            "question_number": 3,
+            "text": "He climbed to the top by stepping carefully on each ____________ of the ladder.",
+            "correct_answer": "rung"
+          },
+          {
+            "question_number": 4,
+            "text": "The tools were left outside in the rain and began to gather ____________.",
+            "correct_answer": "rust"
+          },
+          {
+            "question_number": 5,
+            "text": "She heard the faint ____________ of leaves as something moved in the bushes.",
+            "correct_answer": "rustle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_48",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 48",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "sagacious",
+      "satiate",
+      "scarce",
+      "scarcity",
+      "scrupulous",
+      "scuttle",
+      "semblance",
+      "senile",
+      "sequestered",
+      "serene"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "sagacious",
+          "satiate",
+          "scarce",
+          "scarcity",
+          "scrupulous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The advisor was known for her ____________ insights and thoughtful decisions.",
+            "correct_answer": "sagacious"
+          },
+          {
+            "question_number": 2,
+            "text": "A light snack was enough to ____________ his hunger until dinner.",
+            "correct_answer": "satiate"
+          },
+          {
+            "question_number": 3,
+            "text": "Clean drinking water was ____________ in the remote desert village.",
+            "correct_answer": "scarce"
+          },
+          {
+            "question_number": 4,
+            "text": "During the drought, the ____________ of food forced families to ration supplies.",
+            "correct_answer": "scarcity"
+          },
+          {
+            "question_number": 5,
+            "text": "The accountant was known for being ____________, always checking every detail with precision.",
+            "correct_answer": "scrupulous"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "scuttle",
+          "semblance",
+          "senile",
+          "sequestered",
+          "serene"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The mice began to ____________ away as soon as the lights were turned on.",
+            "correct_answer": "scuttle"
+          },
+          {
+            "question_number": 2,
+            "text": "He tried to maintain a ____________ of calm, though his hands were shaking.",
+            "correct_answer": "semblance"
+          },
+          {
+            "question_number": 3,
+            "text": "The elderly man had become increasingly ____________, often forgetting names and places.",
+            "correct_answer": "senile"
+          },
+          {
+            "question_number": 4,
+            "text": "The researchers worked in a ____________ lab, away from public access and distractions.",
+            "correct_answer": "sequestered"
+          },
+          {
+            "question_number": 5,
+            "text": "She sat by the lake, enjoying the ____________ beauty of the quiet morning.",
+            "correct_answer": "serene"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_49",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 49",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "sever",
+      "sham",
+      "sheer",
+      "shrink",
+      "shroud",
+      "shun",
+      "sift",
+      "sleazy",
+      "slimy",
+      "slit"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "sever",
+          "sham",
+          "sheer",
+          "shrink",
+          "shroud"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The company had to ____________ ties with the supplier after repeated contract violations.",
+            "correct_answer": "sever"
+          },
+          {
+            "question_number": 2,
+            "text": "The entire competition turned out to be a ____________ to gain publicity for the brand.",
+            "correct_answer": "sham"
+          },
+          {
+            "question_number": 3,
+            "text": "The cliff dropped at a ____________ angle, making it dangerous to climb down.",
+            "correct_answer": "sheer"
+          },
+          {
+            "question_number": 4,
+            "text": "Wool sweaters tend to ____________ if washed in hot water.",
+            "correct_answer": "shrink"
+          },
+          {
+            "question_number": 5,
+            "text": "Thick fog began to ____________ the mountains, hiding them from view.",
+            "correct_answer": "shroud"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "shun",
+          "sift",
+          "sleazy",
+          "slimy",
+          "slit"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He chose to ____________ social media to focus on his mental well-being.",
+            "correct_answer": "shun"
+          },
+          {
+            "question_number": 2,
+            "text": "The archaeologists used fine screens to ____________ through the dirt for tiny artifacts.",
+            "correct_answer": "sift"
+          },
+          {
+            "question_number": 3,
+            "text": "The politician was caught in a ____________ scandal involving bribery and fraud.",
+            "correct_answer": "sleazy"
+          },
+          {
+            "question_number": 4,
+            "text": "The sidewalk was covered in a ____________ layer of algae, making it slippery and dangerous to walk on.",
+            "correct_answer": "slimy"
+          },
+          {
+            "question_number": 5,
+            "text": "He cut a narrow ____________ in the curtain to peek outside without being seen.",
+            "correct_answer": "slit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_50",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 50",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "sly",
+      "somber",
+      "sophomore",
+      "sparse",
+      "spectrum",
+      "spinster",
+      "spit",
+      "splendor",
+      "splurge",
+      "sporadic"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "sly",
+          "somber",
+          "sophomore",
+          "sparse",
+          "spectrum"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "With a ____________ grin, the child quietly slipped the cookie into his pocket.",
+            "correct_answer": "sly"
+          },
+          {
+            "question_number": 2,
+            "text": "A ____________ mood filled the room as the mourners gathered in silence.",
+            "correct_answer": "somber"
+          },
+          {
+            "question_number": 3,
+            "text": "As a college ____________, she felt more confident navigating campus than she had as a freshman.",
+            "correct_answer": "sophomore"
+          },
+          {
+            "question_number": 4,
+            "text": "Vegetation was ____________ in the desert, with only a few cacti scattered across the sand.",
+            "correct_answer": "sparse"
+          },
+          {
+            "question_number": 5,
+            "text": "The artist's work covers a wide ____________ of styles, from realism to abstract.",
+            "correct_answer": "spectrum"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "spinster",
+          "spit",
+          "splendor",
+          "splurge",
+          "sporadic"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "She remained a ____________ by choice, preferring independence over marriage.",
+            "correct_answer": "spinster"
+          },
+          {
+            "question_number": 2,
+            "text": "He took a deep breath and then began to ____________ out the bitter medicine.",
+            "correct_answer": "spit"
+          },
+          {
+            "question_number": 3,
+            "text": "The palace stood in quiet ____________, its golden domes shining in the morning sun.",
+            "correct_answer": "splendor"
+          },
+          {
+            "question_number": 4,
+            "text": "After saving for months, she decided to ____________ on a luxury weekend getaway.",
+            "correct_answer": "splurge"
+          },
+          {
+            "question_number": 5,
+            "text": "His attendance was ____________, showing up only once or twice a week.",
+            "correct_answer": "sporadic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_51",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 51",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "squander",
+      "startle",
+      "staunch",
+      "steadfast",
+      "stealthy",
+      "stern",
+      "strenuous",
+      "stroll",
+      "stumble"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "squander",
+          "startle",
+          "staunch",
+          "steadfast",
+          "stealthy"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He managed to ____________ his inheritance on gambling and unnecessary purchases.",
+            "correct_answer": "squander"
+          },
+          {
+            "question_number": 2,
+            "text": "The sudden thunderclap was enough to ____________ the sleeping cat.",
+            "correct_answer": "startle"
+          },
+          {
+            "question_number": 3,
+            "text": "She’s a ____________ supporter of the cause and volunteers every weekend without fail.",
+            "correct_answer": "staunch"
+          },
+          {
+            "question_number": 4,
+            "text": "Despite criticism, he remained ____________ in his beliefs and refused to compromise.",
+            "correct_answer": "steadfast"
+          },
+          {
+            "question_number": 5,
+            "text": "The cat made a ____________ approach toward the birds, careful not to make a sound.",
+            "correct_answer": "stealthy"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "stern",
+          "strenuous",
+          "stroll",
+          "stumble"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The crew gathered at the ____________ to lower the cargo into the supply boat waiting behind the ship.",
+            "correct_answer": "stern"
+          },
+          {
+            "question_number": 2,
+            "text": "The teacher gave a ____________ warning to the class about cheating on the exam.",
+            "correct_answer": "stern"
+          },
+          {
+            "question_number": 3,
+            "text": "Climbing the mountain was a ____________ task that pushed every hiker to their limit.",
+            "correct_answer": "strenuous"
+          },
+          {
+            "question_number": 4,
+            "text": "They decided to take a relaxing evening ____________ through the quiet neighborhood.",
+            "correct_answer": "stroll"
+          },
+          {
+            "question_number": 5,
+            "text": "He managed to ____________ on the uneven path and nearly twisted his ankle.",
+            "correct_answer": "stumble"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_52",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 52",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "stupefy",
+      "sublime",
+      "substantial",
+      "succulent",
+      "sumptuous",
+      "surreptitious",
+      "surrogate",
+      "svelteness",
+      "tacit",
+      "tamper"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "stupefy",
+          "sublime",
+          "substantial",
+          "succulent",
+          "sumptuous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The magician’s final trick seemed to ____________ the audience, leaving them speechless.",
+            "correct_answer": "stupefy"
+          },
+          {
+            "question_number": 2,
+            "text": "The view from the cliff at sunrise was so ____________ that it felt almost unreal.",
+            "correct_answer": "sublime"
+          },
+          {
+            "question_number": 3,
+            "text": "They made a ____________ donation to the charity, enough to fund several new projects.",
+            "correct_answer": "substantial"
+          },
+          {
+            "question_number": 4,
+            "text": "The steak was incredibly ____________, with each bite full of flavor and juice.",
+            "correct_answer": "succulent"
+          },
+          {
+            "question_number": 5,
+            "text": "A ____________ feast was laid out on the table, with rich dishes and decadent desserts.",
+            "correct_answer": "sumptuous"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "surreptitious",
+          "surrogate",
+          "svelteness",
+          "tacit",
+          "tamper"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "He made a ____________ glance at his phone during the meeting, hoping no one would notice.",
+            "correct_answer": "surreptitious"
+          },
+          {
+            "question_number": 2,
+            "text": "The couple was grateful to the ____________ mother who carried their baby to term.",
+            "correct_answer": "surrogate"
+          },
+          {
+            "question_number": 3,
+            "text": "The dancer moved with such grace and ____________ that the audience watched in awe.",
+            "correct_answer": "svelteness"
+          },
+          {
+            "question_number": 4,
+            "text": "There was a ____________ agreement between the two leaders, understood but never spoken aloud.",
+            "correct_answer": "tacit"
+          },
+          {
+            "question_number": 5,
+            "text": "Someone tried to ____________ with the evidence, making it unreliable for the investigation.",
+            "correct_answer": "tamper"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_53",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 53",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "tantrum",
+      "tempt",
+      "tortuous",
+      "torturous",
+      "traumatize",
+      "tremor",
+      "trite",
+      "triumph",
+      "trivial",
+      "truce"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "tantrum",
+          "tempt",
+          "tortuous",
+          "torturous",
+          "traumatize"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The toddler threw a loud ____________ in the store when he didn’t get the toy he wanted.",
+            "correct_answer": "tantrum"
+          },
+          {
+            "question_number": 2,
+            "text": "The aroma of freshly baked cookies was enough to ____________ him into breaking his diet.",
+            "correct_answer": "tempt"
+          },
+          {
+            "question_number": 3,
+            "text": "The hikers followed a ____________ trail that twisted through the mountains for hours.",
+            "correct_answer": "tortuous"
+          },
+          {
+            "question_number": 4,
+            "text": "The prisoner endured ____________ conditions that left both physical and emotional scars.",
+            "correct_answer": "torturous"
+          },
+          {
+            "question_number": 5,
+            "text": "The loud explosion was enough to ____________ the child, leaving him afraid of sudden noises.",
+            "correct_answer": "traumatize"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "tremor",
+          "trite",
+          "triumph",
+          "trivial",
+          "truce"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "A slight ____________ shook the ground, causing people to glance nervously at the walls.",
+            "correct_answer": "tremor"
+          },
+          {
+            "question_number": 2,
+            "text": "His speech was filled with ____________ clichés that failed to inspire the audience.",
+            "correct_answer": "trite"
+          },
+          {
+            "question_number": 3,
+            "text": "Winning the championship was a hard-earned ____________ for the underdog team.",
+            "correct_answer": "triumph"
+          },
+          {
+            "question_number": 4,
+            "text": "She dismissed the argument as ____________, not worth wasting time or energy on.",
+            "correct_answer": "trivial"
+          },
+          {
+            "question_number": 5,
+            "text": "After days of fighting, the two sides agreed to a temporary ____________ to allow for negotiations.",
+            "correct_answer": "truce"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_54",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 54",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "tumult",
+      "turmoil",
+      "tweak",
+      "twig",
+      "ubiquitous",
+      "unravel",
+      "unrivalled",
+      "unsavoury",
+      "unswerving",
+      "untenable"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "tumult",
+          "turmoil",
+          "tweak",
+          "twig",
+          "ubiquitous"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The announcement caused a ____________ of shouting and confusion in the crowded hall.",
+            "correct_answer": "tumult"
+          },
+          {
+            "question_number": 2,
+            "text": "The country was thrown into political ____________ after the sudden resignation of its leader.",
+            "correct_answer": "turmoil"
+          },
+          {
+            "question_number": 3,
+            "text": "In response to his teasing, she gave her husband a light ____________ on the ear, laughing at his jokes.",
+            "correct_answer": "tweak"
+          },
+          {
+            "question_number": 4,
+            "text": "The bird perched quietly on a slender ____________ near the riverbank.",
+            "correct_answer": "twig"
+          },
+          {
+            "question_number": 5,
+            "text": "Smartphones have become so ____________ that almost everyone owns one today.",
+            "correct_answer": "ubiquitous"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "unravel",
+          "unrivalled",
+          "unsavoury",
+          "unswerving",
+          "untenable"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The detective worked hard to ____________ the mystery behind the missing documents.",
+            "correct_answer": "unravel"
+          },
+          {
+            "question_number": 2,
+            "text": "Her talent for painting is ____________; no other artist in the gallery compares to her skill.",
+            "correct_answer": "unrivalled"
+          },
+          {
+            "question_number": 3,
+            "text": "The news report exposed the ____________ behavior of the corrupt officials.",
+            "correct_answer": "unsavoury"
+          },
+          {
+            "question_number": 4,
+            "text": "Despite challenges, his ____________ dedication to the project never wavered.",
+            "correct_answer": "unswerving"
+          },
+          {
+            "question_number": 5,
+            "text": "Without solid evidence, the lawyer argued that the prosecution’s case was ____________.",
+            "correct_answer": "untenable"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_55",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 55",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "upheaval",
+      "uproar",
+      "vacuous",
+      "vague",
+      "veneer",
+      "vexatious",
+      "viable",
+      "vicarious",
+      "vigilance",
+      "virile"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "upheaval",
+          "uproar",
+          "vacuous",
+          "vague",
+          "veneer"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The sudden political ____________ disrupted everyday life and led to weeks of unrest.",
+            "correct_answer": "upheaval"
+          },
+          {
+            "question_number": 2,
+            "text": "The celebrity’s controversial statement caused an ____________ on social media.",
+            "correct_answer": "uproar"
+          },
+          {
+            "question_number": 3,
+            "text": "His ____________ response made it clear he hadn’t given the question any real thought.",
+            "correct_answer": "vacuous"
+          },
+          {
+            "question_number": 4,
+            "text": "She gave only a ____________ explanation of the plan, leaving everyone confused about the details.",
+            "correct_answer": "vague"
+          },
+          {
+            "question_number": 5,
+            "text": "The politician’s calm demeanor was just a ____________ hiding his true intentions.",
+            "correct_answer": "veneer"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "vexatious",
+          "viable",
+          "vicarious",
+          "vigilance",
+          "virile"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The delays and constant paperwork made the process unnecessarily ____________ for everyone involved.",
+            "correct_answer": "vexatious"
+          },
+          {
+            "question_number": 2,
+            "text": "After thorough research, they concluded that solar power was a ____________ alternative for the rural village.",
+            "correct_answer": "viable"
+          },
+          {
+            "question_number": 3,
+            "text": "Though he had never traveled abroad, he experienced a ____________ thrill through the stories his friends told.",
+            "correct_answer": "vicarious"
+          },
+          {
+            "question_number": 4,
+            "text": "The security guard maintained constant ____________ to ensure nothing suspicious went unnoticed.",
+            "correct_answer": "vigilance"
+          },
+          {
+            "question_number": 5,
+            "text": "The athlete’s ____________ strength and commanding presence impressed the entire team.",
+            "correct_answer": "virile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "quiz_id": "IBA_QQ_56",
+    "section": "IBA Question",
+    "quiz_title": "IBA: Quick Quiz 56",
+    "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
+    "display_word_bank": [
+      "vivacious",
+      "vivid",
+      "voluminous",
+      "wary",
+      "waver",
+      "whimper",
+      "whisper",
+      "wither",
+      "wreck",
+      "zeal",
+      "zealot",
+      "zestful"
+    ],
+    "sets": [
+      {
+        "set_id": "A",
+        "set_title": "Set A",
+        "dropdown_options": [
+          "vivacious",
+          "vivid",
+          "voluminous",
+          "wary",
+          "waver",
+          "zealot"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "Her ____________ personality lit up every room she entered, making her the center of attention.",
+            "correct_answer": "vivacious"
+          },
+          {
+            "question_number": 2,
+            "text": "The author’s ____________ descriptions made the scenes come alive in the reader’s mind.",
+            "correct_answer": "vivid"
+          },
+          {
+            "question_number": 3,
+            "text": "The professor carried a ____________ stack of papers that barely fit into his bag.",
+            "correct_answer": "voluminous"
+          },
+          {
+            "question_number": 4,
+            "text": "He was ____________ of the stranger’s offer, sensing something wasn’t quite right.",
+            "correct_answer": "wary"
+          },
+          {
+            "question_number": 5,
+            "text": "Her confidence began to ____________ when she saw the skeptical expressions in the audience.",
+            "correct_answer": "waver"
+          },
+          {
+            "question_number": 6,
+            "text": "The ____________ shouted passionately at the rally, unwilling to consider any opposing views.",
+            "correct_answer": "zealot"
+          }
+        ]
+      },
+      {
+        "set_id": "B",
+        "set_title": "Set B",
+        "dropdown_options": [
+          "whimper",
+          "whisper",
+          "wither",
+          "wreck",
+          "zeal",
+          "zestful"
+        ],
+        "questions": [
+          {
+            "question_number": 1,
+            "text": "The injured puppy let out a soft ____________, barely audible above the noise of the storm.",
+            "correct_answer": "whimper"
+          },
+          {
+            "question_number": 2,
+            "text": "She leaned in to ____________ a secret so softly that only her friend could hear it.",
+            "correct_answer": "whisper"
+          },
+          {
+            "question_number": 3,
+            "text": "Without proper care, the plants began to ____________ under the harsh summer sun.",
+            "correct_answer": "wither"
+          },
+          {
+            "question_number": 4,
+            "text": "The collision was so severe it left the car a total ____________ on the side of the road.",
+            "correct_answer": "wreck"
+          },
+          {
+            "question_number": 5,
+            "text": "He pursued his goals with intense ____________, never letting obstacles slow him down.",
+            "correct_answer": "zeal"
+          },
+          {
+            "question_number": 6,
+            "text": "His ____________ attitude made even the most boring tasks feel exciting and fun.",
+            "correct_answer": "zestful"
+          }
+        ]
+      }
+    ]
   }
 ]
