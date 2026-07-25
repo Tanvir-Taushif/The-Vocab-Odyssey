@@ -12659,6 +12659,7 @@
       "specious",
       "sporadic",
       "spurious",
+      "squalor",
       "squander",
       "stagnation",
       "static",
@@ -12681,6 +12682,7 @@
           "sporadic",
           "spurious",
           "squander",
+          "squalor",
           "stagnation",
           "static",
           "staunch",
@@ -12764,6 +12766,11 @@
           },
           {
             "question_number": 15,
+            "text": "After being abandoned for decades, the once-grand mansion had fallen into complete __________, with shattered windows and decaying floors.",
+            "correct_answer": "squalor"
+          },
+          {
+            "question_number": 16,
             "text": "The new company policy imposed a harsh ___________ on travel expenditures, limiting employees to a much smaller daily budget than before.",
             "correct_answer": "stricture"
           }
@@ -12779,6 +12786,7 @@
           "sporadic",
           "spurious",
           "squander",
+          "squalor",
           "stagnation",
           "static",
           "staunch",
@@ -12864,6 +12872,11 @@
             "question_number": 15,
             "text": "Even when faced with the harsh news of the budget cuts, the CEO maintained a ____________ demeanor, absorbing the information without displaying any outward emotion or panic.",
             "correct_answer": "stoic"
+          },
+          {
+            "question_number": 16,
+            "text": "Despite working long hours, the refugees were forced to live in temporary shelters characterized by extreme poverty and ________.",
+            "correct_answer": "squalor"
           }
         ]
       }
