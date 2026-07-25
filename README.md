@@ -1,157 +1,73 @@
 # 🌌 Vocab Odyssey
 
-> **The Ultimate Companion App for Word Smart I & II**
+> **The Ultimate Companion App for Word Smart I & II & IBA Admission**
 
-**Vocab Odyssey** is an interactive vocabulary learning companion designed to be used **alongside the Word Smart I & II books**, not as a replacement.
+**Vocab Odyssey** is an interactive vocabulary learning web application designed to be used **alongside Word Smart I & II and IBA admission preparation materials**. 
 
-While **Word Smart** is excellent for learning new words, revising chapters, searching for previously learned vocabulary, and practicing quizzes can be time-consuming. Vocab Odyssey transforms that process into an interactive learning experience by combining **smart word search, meaning-based vocabulary clusters, and contextual quizzes** in one place.
-
-Whether you're preparing for **IBA, University Admissions, BCS, GRE, GMAT, IELTS, or simply improving your English vocabulary**, Vocab Odyssey helps you revise smarter and practice more effectively.
+While studying from books is essential, revising chapters, searching for related words, and practicing active recall can be slow and repetitive. Vocab Odyssey bridges that gap by transforming traditional vocabulary lists into an interactive workflow featuring **meaning-based word clusters, one-click lookups, and context-driven chapter quizzes**.
 
 ---
 
 # 👨‍💻 Developed By
 
-**Tanvir Taushif**
-
+**Tanvir Taushif**  
 *Data Scientist*  
 *B.Sc. in Information & Communication Engineering (ICE)*  
 **Bangladesh University of Professionals (BUP)**
 
-As a student preparing with **Word Smart**, I often found myself struggling to quickly revise words, compare similar vocabulary, and repeatedly flip through pages while practicing.
+### 💡 The Motivation Behind Vocab Odyssey
+As a student preparing with **Word Smart** for competitive exams, I constantly found myself struggling to quickly revise words, compare similar vocabulary, and flip endlessly through pages while practicing. 
 
-I built **Vocab Odyssey** to make vocabulary revision faster, more organized, and more interactive without replacing the book itself.
+I built **Vocab Odyssey** to solve this exact bottleneck—making vocabulary revision faster, more organized, and deeply interactive without replacing the book itself. It bridges raw book-reading with active, contextual exam practice.
 
 ---
 
-# 📚 Vocabulary Sources
+# 📚 Vocabulary Sources & Scope
 
-The vocabulary database and quizzes are carefully curated from:
-
+The application features a robust dataset containing **over 2100 words**, carefully curated from:
 - 📖 **Word Smart I & II** (Princeton Review)
 - 🎓 **IBA, University of Dhaka** Previous Years' Vocabulary Questions
 
 ---
 
-# 🎯 What This App Does
+# 🎯 How the App Works (The Student Workflow)
 
-Vocab Odyssey helps you:
+To get the absolute best results from Vocab Odyssey, follow this recommended study loop:
 
-- 📚 Revise Word Smart chapters efficiently
-- 🔍 Instantly search words and meanings
-- 🧠 Explore vocabulary grouped by meaning instead of alphabetical order
-- 📝 Practice contextual quizzes after finishing each chapter
-- ⚡ Instantly review unfamiliar words during quizzes
-- 🎯 Build confidence through exam-style timed practice
-
----
-
-# ✨ Features
-
-## 🔮 Vocab Gangs Search
-
-Unlike the Word Smart books, which arrange words alphabetically, **Vocab Gangs Search** organizes vocabulary into **meaning-based word groups**.
-
-Search any word to instantly discover:
-
-- 📖 Meaning and explanation
-- 🧠 Related vocabulary
-- 🔗 Connected word clusters
-- ✨ Highlighted search results for easier reading
-
-This makes revision much easier when trying to remember words with similar meanings or frequently confused vocabulary.
-
----
-
-## ⚔️ Word Smart & IBA Quizzes
-
-Practice vocabulary using interactive quizzes inspired by the original **Word Smart Quick Quizzes**, redesigned to provide a more engaging and exam-like experience.
-
-Features include:
-
-- 📚 Chapter-wise quizzes based on Word Smart
-- 📚 IBA Previous years question based quizzes
-- 📝 Set A & Set B practice modes
-- 🎯 Context-based fill-in-the-blank questions
-- 📖 Interactive Word Bank reference
-- ⏱️ **30 seconds per question** to improve speed and concentration
-- ⌛ Automatic countdown timer for every quiz
-- 🚨 **Auto-submission when time expires**, simulating a real examination
-- 📊 Instant score, percentage, and color-coded feedback
-- ✅ Correct answers displayed immediately after submission
-
----
-
-## 💡 Smart Word Bank
-
-Every quiz includes a **Word Bank Reference** containing all the vocabulary used in that quiz.
-
-Forgot a word?
-
-👉 Simply click on it.
-
-The app instantly opens that word inside the **Search** section, allowing you to revise its meaning and related vocabulary without flipping through the book.
-
-This creates a smooth learning workflow that keeps you focused while studying.
-
----
-
-# 🚀 Recommended Study Workflow
-
-Vocab Odyssey is designed to be used **together with Word Smart**.
-
-### 📖 Step 1 — Read the Chapter
-
-Study one chapter from **Word Smart**.
-
-Learn the meanings, examples, and usage of the words.
+### 📖 Step 1 — Read Your Book Chapter
+Study a specific chapter from **Word Smart** or your IBA vocabulary list to learn the baseline meanings and usage of the words.
 
 ⬇️
 
-### 🔍 Step 2 — Explore Related Vocabulary
-
-Open **Vocab Gangs Search**.
-
-Search unfamiliar words and explore their related vocabulary groups to strengthen your understanding.
-
-⬇️
-
-### 📝 Step 3 — Take the Quiz
-
-Navigate to **Quizzes**.
-
-Select the corresponding chapter and complete the contextual fill-in-the-blank quiz within the allotted time.
+### 🔍 Step 2 — Explore Meaning-Based Clusters (Vocab Gangs)
+Instead of relying on dry alphabetical lists, open the **Search** tab. Type in any word to discover:
+* Its precise definition and explanation.
+* **Meaning-based word groups (Vocab Gangs)** that cluster synonyms and conceptually connected words together, making it easier to retain families of words.
 
 ⬇️
 
-### 📊 Step 4 — Review Your Mistakes
-
-Check your score.
-
-Review incorrect answers.
-
-Click any unfamiliar word from the **Word Bank** to instantly revise its meaning and related vocabulary.
+### 📝 Step 3 — Take the Contextual Chapter Quiz
+Go to the **Quizzes** tab, type or select your chapter number, and choose **Set A** or **Set B**. 
+* Unlike standard dictionary apps that only test rote definitions, these quizzes use **contextual fill-in-the-blanks sentences** built from the quiz's word bank.
+* **No manual typing is required:** Each question features a dropdown containing all the eligible words from the box, ensuring a smooth mobile-friendly test experience.
+* A **30-seconds-per-question countdown timer** (with automatic submission on expiration) simulates real exam time pressure to build speed and concentration.
 
 ⬇️
 
-### 📚 Step 5 — Repeat
-
-Move on to the next chapter and repeat the process.
+### 📊 Step 4 — Review Mistakes via the Word Bank Reference
+Stuck during a quiz? 
+* Every quiz features an interactive **Word Bank Reference box** right at the top.
+* If you forget a word or make a mistake, simply **click on any word in the Word Bank** to instantly open it in the Search section, view its cluster, and fix your knowledge gap without flipping through pages.
 
 ---
 
-# 🎓 Who Is This App For?
+# ✨ Core Features
 
-Vocab Odyssey is ideal for students preparing for:
-
-- 🎓 IBA Admission Test
-- 🎓 University Admission Tests
-- 🏛️ BCS
-- 📚 GRE
-- 💼 GMAT
-- ✍️ IELTS
-- 📖 Word Smart I & II learners
-- Anyone looking to improve advanced English vocabulary
+* **🗂️ Complete 2100+ Word Database:** Full coverage of *Word Smart I & II* and historical IBA admission questions.
+* **🧠 Vocab Gangs Search:** Groups words by contextual meaning rather than rigid alphabetical order to map out synonyms and confusing terms instantly.
+* **⏱️ Exam-Style Timed Quizzes:** Chapter-matched assessments featuring automated countdown clocks and instant color-coded scoring feedback.
+* **🔗 Instant Word Bank Lookup:** One-click navigation linking quiz vocabulary straight to definition clusters for seamless revision.
+* **📱 Zero Friction (No Installation):** Built entirely with native web tech. No apps to download, no sign-ups required—works instantly on any mobile or desktop browser.
 
 ---
 
@@ -161,42 +77,18 @@ Vocab Odyssey is ideal for students preparing for:
 - CSS3
 - Vanilla JavaScript
 
-✅ No frameworks
-
-✅ No installation
-
-✅ Works on desktop and mobile
+✅ No frameworks  
+✅ No installation  
+✅ Works on desktop and mobile  
 
 ---
 
 # 📁 Repository Structure
 
 ```text
-├── index.html                # Main application
-├── gangs.csv                 # Word groups and meanings
-├── word_smart_quizzes.json   # Quiz database
-└── landing-hero.png          # Landing page image
-```
+├── index.html              # Main application
+├── gangs.csv               # Word groups and meanings
+├── word_smart_quizzes.json # Quiz database
+└── landing-hero.png        # Landing page image
 
----
-
-# ❤️ Why Vocab Odyssey?
-
-**Word Smart** is one of the best vocabulary books available—but studying from a book alone can make revision slow and repetitive.
-
-Vocab Odyssey enhances that learning experience by providing:
-
-- 📖 Interactive chapter-wise quizzes
-- 🎯 Context-based vocabulary practice
-- ⏱️ Real exam-style timed assessments
-- 🚨 Automatic submission when time runs out
-- 🔍 One-click vocabulary lookup
-- 🧠 Meaning-based vocabulary clusters
-- 📊 Instant scoring and feedback
-- 📱 A fast, mobile-friendly interface
-
-Rather than replacing **Word Smart**, Vocab Odyssey helps you get more out of it by making revision faster, practice more engaging, and vocabulary retention more effective.
-
----
-
-> **📚 Learn from the book. 🔍 Revise with Vocab Odyssey. 🎯 Master vocabulary through practice.**
+📚 Learn from the book. 🔍 Revise with Vocab Odyssey. 🎯 Master vocabulary through practice.
