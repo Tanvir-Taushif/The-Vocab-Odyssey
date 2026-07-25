@@ -63,13 +63,14 @@ This makes revision much easier when trying to remember words with similar meani
 
 ---
 
-## ⚔️ Word Smart Quizzes
+## ⚔️ Word Smart & IBA Quizzes
 
 Practice vocabulary using interactive quizzes inspired by the original **Word Smart Quick Quizzes**, redesigned to provide a more engaging and exam-like experience.
 
 Features include:
 
 - 📚 Chapter-wise quizzes based on Word Smart
+- 📚 IBA Previous years question based quizzes
 - 📝 Set A & Set B practice modes
 - 🎯 Context-based fill-in-the-blank questions
 - 📖 Interactive Word Bank reference
