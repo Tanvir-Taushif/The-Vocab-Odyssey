@@ -13009,38 +13009,43 @@
           },
           {
             "question_number": 4,
-            "text": "The heavy rainfall and washed-out roads managed to ___________ the relief efforts, preventing supplies from reaching the affected towns.",
+            "text": "The company implemented ____________ security protocols to protect its proprietary data from both internal and external threats.",
             "correct_answer": "stringent"
           },
           {
             "question_number": 5,
-            "text": "Refusing a direct and reasonable order from a superior officer is considered an ____________ act in the military and can lead to severe consequences.",
+            "text": "The heavy rainfall and washed-out roads managed to ___________ the relief efforts, preventing supplies from reaching the affected towns.",
             "correct_answer": "stymie"
           },
           {
             "question_number": 6,
-            "text": "After reviewing the evidence, the judge determined that the defense lacked any ____________ legal grounds to overturn the previous ruling.",
+            "text": "Refusing a direct and reasonable order from a superior officer is considered an ____________ act in the military and can lead to severe consequences.",
             "correct_answer": "insubordinate"
           },
           {
             "question_number": 7,
-            "text": "In the struggle for power, one faction attempted to ____________ the other by controlling access to essential resources and supplies.",
+            "text": "After reviewing the evidence, the judge determined that the defense lacked any ____________ legal grounds to overturn the previous ruling.",
             "correct_answer": "substantive"
           },
           {
             "question_number": 8,
-            "text": "The project manager requested that the progress report be ____________, focusing only on the key findings and next steps.",
+            "text": "In the struggle for power, one faction attempted to ____________ the other by controlling access to essential resources and supplies.",
             "correct_answer": "subjugate"
           },
           {
             "question_number": 9,
-            "text": "The government was concerned about the ________ activities of the rebel group, fearing they might incite unrest among the population.",
+            "text": "The project manager requested that the progress report be ____________, focusing only on the key findings and next steps.",
             "correct_answer": "succinct"
           },
           {
             "question_number": 10,
-            "text": "The flavor of the rare spice was so ___________ that you had to concentrate to fully appreciate its delicate notes in the dish.",
+            "text": "The government was concerned about the ________ activities of the rebel group, fearing they might incite unrest among the population.",
             "correct_answer": "subversive"
+          },
+          {
+            "question_number": 11,
+            "text": "The flavor of the rare spice was so ___________ that you had to concentrate to fully appreciate its delicate notes in the dish.",
+            "correct_answer": "subtle"
           }
         ]
       }
