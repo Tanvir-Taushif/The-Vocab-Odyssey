@@ -803,20 +803,21 @@
       }
     });
 
-    // Parse raw text into structured array of objects
-    function parseWordList(rawText) {
-      if (!rawText) return [];
-      const regex = /([A-Za-z0-9\-\s\/\'\"]+):\s*([^:]+)(?=\s+[A-Za-z0-9\-\s\/\'\"]+:|$)/g;
-      let matches = [];
-      let match;
-      while ((match = regex.exec(rawText)) !== null) {
-        matches.push({
-          word: match[1].trim(),
-          definition: match[2].trim()
-        });
-      }
-      return matches;
+    // Parse raw text into structured array of objects (updated to catch multi-word terms like "bon vivant" & "bona fide")
+function parseWordList(rawText) {
+  if (!rawText) return [];
+  const regex = /([A-Za-z0-9\-\s\/\'\"]+?):\s*([\s\S]+?)(?=\s+[A-Za-z0-9\-\s\/\'\"]+?:|$)/g;
+  let matches = [];
+  let match;
+  while ((match = regex.exec(rawText)) !== null) {
+    const word = match[1].trim();
+    const definition = match[2].trim();
+    if (word) {
+      matches.push({ word, definition });
     }
+  }
+  return matches;
+}
 
     // Whole-word highlighting using \b word boundaries
     function highlightText(text, query) {
