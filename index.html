@@ -1720,6 +1720,488 @@
       font-weight: 800;
     }
 
+    /* ==========================================================================
+       LISTENING MODE
+       ========================================================================== */
+    .fc-listen-start {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 50px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .fc-listen-start:hover {
+      border-color: var(--primary);
+    }
+
+    .fc-listen-start .icon {
+      color: var(--primary);
+    }
+
+    .fc-listen-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 10px 10px 10px 18px;
+      border-radius: var(--r-md);
+      background: var(--night);
+      color: #ffffff;
+    }
+
+    .fc-listen-status {
+      flex: 1;
+      min-width: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .fc-listen-status small {
+      display: block;
+      margin-top: 1px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .ls-btn {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .ls-btn.speed {
+      width: auto;
+      min-width: 56px;
+      padding: 0 12px;
+      border-radius: var(--r-pill);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ls-btn.primary {
+      background: #f2c14e;
+      color: var(--night);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .fc-listen-bar,
+      .timer-sticky {
+        box-shadow: 0 0 0 1px var(--line);
+      }
+    }
+
+    /* During a round the page heading steps aside so the question sits higher */
+    #practice-app-tab.is-playing > .header {
+      display: none;
+    }
+
+    .fc-listen-note {
+      margin: 8px 4px 0;
+      color: var(--faint);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    /* PDF download buttons */
+    .pdf-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .fc-chip:disabled {
+      opacity: 0.6;
+      cursor: progress;
+    }
+
+    /* ==========================================================================
+       PRACTICE (Synonym challenge & Odd one out)
+       ========================================================================== */
+    .pr-label {
+      display: block;
+      margin: 0 2px 10px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .pr-modes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .pr-mode {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      min-height: 128px;
+      padding: 16px;
+      text-align: left;
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: var(--r-md);
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .pr-mode:hover {
+      border-color: var(--primary);
+    }
+
+    .pr-mode.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .pr-mode-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 4px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .pr-mode.active .pr-mode-icon {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .pr-mode-title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .pr-mode-desc {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .pr-note {
+      margin: 10px 2px 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .pr-start-row {
+      margin-top: 22px;
+    }
+
+    .pr-start-row .btn-action {
+      max-width: none;
+    }
+
+    .pr-msg {
+      margin: 12px 2px 0;
+      color: var(--danger);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .pr-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .pr-counter {
+      color: var(--muted);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fc-dot.right {
+      background: var(--success);
+    }
+
+    .fc-dot.wrong {
+      background: var(--danger);
+    }
+
+    .pr-question {
+      margin-bottom: 14px;
+      padding: 28px 22px;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      box-shadow: var(--float-shadow);
+    }
+
+    .pr-question.pr-in {
+      animation: pr-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes pr-in {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .pr-prompt {
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .pr-word {
+      margin-top: 6px;
+      font-family: var(--font-word);
+      font-size: clamp(2.1rem, 8.5vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      color: var(--text);
+      overflow-wrap: anywhere;
+    }
+
+    .pr-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .pr-options.grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pr-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 60px;
+      padding: 12px 14px;
+      text-align: left;
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: var(--r-md);
+      color: var(--text);
+      font-family: var(--font-word);
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      overflow-wrap: anywhere;
+      transition: border-color 0.2s, background-color 0.2s, opacity 0.2s;
+    }
+
+    .pr-options.grid-2 .pr-option {
+      min-height: 76px;
+    }
+
+    .pr-option:hover:not(:disabled) {
+      border-color: var(--primary);
+    }
+
+    .pr-option:disabled {
+      cursor: default;
+    }
+
+    .pr-key {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--surface-2);
+      color: var(--muted);
+      font: 700 0.8rem var(--font-ui);
+    }
+
+    .pr-option.correct {
+      border-color: var(--success);
+      background: var(--success-bg);
+      color: var(--success);
+    }
+
+    .pr-option.wrong {
+      border-color: var(--danger);
+      background: var(--danger-bg);
+      color: var(--danger);
+    }
+
+    .pr-option.correct .pr-key {
+      background: var(--success);
+      color: var(--surface);
+    }
+
+    .pr-option.wrong .pr-key {
+      background: var(--danger);
+      color: var(--surface);
+    }
+
+    .pr-option.dim {
+      opacity: 0.5;
+    }
+
+    .pr-explain {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-radius: var(--r-md);
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .pr-explain p {
+      margin: 0;
+    }
+
+    .pr-explain p + p {
+      margin-top: 8px;
+    }
+
+    .pr-explain strong {
+      font-family: var(--font-word);
+      font-size: 1.04em;
+    }
+
+    .pr-verdict {
+      margin-bottom: 6px;
+      font-weight: 800;
+    }
+
+    .pr-verdict.good {
+      color: var(--success);
+    }
+
+    .pr-verdict.bad {
+      color: var(--danger);
+    }
+
+    .pr-gang {
+      color: var(--muted);
+    }
+
+    .pr-next-row {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .pr-next-row .btn-action {
+      max-width: none;
+    }
+
+    .pr-review {
+      margin-top: 18px;
+    }
+
+    .pr-review-title {
+      margin: 0 2px 10px;
+      font-family: var(--font-word);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .pr-review-item {
+      margin-bottom: 10px;
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .pr-review-q {
+      color: var(--muted);
+    }
+
+    .pr-review-q strong {
+      color: var(--text);
+      font-family: var(--font-word);
+    }
+
+    .pr-review-a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 8px;
+      margin-top: 6px;
+    }
+
+    .pr-review-word {
+      padding: 3px 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      background: var(--success-bg);
+      color: var(--success);
+      font-family: var(--font-word);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .pr-review-chosen {
+      color: var(--danger);
+      font-size: 0.88rem;
+    }
+
+    .pr-result-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pr-result-actions .btn-action {
+      max-width: none;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-2);
+    }
+
+    /* Five tabs: tighter spacing */
+    @media (max-width: 920px) and (min-width: 721px) {
+      .nav-tab {
+        padding: 0 11px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-icon {
+        width: 48px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -1749,6 +2231,9 @@
         </button>
         <button class="nav-tab" id="tab-btn-cards" onclick="switchMainTab('cards')">
           <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="14" height="14" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg></span><span>Cards</span>
+        </button>
+        <button class="nav-tab" id="tab-btn-practice" onclick="switchMainTab('practice')">
+          <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span>Practice</span>
         </button>
         <button class="nav-tab" id="tab-btn-quiz" onclick="switchMainTab('quiz')">
           <span class="nav-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><span>Quizzes</span>
@@ -1786,6 +2271,14 @@
           <span class="mode-text">
             <span class="mode-title">Flashcards</span>
             <span class="mode-desc">Flip through each quiz’s words and hear them read aloud.</span>
+          </span>
+          <span class="mode-chev"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
+        </button>
+        <button class="mode-card" onclick="switchMainTab('practice')">
+          <span class="mode-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+          <span class="mode-text">
+            <span class="mode-title">Practice games</span>
+            <span class="mode-desc">Synonym and odd-one-out rounds, like the IBA vocabulary section.</span>
           </span>
           <span class="mode-chev"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
         </button>
@@ -1881,10 +2374,85 @@
         <div class="fc-secondary">
           <button class="fc-chip" id="fc-shuffle" onclick="toggleShuffle()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></svg><span>Shuffle</span></button>
           <button class="fc-chip" onclick="restartDeck()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg><span>Restart</span></button>
+          <button class="fc-chip" onclick="downloadDeckPdf(this)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span>Word list PDF</span></button>
         </div>
+
+        <!-- Listening mode -->
+        <button class="fc-listen-start" id="fc-listen-start" onclick="startListening()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg><span>Listen to this group</span></button>
+        <div class="fc-listen-bar hidden" id="fc-listen-bar">
+          <div class="fc-listen-status">
+            <span id="fc-listen-state">Listening</span>
+            <small id="fc-listen-pos">Card 1 of 1</small>
+          </div>
+          <button class="ls-btn speed" id="fc-listen-speed" onclick="toggleListenSpeed()" aria-label="Reading speed">1x</button>
+          <button class="ls-btn primary" id="fc-listen-toggle" onclick="toggleListenPause()" aria-label="Pause"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/></svg></button>
+          <button class="ls-btn" onclick="stopListening()" aria-label="Stop listening"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" stroke="none"/></svg></button>
+        </div>
+        <p class="fc-listen-note hidden" id="fc-listen-note">Keep your screen on while listening. Phones stop reading aloud when the screen locks.</p>
       </div>
 
       <div id="fc-loading" class="no-results">Loading flashcards...</div>
+    </div>
+
+    <!-- PRACTICE -->
+    <div id="practice-app-tab" class="tab-content">
+      <div class="header">
+        <h1>Practice</h1>
+        <p>Exam-style word games built from the Vocab Gangs. Every round has new questions.</p>
+      </div>
+
+      <!-- Setup -->
+      <div id="pr-setup">
+        <span class="pr-label">Choose a game</span>
+        <div class="pr-modes">
+          <button class="pr-mode active" data-mode="synonym" aria-pressed="true" onclick="selectPracticeMode('synonym')">
+            <span class="pr-mode-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span>
+            <span class="pr-mode-title">Synonym challenge</span>
+            <span class="pr-mode-desc">Pick the word closest in meaning.</span>
+          </button>
+          <button class="pr-mode" data-mode="odd" aria-pressed="false" onclick="selectPracticeMode('odd')">
+            <span class="pr-mode-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="6.5" r="3.5"/><circle cx="17.5" cy="6.5" r="3.5"/><circle cx="6.5" cy="17.5" r="3.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <span class="pr-mode-title">Odd one out</span>
+            <span class="pr-mode-desc">Find the word that doesn’t belong.</span>
+          </button>
+        </div>
+
+        <label class="pr-label" for="pr-source">Use words from</label>
+        <div class="select-wrap">
+          <select id="pr-source" class="quiz-select-box">
+            <option value="all">All words</option>
+          </select>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        <p class="pr-note">Choose a quiz to practise the chapter you just studied. Each round has 10 questions.</p>
+
+        <div class="pr-start-row">
+          <button class="btn-action" onclick="startPractice()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor" stroke="none"/></svg><span>Start round</span></button>
+        </div>
+        <p id="pr-msg" class="pr-msg hidden" role="alert"></p>
+      </div>
+
+      <!-- Playing -->
+      <div id="pr-play" class="hidden">
+        <div class="pr-top">
+          <button class="fc-back-btn" onclick="quitPractice()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg><span>End round</span></button>
+          <div class="pr-counter" id="pr-counter">1 / 10</div>
+        </div>
+        <div class="fc-dots" id="pr-dots" aria-hidden="true"></div>
+
+        <div class="pr-question" id="pr-question">
+          <div class="pr-prompt" id="pr-prompt"></div>
+          <div class="pr-word" id="pr-word"></div>
+        </div>
+        <div class="pr-options" id="pr-options"></div>
+        <div class="pr-explain hidden" id="pr-explain" aria-live="polite"></div>
+        <div class="pr-next-row hidden" id="pr-next-row">
+          <button class="btn-action" id="pr-next" onclick="nextPractice()">Next question</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="pr-results" class="hidden"></div>
     </div>
 
     <!-- QUIZZES -->
@@ -1919,6 +2487,11 @@
             <div class="word-bank-box">
               <div class="word-bank-title"><strong>Word bank</strong><span>Tap a word to look it up</span></div>
               <div id="word-bank-tags" class="word-bank-tags"></div>
+            </div>
+
+            <div class="pdf-actions">
+              <button class="fc-chip" onclick="downloadQuizPdf(false, this)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span>Word list PDF</span></button>
+              <button class="fc-chip" onclick="downloadQuizPdf(true, this)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Self-test PDF</span></button>
             </div>
           </div>
 
@@ -1970,13 +2543,15 @@
       complete: function(results) {
         csvData = results.data;
         buildWordIndex();
+        buildGangIndex();
       }
     });
 
     // Parse raw text into structured array of objects (updated to catch multi-word terms like "bon vivant" & "bona fide")
     function parseWordList(rawText) {
       if (!rawText) return [];
-      const regex = /([A-Za-z0-9\-\s\/\'\"]+?):\s*([\s\S]+?)(?=\s+[A-Za-z0-9\-\s\/\'\"]+?:|$)/g;
+      // \u00C0-\u024F lets accented words like "cliché" be recognised
+  const regex = /([A-Za-z\u00C0-\u024F0-9\-\s\/\'\"]+?):\s*([\s\S]+?)(?=\s+[A-Za-z\u00C0-\u024F0-9\-\s\/\'\"]+?:|$)/g;
       let matches = [];
       let match;
       while ((match = regex.exec(rawText)) !== null) {
@@ -2122,6 +2697,50 @@
       wordIndex = Array.from(map.values()).sort((a, b) => a.lower.localeCompare(b.lower));
     }
 
+    // ==========================================================================
+    // GANG INDEX (powers the Practice games)
+    // ==========================================================================
+    let gangList = [];             // [{ no, meaning, words: [lowercase words] }]
+    let wordToGangs = new Map();   // word -> [index into gangList, ...]
+    let gangWordInfo = new Map();  // word -> { definition, isVerb }
+
+    function buildGangIndex() {
+      gangList = [];
+      wordToGangs = new Map();
+      gangWordInfo = new Map();
+
+      csvData.forEach(row => {
+        const entries = parseWordList(row['Words with Meanings'] || '');
+        if (entries.length === 0) return;
+
+        const idx = gangList.length;
+        const seen = new Set();
+        const words = [];
+
+        entries.forEach(entry => {
+          const lower = entry.word.trim().toLowerCase();
+          if (!lower || lower.length > 40 || seen.has(lower)) return;
+          seen.add(lower);
+          words.push(lower);
+
+          if (!gangWordInfo.has(lower)) {
+            gangWordInfo.set(lower, {
+              definition: entry.definition,
+              isVerb: /^to\s/i.test(entry.definition) // "To praise highly" -> verb
+            });
+          }
+          if (!wordToGangs.has(lower)) wordToGangs.set(lower, []);
+          wordToGangs.get(lower).push(idx);
+        });
+
+        gangList.push({
+          no: row['Group No'] || '',
+          meaning: (row['Group Meaning & Context'] || '').trim(),
+          words
+        });
+      });
+    }
+
     // Words that START with the query come first, then words that merely CONTAIN it
     function getSuggestions(query, limit = 8) {
       const q = query.toLowerCase();
@@ -2250,16 +2869,19 @@
     // Inline SVG icons used by script-generated UI
     const ICON_SPEAK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
     const ICON_STOP = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" stroke="none"/></svg>';
+    const ICON_PLAY = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor" stroke="none"/></svg>';
+    const ICON_PAUSE = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/></svg>';
     const ICON_CHECK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
 
     // Tab Navigation Switcher
     function switchMainTab(tab) {
-      ['home', 'search', 'cards', 'quiz'].forEach(name => {
+      ['home', 'search', 'cards', 'practice', 'quiz'].forEach(name => {
         document.getElementById(`${name}-app-tab`).classList.toggle('active', name === tab);
         document.getElementById(`tab-btn-${name}`).classList.toggle('active', name === tab);
       });
 
       // Stop any read-aloud when leaving the flashcards
+      stopListening();
       if (tab !== 'cards') stopSpeaking();
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2297,6 +2919,7 @@
 
         buildFlashcardGroups();
         renderFlashcardGroups();
+        populatePracticeSources();
         document.getElementById('fc-loading').classList.add('hidden');
       } catch (err) {
         loadingEl.textContent = 'Failed to load quiz data. Ensure word_smart_quizzes.json exists in the root folder.';
@@ -2570,6 +3193,13 @@
     let fcDirection = 0;        // 1 = next, -1 = previous (drives the page-turn)
 
     // Words for a group come from the quiz's word bank (fallback: its dropdown options)
+    const FC_SECTIONS = [
+      { key: 'ws1', label: 'Word Smart I' },
+      { key: 'ws2', label: 'Word Smart II' },
+      { key: 'iba', label: 'IBA' },
+      { key: 'other', label: 'Other quizzes' }
+    ];
+
     function getQuizWords(quiz) {
       let words = Array.isArray(quiz.display_word_bank) ? quiz.display_word_bank.slice() : [];
       if (words.length === 0 && Array.isArray(quiz.sets)) {
@@ -2587,11 +3217,16 @@
     function buildFlashcardGroups() {
       fcGroups = allQuizzes.map(q => {
         const title = q.quiz_title || 'Untitled';
-        const isIBA = /\bIBA\b/i.test(title) || /\bIBA\b/i.test(q.section || '');
+        const section = q.section || '';
+        let category = 'other';
+        if (/\bIBA\b/i.test(title) || /\bIBA\b/i.test(section)) category = 'iba';
+        else if (/word smart ii\b/i.test(section) || /^WS\s*2\b/i.test(title)) category = 'ws2';
+        else if (/word smart i\b/i.test(section) || /^WS\s*1\b/i.test(title)) category = 'ws1';
         return {
           title,
-          shortTitle: title.replace(/^IBA\s*[:\-–]\s*/i, ''),
-          category: isIBA ? 'iba' : 'ws',
+          // "WS1: Quick Quiz 01" -> "Quick Quiz 01" (the section heading already says which book)
+          shortTitle: title.replace(/^(IBA|WS\s*\d)\s*[:\-–]\s*/i, ''),
+          category,
           words: getQuizWords(q)
         };
       }).filter(g => g.words.length > 0);
@@ -2602,10 +3237,7 @@
       const tokens = document.getElementById('fc-filter').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const visible = fcGroups.filter(g => tokens.every(t => g.title.toLowerCase().includes(t)));
 
-      const sections = [
-        { key: 'ws', label: 'Word Smart' },
-        { key: 'iba', label: 'IBA' }
-      ];
+      const sections = FC_SECTIONS;
 
       let html = '';
       sections.forEach(sec => {
@@ -2651,6 +3283,7 @@
     }
 
     function openDeck(groupIndex) {
+      stopListening();
       fcCurrentGroup = fcGroups[groupIndex];
       if (!fcCurrentGroup) return;
       fcShuffled = false;
@@ -2668,6 +3301,7 @@
     }
 
     function closeDeck() {
+      stopListening();
       stopSpeaking();
       document.getElementById('fc-deck-view').classList.add('hidden');
       document.getElementById('fc-groups-view').classList.remove('hidden');
@@ -2720,6 +3354,8 @@
         slide.classList.add(fcDirection > 0 ? 'in-right' : 'in-left');
         fcDirection = 0;
       }
+
+      if (lsActive) updateListenUI();
     }
 
     function flipCard() {
@@ -2727,6 +3363,7 @@
         fcSwipeHandled = false;
         return;
       }
+      stopListening();
       document.getElementById('fc-card').classList.toggle('flipped');
     }
 
@@ -2760,15 +3397,18 @@
     }
 
     function nextCard() {
+      stopListening();
       turnPage(1);
     }
 
     function prevCard() {
+      stopListening();
       turnPage(-1);
     }
 
     function toggleShuffle() {
       if (!fcCurrentGroup) return;
+      stopListening();
       fcShuffled = !fcShuffled;
       fcOrder = fcCurrentGroup.words.slice();
       if (fcShuffled) {
@@ -2783,12 +3423,14 @@
     }
 
     function restartDeck() {
+      stopListening();
       fcIndex = 0;
       showCard();
     }
 
     function openCardInSearch(event) {
       event.stopPropagation();
+      stopListening();
       stopSpeaking();
       lookupWordFromBank(fcOrder[fcIndex]);
     }
@@ -2877,6 +3519,7 @@
 
     function speakCard(event) {
       if (event) event.stopPropagation(); // don't flip the card
+      stopListening();
 
       if (!('speechSynthesis' in window)) {
         alert('Sorry, read-aloud is not supported in this browser.');
@@ -2917,6 +3560,765 @@
       synth.resume(); // un-sticks Chrome if it was left paused
       parts.forEach(u => synth.speak(u));
     }
+
+    // ==========================================================================
+    // LISTENING MODE — reads a whole group hands-free
+    // ==========================================================================
+    let lsActive = false;
+    let lsPaused = false;
+    let lsToken = 0;        // bumps on stop/pause so stale callbacks do nothing
+    let lsRate = 1;
+    let lsTimer = null;
+    let lsWakeLock = null;
+
+    function lsIsLive(token) {
+      return token === lsToken && lsActive && !lsPaused;
+    }
+
+    function lsWait(ms, token, next) {
+      clearTimeout(lsTimer);
+      lsTimer = setTimeout(() => { if (lsIsLive(token)) next(); }, ms);
+    }
+
+    function lsSpeak(text, rate, token, next) {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = fcVoice ? fcVoice.lang : 'en-US';
+      if (fcVoice) u.voice = fcVoice;
+      u.rate = rate;
+      u.onend = () => { if (lsIsLive(token)) next(); };
+      u.onerror = (e) => {
+        if (e.error !== 'interrupted' && e.error !== 'canceled' && lsIsLive(token)) next();
+      };
+      window.speechSynthesis.speak(u);
+    }
+
+    // One card: word, flip, meaning, pause, turn the page, repeat
+    function listenStep() {
+      const token = ++lsToken;
+      const word = fcOrder[fcIndex];
+      if (!word) return stopListening();
+      const meaning = getMeaning(word);
+      updateListenUI();
+
+      lsWait(200, token, () =>
+        lsSpeak(word, 0.8 * lsRate, token, () =>
+          lsWait(500, token, () => {
+            document.getElementById('fc-card').classList.add('flipped');
+            lsWait(500, token, () => {
+              const afterMeaning = () => lsWait(1500, token, () => {
+                if (fcIndex >= fcOrder.length - 1) {
+                  stopListening(); // finished the group
+                  return;
+                }
+                turnPage(1);
+                lsWait(700, token, listenStep);
+              });
+              if (meaning) lsSpeak(meaning, 0.92 * lsRate, token, afterMeaning);
+              else afterMeaning();
+            });
+          })
+        )
+      );
+    }
+
+    function startListening() {
+      if (!('speechSynthesis' in window)) {
+        alert('Sorry, read-aloud is not supported in this browser.');
+        return;
+      }
+      if (!fcOrder.length) return;
+      stopSpeaking();
+      lsActive = true;
+      lsPaused = false;
+      requestWakeLock();
+      showCard(); // start from the word side of the current card
+      listenStep();
+    }
+
+    function toggleListenPause() {
+      if (!lsActive) return;
+      if (!lsPaused) {
+        lsPaused = true;
+        lsToken++;
+        clearTimeout(lsTimer);
+        window.speechSynthesis.cancel();
+        updateListenUI();
+      } else {
+        lsPaused = false;
+        showCard();   // replay the current card from its word
+        listenStep();
+      }
+    }
+
+    function stopListening() {
+      if (!lsActive) return;
+      lsActive = false;
+      lsPaused = false;
+      lsToken++;
+      clearTimeout(lsTimer);
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      releaseWakeLock();
+      updateListenUI();
+    }
+
+    function toggleListenSpeed() {
+      lsRate = lsRate === 1 ? 0.75 : 1; // applies from the next word or meaning
+      updateListenUI();
+    }
+
+    function updateListenUI() {
+      document.getElementById('fc-listen-start').classList.toggle('hidden', lsActive);
+      document.getElementById('fc-listen-bar').classList.toggle('hidden', !lsActive);
+      document.getElementById('fc-listen-note').classList.toggle('hidden', !lsActive);
+      if (!lsActive) return;
+
+      document.getElementById('fc-listen-state').textContent = lsPaused ? 'Paused' : 'Listening';
+      document.getElementById('fc-listen-pos').textContent = `Card ${fcIndex + 1} of ${fcOrder.length}`;
+      document.getElementById('fc-listen-speed').textContent = lsRate === 1 ? '1x' : '0.75x';
+      const toggle = document.getElementById('fc-listen-toggle');
+      toggle.innerHTML = lsPaused ? ICON_PLAY : ICON_PAUSE;
+      toggle.setAttribute('aria-label', lsPaused ? 'Resume' : 'Pause');
+    }
+
+    // Keep the screen awake while listening (supported on current Android Chrome and iOS)
+    async function requestWakeLock() {
+      try {
+        if ('wakeLock' in navigator) lsWakeLock = await navigator.wakeLock.request('screen');
+      } catch (e) {
+        lsWakeLock = null;
+      }
+    }
+
+    function releaseWakeLock() {
+      try { if (lsWakeLock) lsWakeLock.release(); } catch (e) {}
+      lsWakeLock = null;
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (!lsActive) return;
+      if (document.visibilityState === 'hidden') {
+        if (!lsPaused) toggleListenPause(); // phones cut speech anyway; pause cleanly
+      } else {
+        requestWakeLock();
+      }
+    });
+
+    // ==========================================================================
+    // WORD LIST PDF (jsPDF is loaded only when a PDF is first requested)
+    // ==========================================================================
+    let jsPdfLoading = null;
+
+    function loadJsPdf() {
+      if (window.jspdf && window.jspdf.jsPDF) return Promise.resolve(window.jspdf.jsPDF);
+      if (!jsPdfLoading) {
+        jsPdfLoading = new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+          script.onload = () => (window.jspdf && window.jspdf.jsPDF)
+            ? resolve(window.jspdf.jsPDF)
+            : reject(new Error('jsPDF did not load'));
+          script.onerror = () => {
+            jsPdfLoading = null;
+            reject(new Error('jsPDF failed to load'));
+          };
+          document.head.appendChild(script);
+        });
+      }
+      return jsPdfLoading;
+    }
+
+    // The built-in PDF fonts only cover Western European characters
+    function pdfText(str) {
+      return String(str || '')
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201C\u201D]/g, '"')
+        .replace(/[\u2013\u2014]/g, '-')
+        .replace(/\u2026/g, '...')
+        .replace(/[^\x00-\xFF]/g, '');
+    }
+
+    async function createWordListPdf(title, words, selfTest, btn) {
+      if (!words || words.length === 0) return;
+      const label = btn ? btn.querySelector('span') : null;
+      const originalLabel = label ? label.textContent : '';
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Preparing…';
+
+      try {
+        const JsPDF = await loadJsPdf();
+        const doc = new JsPDF({ unit: 'pt', format: 'a4' });
+        const W = doc.internal.pageSize.getWidth();
+        const H = doc.internal.pageSize.getHeight();
+        const M = 50;
+        const NAVY = [27, 35, 64];
+        const BODY = [45, 52, 78];
+        const MUTED = [110, 118, 145];
+        const LINE = [221, 226, 238];
+        const GOLD = [227, 169, 43];
+
+        const colNum = M;
+        const colWord = M + 28;
+        const colMean = M + 185;
+        const wordW = colMean - colWord - 14;
+        const meanW = W - M - colMean;
+        const cleanTitle = pdfText(title);
+        let y = M;
+
+        const columnHeads = () => {
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(8.5);
+          doc.setTextColor(...MUTED);
+          doc.text('#', colNum, y);
+          doc.text('Word', colWord, y);
+          doc.text(selfTest ? 'Meaning (write from memory)' : 'Meaning', colMean, y);
+          y += 8;
+          doc.setDrawColor(...LINE);
+          doc.setLineWidth(0.75);
+          doc.line(M, y, W - M, y);
+          y += 20;
+        };
+
+        // First-page header
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(9.5);
+        doc.setTextColor(...GOLD);
+        doc.text('Vocab Odyssey', M, y);
+        y += 28;
+        doc.setFont('times', 'bold');
+        doc.setFontSize(24);
+        doc.setTextColor(...NAVY);
+        const titleLines = doc.splitTextToSize(cleanTitle, W - 2 * M);
+        doc.text(titleLines, M, y, { lineHeightFactor: 1.15 });
+        y += (titleLines.length - 1) * 28 + 20;
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10.5);
+        doc.setTextColor(...MUTED);
+        doc.text(selfTest
+          ? `Self-test sheet: ${words.length} words. Write each meaning, then check with the word list.`
+          : `${words.length} words with meanings`, M, y);
+        y += 14;
+        doc.setDrawColor(...GOLD);
+        doc.setLineWidth(2);
+        doc.line(M, y, W - M, y);
+        y += 26;
+        columnHeads();
+
+        // Fit to one page when possible: try normal, then tighter spacing
+        const LAYOUTS = [
+          { wf: 12.5, mf: 10.5, lh: 14, gap: 19, selfGap: 28, writeLines: 2 },
+          { wf: 12, mf: 10, lh: 13, gap: 14, selfGap: 22, writeLines: 2 },
+          { wf: 11.5, mf: 9.5, lh: 12, gap: 10, selfGap: 17, writeLines: 2 },
+          { wf: 11.5, mf: 9.5, lh: 12, gap: 10, selfGap: 26, writeLines: 1 } // long self-test sheets
+        ];
+        const rows = (L) => words.map(word => {
+          doc.setFont('times', 'bold');
+          doc.setFontSize(L.wf);
+          const wordLines = doc.splitTextToSize(pdfText(word), wordW);
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(L.mf);
+          const meaning = getMeaning(word) || 'Meaning not in the word list';
+          const meanLines = selfTest ? [] : doc.splitTextToSize(pdfText(meaning), meanW);
+          const lines = Math.max(wordLines.length, meanLines.length, 1);
+          const blockH = selfTest
+            ? Math.max(L.writeLines === 2 ? 22 : 0, (wordLines.length - 1) * L.lh)
+            : (lines - 1) * L.lh;
+          const advance = selfTest ? blockH + L.selfGap : blockH + 9 + L.gap;
+          return { word, wordLines, meanLines, blockH, advance };
+        });
+        const pageBottom = H - 60;
+        let L = LAYOUTS[0];
+        let laidOut = rows(L);
+        for (const candidate of LAYOUTS) {
+          const r = rows(candidate);
+          // Same rule the page break uses: the last row needs its block plus 12pt
+          const last = r[r.length - 1];
+          const needed = r.slice(0, -1).reduce((sum, row) => sum + row.advance, 0) + last.blockH + 12;
+          if (y + needed <= pageBottom) {
+            L = candidate;
+            laidOut = r;
+            break;
+          }
+        }
+
+        laidOut.forEach((row, i) => {
+          const { wordLines, meanLines, blockH } = row;
+
+          // New page if this row won't fit above the footer
+          if (y + blockH + 12 > pageBottom) {
+            doc.addPage();
+            y = M;
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(9);
+            doc.setTextColor(...MUTED);
+            doc.text(`${cleanTitle} (continued)`, M, y);
+            y += 24;
+            columnHeads();
+          }
+
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(9.5);
+          doc.setTextColor(...MUTED);
+          doc.text(String(i + 1), colNum, y);
+
+          doc.setFont('times', 'bold');
+          doc.setFontSize(L.wf);
+          doc.setTextColor(...NAVY);
+          doc.text(wordLines, colWord, y, { lineHeightFactor: L.lh / L.wf });
+
+          if (selfTest) {
+            doc.setDrawColor(...LINE);
+            doc.setLineWidth(0.75);
+            doc.line(colMean, y + 3, W - M, y + 3);
+            if (L.writeLines === 2) doc.line(colMean, y + 22, W - M, y + 22);
+            y += row.advance;
+          } else {
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(L.mf);
+            doc.setTextColor(...BODY);
+            doc.text(meanLines, colMean, y, { lineHeightFactor: L.lh / L.mf });
+            const bottom = y + blockH + 9;
+            doc.setDrawColor(...LINE);
+            doc.setLineWidth(0.5);
+            doc.line(M, bottom, W - M, bottom);
+            y = bottom + L.gap;
+          }
+        });
+
+        // Footer on every page
+        const pages = doc.getNumberOfPages();
+        for (let p = 1; p <= pages; p++) {
+          doc.setPage(p);
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(8.5);
+          doc.setTextColor(...MUTED);
+          doc.text(cleanTitle, M, H - 30);
+          doc.text(`Page ${p} of ${pages}`, W - M, H - 30, { align: 'right' });
+        }
+
+        const slug = cleanTitle.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        doc.save(`Vocab-Odyssey-${slug}${selfTest ? '-Self-Test' : ''}.pdf`);
+      } catch (err) {
+        console.error(err);
+        alert('Couldn’t create the PDF. Check your internet connection and try again.');
+      } finally {
+        if (btn) btn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
+    }
+
+    function downloadQuizPdf(selfTest, btn) {
+      if (!currentQuiz) return;
+      createWordListPdf(currentQuiz.quiz_title || 'Word list', getQuizWords(currentQuiz), selfTest, btn);
+    }
+
+    function downloadDeckPdf(btn) {
+      if (!fcCurrentGroup) return;
+      stopListening();
+      createWordListPdf(fcCurrentGroup.title, fcCurrentGroup.words, false, btn);
+    }
+
+    // ==========================================================================
+    // PRACTICE: Synonym challenge & Odd one out
+    // Questions are generated from the Vocab Gangs every round.
+    // ==========================================================================
+    const PR_ROUND = 10;
+    let prMode = 'synonym';
+    let prQuestions = [];
+    let prIndex = 0;
+    let prScore = 0;
+    let prAnswers = [];
+    let prAnswered = false;
+    let prAllWords = [];
+
+    const prPick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+    function prShuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function prShareGang(a, b) {
+      const ga = wordToGangs.get(a) || [];
+      const gb = wordToGangs.get(b) || [];
+      return ga.some(g => gb.includes(g));
+    }
+
+    const prIsVerb = w => !!(gangWordInfo.get(w) || {}).isVerb;
+    const prDef = w => (gangWordInfo.get(w) || {}).definition || getMeaning(w) || '';
+
+    function populatePracticeSources() {
+      const select = document.getElementById('pr-source');
+      let html = '<option value="all">All words</option>';
+      FC_SECTIONS.forEach(({ key, label }) => {
+        const items = fcGroups.map((g, i) => ({ g, i })).filter(x => x.g.category === key);
+        if (items.length === 0) return;
+        html += `<optgroup label="${label}">`
+          + items.map(x => `<option value="${x.i}">${escapeHtml(x.g.title)}</option>`).join('')
+          + '</optgroup>';
+      });
+      select.innerHTML = html;
+    }
+
+    function selectPracticeMode(mode) {
+      prMode = mode;
+      document.querySelectorAll('.pr-mode').forEach(btn => {
+        const on = btn.dataset.mode === mode;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', String(on));
+      });
+    }
+
+    function prGetPool() {
+      const value = document.getElementById('pr-source').value;
+      if (value === 'all' || !fcGroups[value]) return prAllWords;
+      return fcGroups[value].words
+        .map(w => w.trim().toLowerCase())
+        .filter(w => wordToGangs.has(w));
+    }
+
+    // Pick words that share no gang with any word in `avoid` (or with each other),
+    // preferring the chosen pool and the same word type (verb / not verb)
+    function prPickUnrelated(count, avoid, wantVerb, pool) {
+      const chosen = [];
+      const ok = w => !avoid.includes(w) && !chosen.includes(w)
+        && avoid.every(a => !prShareGang(a, w) && prSim(a, w) < 2 && prSim(w, a) < 2)
+        && chosen.every(c => !prShareGang(c, w));
+
+      [pool, prAllWords].forEach(source => {
+        for (let tries = 0; tries < 400 && chosen.length < count; tries++) {
+          const w = prPick(source);
+          if (!ok(w)) continue;
+          if (tries < 300 && prIsVerb(w) !== wantVerb) continue;
+          chosen.push(w);
+        }
+      });
+      return chosen;
+    }
+
+    // Definition similarity: two words are close in meaning when their definitions
+    // share uncommon words ("scarcity", "deceive"...). Rare shared words count more.
+    const PR_STOP = new Set(('a an the of or and to in on for with by as at from that this is be being been are was were '
+      + 'it its into out up down over under one ones someone something some any more most less very not no make made makes '
+      + 'making become becomes cause causes having have has who which what when where how way thing things person people '
+      + 'quality state act action manner often especially usually').split(' '));
+    let prTokens = new Map();
+    let prIdf = new Map();
+    let prSynPairs = new Map(); // word -> its closest same-type gang-mate (strong matches only)
+
+    function prTokensOf(definition) {
+      const words = (definition || '').toLowerCase().replace(/[^a-z\s]/g, ' ').split(/\s+/)
+        .filter(w => w.length > 2 && !PR_STOP.has(w))
+        .map(w => w.replace(/(ingly|edly|ings|ing|ed|es|s|ly|ness|ment|ful|ous|ive|al|ity|ion)$/, ''))
+        .filter(w => w.length > 2);
+      return [...new Set(words)];
+    }
+
+    function prSim(a, b) {
+      const B = new Set(prTokens.get(b) || []);
+      let score = 0;
+      (prTokens.get(a) || []).forEach(t => { if (B.has(t)) score += prIdf.get(t) || 0; });
+      return score;
+    }
+
+    function prBuildSimilarity() {
+      prTokens = new Map();
+      const docFreq = new Map();
+      gangWordInfo.forEach((info, w) => {
+        const t = prTokensOf(info.definition);
+        prTokens.set(w, t);
+        t.forEach(x => docFreq.set(x, (docFreq.get(x) || 0) + 1));
+      });
+      const N = prTokens.size;
+      prIdf = new Map();
+      docFreq.forEach((count, t) => prIdf.set(t, Math.log(N / (count + 1))));
+
+      prSynPairs = new Map();
+      wordToGangs.forEach((gangs, w) => {
+        const mates = new Set();
+        gangs.forEach(g => gangList[g].words.forEach(m => { if (m !== w) mates.add(m); }));
+        let best = null;
+        let bestScore = 0;
+        mates.forEach(m => {
+          if (prIsVerb(m) !== prIsVerb(w)) return;
+          if (m.slice(0, 5) === w.slice(0, 5)) return; // same root gives the answer away
+          const score = prSim(w, m);
+          if (score > bestScore) { bestScore = score; best = m; }
+        });
+        if (best && bestScore >= 6) prSynPairs.set(w, best);
+      });
+    }
+
+    // Fallback when a word has no strong match: the gang-mate that shares the most gangs; otherwise comes
+    // from the word's smallest (most specific) gang. Same word type preferred.
+    function prBestSynonym(target) {
+      const targetGangs = wordToGangs.get(target) || [];
+      const counts = new Map();
+      targetGangs.forEach(g => gangList[g].words.forEach(w => {
+        if (w !== target) counts.set(w, (counts.get(w) || 0) + 1);
+      }));
+      if (counts.size === 0) return null;
+
+      const sameType = [...counts.keys()].filter(w => prIsVerb(w) === prIsVerb(target));
+      const candidates = sameType.length ? sameType : [...counts.keys()];
+      const best = Math.max(...candidates.map(w => counts.get(w)));
+      if (best > 1) return prPick(candidates.filter(w => counts.get(w) === best));
+
+      const bySize = targetGangs.slice().sort((a, b) => gangList[a].words.length - gangList[b].words.length);
+      for (const g of bySize) {
+        const inGang = candidates.filter(w => gangList[g].words.includes(w));
+        if (inGang.length) return prPick(inGang);
+      }
+      return prPick(candidates);
+    }
+
+    function prMakeSynonym(pool, used) {
+      // Prefer words that have a strong synonym in their gang
+      const strong = pool.filter(w => prSynPairs.has(w));
+      const targets = strong.length >= 3 ? strong : pool;
+
+      for (let attempt = 0; attempt < 80; attempt++) {
+        const target = prPick(targets);
+        if (used.has(target) && attempt < 60) continue;
+
+        const answer = prSynPairs.get(target) || prBestSynonym(target);
+        if (!answer) continue;
+        const wrong = prPickUnrelated(3, [target, answer], prIsVerb(answer), pool);
+        if (wrong.length < 3) continue;
+
+        used.add(target);
+        const gangIdx = wordToGangs.get(target).find(g => gangList[g].words.includes(answer));
+        return { type: 'synonym', word: target, answer, options: prShuffle([answer, ...wrong]), gang: gangList[gangIdx] };
+      }
+      return null;
+    }
+
+    function prMakeOdd(pool, used) {
+      const poolSet = new Set(pool);
+      for (let attempt = 0; attempt < 80; attempt++) {
+        const seed = prPick(pool);
+        if (used.has(seed) && attempt < 60) continue;
+
+        const gangs = (wordToGangs.get(seed) || []).filter(g => gangList[g].words.length >= 3);
+        if (gangs.length === 0) continue;
+        const gang = gangList[prPick(gangs)];
+
+        // Prefer the chosen quiz's words for the other two members
+        const others = prShuffle(gang.words.filter(w => w !== seed));
+        others.sort((a, b) => (poolSet.has(b) ? 1 : 0) - (poolSet.has(a) ? 1 : 0));
+        const group = [seed, others[0], others[1]];
+
+        const verbCount = group.filter(prIsVerb).length;
+        const outsider = prPickUnrelated(1, group, verbCount >= 2, pool)[0];
+        if (!outsider) continue;
+
+        used.add(seed);
+        return { type: 'odd', group, answer: outsider, options: prShuffle([...group, outsider]), gang };
+      }
+      return null;
+    }
+
+    function prShowView(view) {
+      ['pr-setup', 'pr-play', 'pr-results'].forEach(id =>
+        document.getElementById(id).classList.toggle('hidden', id !== view));
+      document.getElementById('practice-app-tab').classList.toggle('is-playing', view !== 'pr-setup');
+    }
+
+    function startPractice() {
+      const msg = document.getElementById('pr-msg');
+      msg.classList.add('hidden');
+
+      if (wordToGangs.size === 0) {
+        msg.textContent = 'Words are still loading. Try again in a moment.';
+        msg.classList.remove('hidden');
+        return;
+      }
+      if (prAllWords.length !== wordToGangs.size) {
+        prAllWords = [...wordToGangs.keys()];
+        prBuildSimilarity();
+      }
+
+      const pool = prGetPool();
+      if (pool.length === 0) {
+        msg.textContent = 'None of this quiz’s words are in the Vocab Gangs list. Choose another source.';
+        msg.classList.remove('hidden');
+        return;
+      }
+
+      const used = new Set();
+      prQuestions = [];
+      for (let i = 0; i < PR_ROUND; i++) {
+        const q = prMode === 'synonym' ? prMakeSynonym(pool, used) : prMakeOdd(pool, used);
+        if (q) prQuestions.push(q);
+      }
+      if (prQuestions.length === 0) {
+        msg.textContent = 'Couldn’t build questions from these words. Choose another source.';
+        msg.classList.remove('hidden');
+        return;
+      }
+
+      prIndex = 0;
+      prScore = 0;
+      prAnswers = [];
+      prShowView('pr-play');
+      renderPracticeQuestion();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderPracticeDots() {
+      document.getElementById('pr-dots').innerHTML = prQuestions.map((_, i) => {
+        let cls = '';
+        if (i < prAnswers.length) cls = prAnswers[i].right ? ' right' : ' wrong';
+        if (i === prIndex && !prAnswered) cls = ' current';
+        return `<span class="fc-dot${cls}"></span>`;
+      }).join('');
+    }
+
+    function renderPracticeQuestion() {
+      const q = prQuestions[prIndex];
+      prAnswered = false;
+
+      document.getElementById('pr-counter').textContent = `${prIndex + 1} / ${prQuestions.length}`;
+      renderPracticeDots();
+
+      const card = document.getElementById('pr-question');
+      const wordEl = document.getElementById('pr-word');
+      if (q.type === 'synonym') {
+        document.getElementById('pr-prompt').textContent = 'Which word is closest in meaning to';
+        wordEl.textContent = q.word;
+        wordEl.classList.remove('hidden');
+      } else {
+        document.getElementById('pr-prompt').textContent = 'Three of these words share a meaning. Which one doesn’t belong?';
+        wordEl.classList.add('hidden');
+      }
+      card.classList.remove('pr-in');
+      void card.offsetWidth;
+      card.classList.add('pr-in');
+
+      const options = document.getElementById('pr-options');
+      options.classList.toggle('grid-2', q.type === 'odd');
+      options.innerHTML = q.options.map((w, i) => `
+        <button class="pr-option" data-word="${escapeHtml(w)}" onclick="answerPractice(${i})">
+          <span class="pr-key">${i + 1}</span><span>${escapeHtml(w)}</span>
+        </button>`).join('');
+
+      document.getElementById('pr-explain').classList.add('hidden');
+      document.getElementById('pr-next-row').classList.add('hidden');
+    }
+
+    function answerPractice(i) {
+      if (prAnswered) return;
+      prAnswered = true;
+
+      const q = prQuestions[prIndex];
+      const chosen = q.options[i];
+      const right = chosen === q.answer;
+      if (right) prScore++;
+      prAnswers.push({ q, chosen, right });
+
+      document.querySelectorAll('#pr-options .pr-option').forEach(btn => {
+        btn.disabled = true;
+        const w = q.options[[...btn.parentNode.children].indexOf(btn)];
+        if (w === q.answer) btn.classList.add('correct');
+        else if (w === chosen) btn.classList.add('wrong');
+        else btn.classList.add('dim');
+      });
+
+      const gangText = `Vocab Gang ${escapeHtml(q.gang.no)}: ${escapeHtml(q.gang.meaning)}`;
+      let body;
+      if (q.type === 'synonym') {
+        body = `
+          <p><strong>${escapeHtml(q.word)}</strong>: ${escapeHtml(prDef(q.word))}</p>
+          <p><strong>${escapeHtml(q.answer)}</strong>: ${escapeHtml(prDef(q.answer))}</p>
+          <p class="pr-gang">Both are in ${gangText}.</p>`;
+      } else {
+        body = `
+          <p><strong>${q.group.map(escapeHtml).join(', ')}</strong> all belong to <span class="pr-gang">${gangText}</span>.</p>
+          <p><strong>${escapeHtml(q.answer)}</strong>: ${escapeHtml(prDef(q.answer))}</p>`;
+      }
+      const explain = document.getElementById('pr-explain');
+      explain.innerHTML = `<div class="pr-verdict ${right ? 'good' : 'bad'}">${right ? 'Correct.' : 'Not quite.'}</div>${body}`;
+      explain.classList.remove('hidden');
+
+      const isLast = prIndex >= prQuestions.length - 1;
+      document.getElementById('pr-next').textContent = isLast ? 'See results' : 'Next question';
+      document.getElementById('pr-next-row').classList.remove('hidden');
+      renderPracticeDots();
+      document.getElementById('pr-next').focus({ preventScroll: true });
+      document.getElementById('pr-next-row').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function nextPractice() {
+      if (!prAnswered) return;
+      if (prIndex < prQuestions.length - 1) {
+        prIndex++;
+        renderPracticeQuestion();
+        document.getElementById('pr-play').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        showPracticeResults();
+      }
+    }
+
+    function showPracticeResults() {
+      const total = prQuestions.length;
+      const pct = Math.round((prScore / total) * 100);
+      const message = pct >= 80 ? 'Excellent work.'
+        : pct >= 50 ? 'Good effort. Review the words you missed below.'
+        : 'Review the words below, then try another round.';
+
+      const missed = prAnswers.filter(a => !a.right);
+      const wordBtn = w => `<button class="pr-review-word" data-word="${escapeHtml(w)}" onclick="lookupWordFromBank(this.dataset.word)">${escapeHtml(w)}</button>`;
+
+      const reviewHtml = missed.length === 0
+        ? '<p class="no-results">Perfect round. Every answer was right.</p>'
+        : `<h2 class="pr-review-title">Words to review</h2>` + missed.map(a => `
+          <div class="pr-review-item">
+            <div class="pr-review-q">${a.q.type === 'synonym'
+              ? `Closest in meaning to <strong>${escapeHtml(a.q.word)}</strong>`
+              : `Odd one out of <strong>${a.q.options.map(escapeHtml).join(', ')}</strong>`}</div>
+            <div class="pr-review-a">Answer: ${wordBtn(a.q.answer)}
+              <span class="pr-review-chosen">You chose ${escapeHtml(a.chosen)}</span></div>
+          </div>`).join('');
+
+      document.getElementById('pr-results').innerHTML = `
+        <div class="score-summary-box">
+          <div class="score-summary-title">${prMode === 'synonym' ? 'Synonym challenge' : 'Odd one out'} complete</div>
+          <div class="score-big">${prScore}<span> / ${total}</span></div>
+          <p class="score-message"><span class="score-pct">${pct}%</span> &nbsp;${message}</p>
+        </div>
+        <div class="pr-result-actions">
+          <button class="btn-action" onclick="startPractice()">Play again</button>
+          <button class="btn-action btn-secondary" onclick="quitPractice()">Change game</button>
+        </div>
+        <div class="pr-review">${reviewHtml}</div>`;
+
+      prShowView('pr-results');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function quitPractice() {
+      prShowView('pr-setup');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Keyboard: 1–4 to answer, Enter for the next question
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('practice-app-tab').classList.contains('active')) return;
+      if (document.getElementById('pr-play').classList.contains('hidden')) return;
+      const tag = (e.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+
+      if (!prAnswered && /^[1-4]$/.test(e.key)) {
+        const n = parseInt(e.key, 10) - 1;
+        if (n < prQuestions[prIndex].options.length) answerPractice(n);
+      } else if (e.key === 'Enter' && prAnswered && tag !== 'button') {
+        e.preventDefault();
+        nextPractice();
+      }
+    });
 
     document.addEventListener('DOMContentLoaded', initQuizEngine);
   </script>
