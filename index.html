@@ -985,21 +985,38 @@
       perspective: 1400px;
     }
 
+    /* Page turn: the current card slides off, the next one slides in */
+    .fc-slide.out-left {
+      animation: fc-out-left 0.2s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+    }
+
+    .fc-slide.out-right {
+      animation: fc-out-right 0.2s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+    }
+
     .fc-slide.in-right {
-      animation: fc-in-right 0.34s cubic-bezier(0.2, 0.8, 0.2, 1);
+      animation: fc-in-right 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
     .fc-slide.in-left {
-      animation: fc-in-left 0.34s cubic-bezier(0.2, 0.8, 0.2, 1);
+      animation: fc-in-left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes fc-out-left {
+      to { opacity: 0; transform: translateX(-130px) rotate(-7deg); }
+    }
+
+    @keyframes fc-out-right {
+      to { opacity: 0; transform: translateX(130px) rotate(7deg); }
     }
 
     @keyframes fc-in-right {
-      from { opacity: 0; transform: translateX(60px) rotate(2deg); }
+      from { opacity: 0; transform: translateX(130px) rotate(7deg); }
       to { opacity: 1; transform: none; }
     }
 
     @keyframes fc-in-left {
-      from { opacity: 0; transform: translateX(-60px) rotate(-2deg); }
+      from { opacity: 0; transform: translateX(-130px) rotate(-7deg); }
       to { opacity: 1; transform: none; }
     }
 
@@ -1864,7 +1881,6 @@
         <div class="fc-secondary">
           <button class="fc-chip" id="fc-shuffle" onclick="toggleShuffle()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></svg><span>Shuffle</span></button>
           <button class="fc-chip" onclick="restartDeck()"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg><span>Restart</span></button>
-          <button class="fc-chip active" id="fc-sound" onclick="toggleFlipSound()" aria-pressed="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg><span>Page sound</span></button>
         </div>
       </div>
 
@@ -2234,8 +2250,6 @@
     // Inline SVG icons used by script-generated UI
     const ICON_SPEAK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
     const ICON_STOP = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" stroke="none"/></svg>';
-    const ICON_SOUNDON = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>';
-    const ICON_SOUNDOFF = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></svg>';
     const ICON_CHECK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
 
     // Tab Navigation Switcher
@@ -2698,13 +2712,12 @@
         ).join('');
       }
 
-      // Page turn: slide the new card in from the side you moved towards, with a paper sound
+      // Page turn: slide the new card in from the side you moved towards
       if (fcDirection !== 0) {
         const slide = document.getElementById('fc-slide');
         slide.classList.remove('in-right', 'in-left');
         void slide.offsetWidth;
         slide.classList.add(fcDirection > 0 ? 'in-right' : 'in-left');
-        playPageFlip();
         fcDirection = 0;
       }
     }
@@ -2717,20 +2730,41 @@
       document.getElementById('fc-card').classList.toggle('flipped');
     }
 
-    function nextCard() {
-      if (fcIndex < fcOrder.length - 1) {
-        fcIndex++;
-        fcDirection = 1;
+    let fcAnimating = false;
+
+    // Slide the current card off, then bring the next one in from the other side
+    function turnPage(dir) {
+      const target = fcIndex + dir;
+      if (fcAnimating || target < 0 || target >= fcOrder.length) return;
+      fcAnimating = true;
+      stopSpeaking();
+
+      const slide = document.getElementById('fc-slide');
+      slide.classList.remove('in-right', 'in-left', 'out-left', 'out-right');
+      void slide.offsetWidth;
+      slide.classList.add(dir > 0 ? 'out-left' : 'out-right');
+
+      let finished = false;
+      const finish = (e) => {
+        if (finished || (e && e.target !== slide)) return;
+        finished = true;
+        slide.removeEventListener('animationend', finish);
+        slide.classList.remove('out-left', 'out-right');
+        fcIndex = target;
+        fcDirection = dir;
         showCard();
-      }
+        fcAnimating = false;
+      };
+      slide.addEventListener('animationend', finish);
+      setTimeout(finish, 320); // fallback if the animation event doesn't fire
+    }
+
+    function nextCard() {
+      turnPage(1);
     }
 
     function prevCard() {
-      if (fcIndex > 0) {
-        fcIndex--;
-        fcDirection = -1;
-        showCard();
-      }
+      turnPage(-1);
     }
 
     function toggleShuffle() {
@@ -2883,77 +2917,6 @@
       synth.resume(); // un-sticks Chrome if it was left paused
       parts.forEach(u => synth.speak(u));
     }
-
-    // ==========================================================================
-    // PAGE-TURN SOUND (generated with the Web Audio API — no audio file needed)
-    // ==========================================================================
-    let fcAudioCtx = null;
-    let fcSoundOn = true;
-    try { fcSoundOn = localStorage.getItem('vo-page-sound') !== 'off'; } catch (e) {}
-
-    function playPageFlip() {
-      if (!fcSoundOn) return;
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      try {
-        if (!fcAudioCtx) fcAudioCtx = new AudioCtx();
-        const ctx = fcAudioCtx;
-        if (ctx.state === 'suspended') ctx.resume();
-
-        // A short burst of shaped noise: soft rise, papery flutter, quick fade
-        const duration = 0.28;
-        const length = Math.floor(ctx.sampleRate * duration);
-        const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
-        const data = buffer.getChannelData(0);
-        for (let i = 0; i < length; i++) {
-          const t = i / length;
-          const envelope = Math.pow(Math.sin(Math.PI * Math.min(1, t * 1.15)), 1.6) * (1 - t * 0.6);
-          const flutter = 0.65 + 0.35 * Math.sin(t * 70);
-          data[i] = (Math.random() * 2 - 1) * envelope * flutter;
-        }
-
-        const source = ctx.createBufferSource();
-        source.buffer = buffer;
-
-        const highpass = ctx.createBiquadFilter();
-        highpass.type = 'highpass';
-        highpass.frequency.value = 700;
-
-        const bandpass = ctx.createBiquadFilter();
-        bandpass.type = 'bandpass';
-        bandpass.Q.value = 0.8;
-        bandpass.frequency.setValueAtTime(1600, ctx.currentTime);
-        bandpass.frequency.exponentialRampToValueAtTime(4200, ctx.currentTime + duration);
-
-        const gain = ctx.createGain();
-        gain.gain.value = 0.32;
-
-        source.connect(highpass);
-        highpass.connect(bandpass);
-        bandpass.connect(gain);
-        gain.connect(ctx.destination);
-        source.start();
-      } catch (e) {
-        // Sound is a nice-to-have; never let it break the cards
-      }
-    }
-
-    function updateSoundToggle() {
-      const btn = document.getElementById('fc-sound');
-      if (!btn) return;
-      btn.classList.toggle('active', fcSoundOn);
-      btn.setAttribute('aria-pressed', String(fcSoundOn));
-      btn.innerHTML = (fcSoundOn ? ICON_SOUNDON : ICON_SOUNDOFF) + '<span>Page sound</span>';
-    }
-
-    function toggleFlipSound() {
-      fcSoundOn = !fcSoundOn;
-      try { localStorage.setItem('vo-page-sound', fcSoundOn ? 'on' : 'off'); } catch (e) {}
-      updateSoundToggle();
-      if (fcSoundOn) playPageFlip(); // a preview so you know it's on
-    }
-
-    updateSoundToggle();
 
     document.addEventListener('DOMContentLoaded', initQuizEngine);
   </script>
