@@ -712,6 +712,334 @@
       color: #1e40af;
     }
 
+    /* ==========================================================================
+       FLASHCARDS
+       ========================================================================== */
+    .fc-section {
+      margin-top: 22px;
+    }
+
+    .fc-section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0 2px 10px;
+    }
+
+    .fc-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .fc-section-count {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .fc-group-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    .fc-group-tile {
+      text-align: left;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      min-height: 64px;
+      cursor: pointer;
+      font: inherit;
+      color: var(--text);
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .fc-group-tile:hover {
+      border-color: var(--primary);
+      background-color: #eff6ff;
+    }
+
+    .fc-group-tile:focus-visible,
+    .fc-nav-btn:focus-visible,
+    .fc-chip:focus-visible,
+    .fc-speak:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.4);
+      outline-offset: 2px;
+    }
+
+    .fc-tile-title {
+      display: block;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .fc-tile-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .fc-deck-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .fc-back-btn {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      padding: 8px 4px;
+      min-height: 44px;
+    }
+
+    .fc-deck-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #0f172a;
+      text-align: right;
+    }
+
+    .fc-progress {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .fc-progress-bar {
+      height: 100%;
+      width: 0;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .fc-scene {
+      perspective: 1200px;
+    }
+
+    .fc-card {
+      position: relative;
+      height: 320px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+
+    .fc-card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .fc-card.no-anim {
+      transition: none;
+    }
+
+    .fc-card:focus-visible .fc-face {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+    }
+
+    .fc-face {
+      position: absolute;
+      inset: 0;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 22px;
+      text-align: center;
+    }
+
+    .fc-front {
+      justify-content: center;
+    }
+
+    .fc-word {
+      font-size: clamp(1.8rem, 7vw, 2.4rem);
+      font-weight: 800;
+      color: #0f172a;
+      overflow-wrap: anywhere;
+    }
+
+    .fc-hint {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .fc-back {
+      transform: rotateY(180deg);
+      background: #f0fdf4;
+      border-color: #86efac;
+      overflow-y: auto;
+    }
+
+    /* margin:auto centres short meanings but still lets long ones scroll */
+    .fc-back-inner {
+      margin: auto 0;
+      width: 100%;
+    }
+
+    .fc-back-word {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #166534;
+      margin: 6px 0 10px;
+    }
+
+    .fc-meaning {
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: #1e293b;
+    }
+
+    .fc-meaning.missing {
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .fc-open-search {
+      margin-top: 16px;
+      background: #ffffff;
+      border: 1px solid #86efac;
+      color: #166534;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      padding: 8px 12px;
+      min-height: 40px;
+      cursor: pointer;
+    }
+
+    .fc-speak {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .fc-speak:hover {
+      border-color: var(--primary);
+    }
+
+    .fc-speak.speaking {
+      background: var(--primary);
+      border-color: var(--primary);
+      animation: fc-pulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes fc-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45); }
+      50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); }
+    }
+
+    .fc-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .fc-nav-btn {
+      flex: 1;
+      min-height: 48px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #1e293b;
+      cursor: pointer;
+    }
+
+    .fc-nav-btn:hover:not(:disabled) {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .fc-nav-btn:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .fc-counter {
+      min-width: 70px;
+      text-align: center;
+      font-weight: 700;
+      color: #475569;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fc-secondary {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .fc-chip {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 14px;
+      min-height: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #334155;
+      cursor: pointer;
+    }
+
+    .fc-chip.active {
+      background: #eff6ff;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Four nav tabs on very narrow phones */
+    @media (max-width: 380px) {
+      .nav-tab {
+        font-size: 0.76rem;
+        gap: 3px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fc-card,
+      .fc-progress-bar {
+        transition: none;
+      }
+      .fc-speak.speaking {
+        animation: none;
+      }
+    }
+
     .hidden {
       display: none !important;
     }
@@ -727,6 +1055,9 @@
       </button>
       <button class="nav-tab" id="tab-btn-search" onclick="switchMainTab('search')">
         🔍 Search
+      </button>
+      <button class="nav-tab" id="tab-btn-cards" onclick="switchMainTab('cards')">
+        🃏 Cards
       </button>
       <button class="nav-tab" id="tab-btn-quiz" onclick="switchMainTab('quiz')">
         📝 Quizzes
@@ -750,6 +1081,9 @@
           <div class="landing-actions">
             <button class="btn-landing btn-landing-primary" onclick="switchMainTab('search')">
               🚀 Begin Odyssey (Search)
+            </button>
+            <button class="btn-landing btn-landing-secondary" onclick="switchMainTab('cards')">
+              🃏 Flashcards
             </button>
             <button class="btn-landing btn-landing-secondary" onclick="switchMainTab('quiz')">
               📝 Practice Quizzes
@@ -779,6 +1113,60 @@
 
         <div id="results" class="results"></div>
       </div>
+    </div>
+
+    <!-- FLASHCARDS COMPONENT -->
+    <div id="cards-app-tab" class="tab-content">
+      <div class="header">
+        <h1>🃏 Flashcards</h1>
+        <p>Pick a group, tap a card to flip it, and tap 🔊 to hear it.</p>
+      </div>
+
+      <!-- Group list -->
+      <div id="fc-groups-view">
+        <input type="text" id="fc-filter" class="quiz-search-input" autocomplete="off"
+               placeholder="🔍 Filter groups (e.g. IBA 05)..." oninput="renderFlashcardGroups()">
+        <div id="fc-groups"></div>
+      </div>
+
+      <!-- Deck -->
+      <div id="fc-deck-view" class="hidden">
+        <div class="fc-deck-top">
+          <button class="fc-back-btn" onclick="closeDeck()">‹ All groups</button>
+          <div id="fc-deck-title" class="fc-deck-title"></div>
+        </div>
+        <div class="fc-progress"><div id="fc-progress-bar" class="fc-progress-bar"></div></div>
+
+        <div class="fc-scene" id="fc-scene">
+          <div class="fc-card" id="fc-card" role="button" tabindex="0" aria-label="Flashcard. Tap to flip." onclick="flipCard()">
+            <div class="fc-face fc-front">
+              <button class="fc-speak" onclick="speakCard(event)" aria-label="Read word and meaning aloud">🔊</button>
+              <div class="fc-word" id="fc-front-word"></div>
+              <div class="fc-hint">Tap to see meaning</div>
+            </div>
+            <div class="fc-face fc-back" id="fc-back">
+              <button class="fc-speak" onclick="speakCard(event)" aria-label="Read word and meaning aloud">🔊</button>
+              <div class="fc-back-inner">
+                <div class="fc-back-word" id="fc-back-word"></div>
+                <div class="fc-meaning" id="fc-meaning"></div>
+                <button class="fc-open-search" onclick="openCardInSearch(event)">🔍 See its Vocab Gang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc-controls">
+          <button class="fc-nav-btn" id="fc-prev" onclick="prevCard()">‹ Prev</button>
+          <div class="fc-counter" id="fc-counter">1 / 1</div>
+          <button class="fc-nav-btn" id="fc-next" onclick="nextCard()">Next ›</button>
+        </div>
+        <div class="fc-secondary">
+          <button class="fc-chip" id="fc-shuffle" onclick="toggleShuffle()">🔀 Shuffle</button>
+          <button class="fc-chip" onclick="restartDeck()">↺ Restart</button>
+        </div>
+      </div>
+
+      <div id="fc-loading" class="no-results">Loading flashcards...</div>
     </div>
 
     <!-- 2. QUIZ APP COMPONENT -->
@@ -1149,24 +1537,13 @@
   <script>
     // Tab Navigation Switcher
     function switchMainTab(tab) {
-      document.getElementById('home-app-tab').classList.remove('active');
-      document.getElementById('search-app-tab').classList.remove('active');
-      document.getElementById('quiz-app-tab').classList.remove('active');
-      
-      document.getElementById('tab-btn-home').classList.remove('active');
-      document.getElementById('tab-btn-search').classList.remove('active');
-      document.getElementById('tab-btn-quiz').classList.remove('active');
+      ['home', 'search', 'cards', 'quiz'].forEach(name => {
+        document.getElementById(`${name}-app-tab`).classList.toggle('active', name === tab);
+        document.getElementById(`tab-btn-${name}`).classList.toggle('active', name === tab);
+      });
 
-      if (tab === 'home') {
-        document.getElementById('home-app-tab').classList.add('active');
-        document.getElementById('tab-btn-home').classList.add('active');
-      } else if (tab === 'search') {
-        document.getElementById('search-app-tab').classList.add('active');
-        document.getElementById('tab-btn-search').classList.add('active');
-      } else if (tab === 'quiz') {
-        document.getElementById('quiz-app-tab').classList.add('active');
-        document.getElementById('tab-btn-quiz').classList.add('active');
-      }
+      // Stop any read-aloud when leaving the flashcards
+      if (tab !== 'cards') stopSpeaking();
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1199,8 +1576,13 @@
         
         populateQuizSelector(allQuizzes);
         loadingEl.classList.add('hidden');
+
+        buildFlashcardGroups();
+        renderFlashcardGroups();
+        document.getElementById('fc-loading').classList.add('hidden');
       } catch (err) {
         loadingEl.textContent = 'Failed to load quiz data. Ensure word_smart_quizzes.json exists in the root folder.';
+        document.getElementById('fc-loading').textContent = 'Failed to load flashcard groups.';
         console.error(err);
       }
     }
@@ -1440,6 +1822,318 @@
     function escapeHtml(str) {
       if (!str) return '';
       return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    // ==========================================================================
+    // FLASHCARDS
+    // ==========================================================================
+    let fcGroups = [];          // [{ title, shortTitle, category, words: [] }]
+    let fcCurrentGroup = null;
+    let fcOrder = [];           // words in the current display order
+    let fcIndex = 0;
+    let fcShuffled = false;
+    let fcSwipeHandled = false;
+    let fcMeaningMap = new Map();
+
+    // Words for a group come from the quiz's word bank (fallback: its dropdown options)
+    function getQuizWords(quiz) {
+      let words = Array.isArray(quiz.display_word_bank) ? quiz.display_word_bank.slice() : [];
+      if (words.length === 0 && Array.isArray(quiz.sets)) {
+        quiz.sets.forEach(set => (set.dropdown_options || []).forEach(w => words.push(w)));
+      }
+      const seen = new Set();
+      return words.map(w => String(w).trim()).filter(w => {
+        const key = w.toLowerCase();
+        if (!w || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    function buildFlashcardGroups() {
+      fcGroups = allQuizzes.map(q => {
+        const title = q.quiz_title || 'Untitled';
+        const isIBA = /\bIBA\b/i.test(title) || /\bIBA\b/i.test(q.section || '');
+        return {
+          title,
+          shortTitle: title.replace(/^IBA\s*[:\-–]\s*/i, ''),
+          category: isIBA ? 'iba' : 'ws',
+          words: getQuizWords(q)
+        };
+      }).filter(g => g.words.length > 0);
+    }
+
+    function renderFlashcardGroups() {
+      const container = document.getElementById('fc-groups');
+      const tokens = document.getElementById('fc-filter').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const visible = fcGroups.filter(g => tokens.every(t => g.title.toLowerCase().includes(t)));
+
+      const sections = [
+        { key: 'ws', label: 'Word Smart' },
+        { key: 'iba', label: 'IBA' }
+      ];
+
+      let html = '';
+      sections.forEach(sec => {
+        const items = visible.filter(g => g.category === sec.key);
+        if (items.length === 0) return;
+        html += `
+          <section class="fc-section">
+            <div class="fc-section-head">
+              <h2 class="fc-section-title">${sec.label}</h2>
+              <span class="fc-section-count">${items.length} ${items.length === 1 ? 'group' : 'groups'}</span>
+            </div>
+            <div class="fc-group-grid">`;
+        items.forEach(g => {
+          const idx = fcGroups.indexOf(g);
+          html += `
+              <button class="fc-group-tile" onclick="openDeck(${idx})">
+                <span class="fc-tile-title">${escapeHtml(g.shortTitle)}</span>
+                <span class="fc-tile-meta">${g.words.length} words</span>
+              </button>`;
+        });
+        html += `
+            </div>
+          </section>`;
+      });
+
+      container.innerHTML = html || '<div class="no-results">No groups match your filter.</div>';
+    }
+
+    // Meanings are looked up from gangs.csv (the same index the search autocomplete uses)
+    function getMeaning(word) {
+      if (fcMeaningMap.size !== wordIndex.length) {
+        fcMeaningMap = new Map(wordIndex.map(item => [item.lower, item.definition]));
+      }
+      const key = word.trim().toLowerCase();
+      return fcMeaningMap.get(key)
+        || fcMeaningMap.get(key.replace(/\s*\(.*?\)\s*/g, ' ').trim())
+        || '';
+    }
+
+    function openDeck(groupIndex) {
+      fcCurrentGroup = fcGroups[groupIndex];
+      if (!fcCurrentGroup) return;
+      fcShuffled = false;
+      fcOrder = fcCurrentGroup.words.slice();
+      fcIndex = 0;
+
+      document.getElementById('fc-deck-title').textContent = fcCurrentGroup.title;
+      document.getElementById('fc-shuffle').classList.remove('active');
+      document.getElementById('fc-groups-view').classList.add('hidden');
+      document.getElementById('fc-deck-view').classList.remove('hidden');
+
+      showCard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('fc-card').focus({ preventScroll: true });
+    }
+
+    function closeDeck() {
+      stopSpeaking();
+      document.getElementById('fc-deck-view').classList.add('hidden');
+      document.getElementById('fc-groups-view').classList.remove('hidden');
+    }
+
+    function showCard() {
+      stopSpeaking();
+      const card = document.getElementById('fc-card');
+
+      // Snap back to the front without animating, so the next meaning isn't revealed mid-flip
+      card.classList.add('no-anim');
+      card.classList.remove('flipped');
+      void card.offsetWidth;
+      card.classList.remove('no-anim');
+
+      const word = fcOrder[fcIndex] || '';
+      const meaning = getMeaning(word);
+
+      document.getElementById('fc-front-word').textContent = word;
+      document.getElementById('fc-back-word').textContent = word;
+
+      const meaningEl = document.getElementById('fc-meaning');
+      meaningEl.textContent = meaning || 'Meaning not found in the word list. Tap below to search for it.';
+      meaningEl.classList.toggle('missing', !meaning);
+      document.getElementById('fc-back').scrollTop = 0;
+
+      const total = fcOrder.length;
+      document.getElementById('fc-counter').textContent = `${fcIndex + 1} / ${total}`;
+      document.getElementById('fc-prev').disabled = fcIndex === 0;
+      document.getElementById('fc-next').disabled = fcIndex >= total - 1;
+      document.getElementById('fc-progress-bar').style.width = `${((fcIndex + 1) / total) * 100}%`;
+      card.setAttribute('aria-label', `Flashcard: ${word}. Tap to flip.`);
+    }
+
+    function flipCard() {
+      if (fcSwipeHandled) {
+        fcSwipeHandled = false;
+        return;
+      }
+      document.getElementById('fc-card').classList.toggle('flipped');
+    }
+
+    function nextCard() {
+      if (fcIndex < fcOrder.length - 1) {
+        fcIndex++;
+        showCard();
+      }
+    }
+
+    function prevCard() {
+      if (fcIndex > 0) {
+        fcIndex--;
+        showCard();
+      }
+    }
+
+    function toggleShuffle() {
+      if (!fcCurrentGroup) return;
+      fcShuffled = !fcShuffled;
+      fcOrder = fcCurrentGroup.words.slice();
+      if (fcShuffled) {
+        for (let i = fcOrder.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [fcOrder[i], fcOrder[j]] = [fcOrder[j], fcOrder[i]];
+        }
+      }
+      fcIndex = 0;
+      document.getElementById('fc-shuffle').classList.toggle('active', fcShuffled);
+      showCard();
+    }
+
+    function restartDeck() {
+      fcIndex = 0;
+      showCard();
+    }
+
+    function openCardInSearch(event) {
+      event.stopPropagation();
+      stopSpeaking();
+      lookupWordFromBank(fcOrder[fcIndex]);
+    }
+
+    // Swipe left / right on phones
+    (function setupFlashcardSwipe() {
+      const scene = document.getElementById('fc-scene');
+      let startX = 0;
+      let startY = 0;
+
+      scene.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      }, { passive: true });
+
+      scene.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - startX;
+        const dy = e.changedTouches[0].clientY - startY;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+          fcSwipeHandled = true; // stop the tap that follows from flipping the card
+          setTimeout(() => { fcSwipeHandled = false; }, 400);
+          if (dx < 0) nextCard();
+          else prevCard();
+        }
+      });
+    })();
+
+    // Keyboard: ← → to move, Space / Enter on the card to flip
+    document.addEventListener('keydown', (e) => {
+      const deckOpen = document.getElementById('cards-app-tab').classList.contains('active')
+        && !document.getElementById('fc-deck-view').classList.contains('hidden');
+      if (!deckOpen) return;
+
+      const tag = (e.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextCard();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevCard();
+      } else if ((e.key === ' ' || e.key === 'Enter') && (e.target.id === 'fc-card' || e.target === document.body)) {
+        e.preventDefault();
+        flipCard();
+      }
+    });
+
+    // ==========================================================================
+    // READ ALOUD (Web Speech API — built into the browser, no API key needed)
+    // ==========================================================================
+    let fcVoice = null;
+    let fcSpeaking = false;
+    let fcSpeechToken = 0;
+
+    function pickVoice() {
+      if (!('speechSynthesis' in window)) return;
+      const voices = window.speechSynthesis.getVoices();
+      if (!voices.length) return;
+      const preferred = ['Google US English', 'Microsoft Aria', 'Microsoft Jenny', 'Samantha', 'Google UK English Female'];
+      fcVoice = preferred.map(name => voices.find(v => v.name.includes(name))).find(Boolean)
+        || voices.find(v => v.lang === 'en-US')
+        || voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'))
+        || null;
+    }
+
+    if ('speechSynthesis' in window) {
+      pickVoice();
+      window.speechSynthesis.onvoiceschanged = pickVoice; // voices load asynchronously in Chrome
+    }
+
+    function setSpeakingState(on) {
+      fcSpeaking = on;
+      document.querySelectorAll('.fc-speak').forEach(btn => {
+        btn.classList.toggle('speaking', on);
+        btn.textContent = on ? '⏹' : '🔊';
+        btn.setAttribute('aria-label', on ? 'Stop reading' : 'Read word and meaning aloud');
+      });
+    }
+
+    function stopSpeaking() {
+      fcSpeechToken++;
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      if (fcSpeaking) setSpeakingState(false);
+    }
+
+    function speakCard(event) {
+      if (event) event.stopPropagation(); // don't flip the card
+
+      if (!('speechSynthesis' in window)) {
+        alert('Sorry, read-aloud is not supported in this browser.');
+        return;
+      }
+
+      // Tapping again while it's reading stops it
+      if (fcSpeaking) {
+        stopSpeaking();
+        return;
+      }
+
+      const word = fcOrder[fcIndex];
+      if (!word) return;
+      const meaning = getMeaning(word);
+
+      const synth = window.speechSynthesis;
+      stopSpeaking();
+      const token = fcSpeechToken;
+
+      const makeUtterance = (text, rate) => {
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = fcVoice ? fcVoice.lang : 'en-US';
+        if (fcVoice) u.voice = fcVoice;
+        u.rate = rate;
+        return u;
+      };
+
+      // Word slowly first, then the meaning
+      const parts = [makeUtterance(word, 0.8)];
+      if (meaning) parts.push(makeUtterance(meaning, 0.92));
+
+      const done = () => { if (token === fcSpeechToken) setSpeakingState(false); };
+      parts[parts.length - 1].onend = done;
+      parts.forEach(u => { u.onerror = done; });
+
+      setSpeakingState(true);
+      synth.resume(); // un-sticks Chrome if it was left paused
+      parts.forEach(u => synth.speak(u));
     }
 
     document.addEventListener('DOMContentLoaded', initQuizEngine);
