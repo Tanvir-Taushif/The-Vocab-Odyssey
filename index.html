@@ -382,6 +382,71 @@
     }
 
     /* ==========================================================================
+       SEARCH AUTOCOMPLETE
+       ========================================================================== */
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-wrapper .search-box {
+      width: 100%;
+    }
+
+    .autocomplete-list {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 4px;
+      list-style: none;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
+      max-height: min(320px, 50vh);
+      overflow-y: auto;
+      z-index: 500;
+    }
+
+    .autocomplete-item {
+      min-height: 44px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    .autocomplete-item:hover,
+    .autocomplete-item.active {
+      background-color: #eff6ff;
+    }
+
+    .ac-word {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #0f172a;
+    }
+
+    .ac-match {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .ac-def {
+      font-size: 0.82rem;
+      color: #64748b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ==========================================================================
        QUIZ APP STYLES
        ========================================================================== */
     .quiz-container {
@@ -694,7 +759,7 @@
       </div>
     </div>
 
-    <!-- 1. VOCAB SEARCH COMPONENT WRAPPER (PRESERVED INTACT) -->
+    <!-- 1. VOCAB SEARCH COMPONENT WRAPPER -->
     <div id="search-app-tab" class="tab-content">
       <div class="container">
         <div class="header">
@@ -703,7 +768,12 @@
         </div>
 
         <div class="search-container">
-          <input type="text" id="search" class="search-box" placeholder="Type a word to search..." onkeydown="handleKeyPress(event)">
+          <div class="search-wrapper">
+            <input type="text" id="search" class="search-box" placeholder="Type a word to search..."
+                   autocomplete="off" role="combobox" aria-autocomplete="list"
+                   aria-expanded="false" aria-controls="autocomplete-list">
+            <ul id="autocomplete-list" class="autocomplete-list hidden" role="listbox"></ul>
+          </div>
           <button class="search-btn" onclick="searchWord()">Search</button>
         </div>
 
@@ -790,7 +860,7 @@
   <!-- External PapaParse Script for Search Engine -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 
-  <!-- VOCAB SEARCH ENGINE SCRIPT (INTACT) -->
+  <!-- VOCAB SEARCH ENGINE SCRIPT -->
   <script>
     let csvData = [];
 
@@ -800,24 +870,25 @@
       header: true,
       complete: function(results) {
         csvData = results.data;
+        buildWordIndex();
       }
     });
 
     // Parse raw text into structured array of objects (updated to catch multi-word terms like "bon vivant" & "bona fide")
-function parseWordList(rawText) {
-  if (!rawText) return [];
-  const regex = /([A-Za-z0-9\-\s\/\'\"]+?):\s*([\s\S]+?)(?=\s+[A-Za-z0-9\-\s\/\'\"]+?:|$)/g;
-  let matches = [];
-  let match;
-  while ((match = regex.exec(rawText)) !== null) {
-    const word = match[1].trim();
-    const definition = match[2].trim();
-    if (word) {
-      matches.push({ word, definition });
+    function parseWordList(rawText) {
+      if (!rawText) return [];
+      const regex = /([A-Za-z0-9\-\s\/\'\"]+?):\s*([\s\S]+?)(?=\s+[A-Za-z0-9\-\s\/\'\"]+?:|$)/g;
+      let matches = [];
+      let match;
+      while ((match = regex.exec(rawText)) !== null) {
+        const word = match[1].trim();
+        const definition = match[2].trim();
+        if (word) {
+          matches.push({ word, definition });
+        }
+      }
+      return matches;
     }
-  }
-  return matches;
-}
 
     // Whole-word highlighting using \b word boundaries
     function highlightText(text, query) {
@@ -827,13 +898,8 @@ function parseWordList(rawText) {
       return text.replace(regex, '<mark class="highlight">$1</mark>');
     }
 
-    function handleKeyPress(event) {
-      if (event.key === 'Enter') {
-        searchWord();
-      }
-    }
-
     function searchWord() {
+      closeSuggestions();
       const query = document.getElementById('search').value.trim();
       const resultsContainer = document.getElementById('results');
       resultsContainer.innerHTML = '';
@@ -934,6 +1000,149 @@ function parseWordList(rawText) {
 
       resultsContainer.innerHTML = finalHtml;
     }
+
+    // ==========================================================================
+    // SEARCH AUTOCOMPLETE
+    // ==========================================================================
+    let wordIndex = [];       // [{ word, lower, definition }]
+    let acItems = [];         // suggestions currently shown
+    let acActiveIndex = -1;   // keyboard-highlighted suggestion
+
+    // Build a unique, alphabetically sorted list of every word in gangs.csv
+    function buildWordIndex() {
+      const map = new Map();
+      csvData.forEach(row => {
+        parseWordList(row['Words with Meanings'] || '').forEach(entry => {
+          const word = entry.word.trim();
+          const lower = word.toLowerCase();
+          if (!word || word.length > 40 || map.has(lower)) return;
+          map.set(lower, { word, lower, definition: entry.definition });
+        });
+      });
+      wordIndex = Array.from(map.values()).sort((a, b) => a.lower.localeCompare(b.lower));
+    }
+
+    // Words that START with the query come first, then words that merely CONTAIN it
+    function getSuggestions(query, limit = 8) {
+      const q = query.toLowerCase();
+      const starts = [];
+      const contains = [];
+      for (const item of wordIndex) {
+        if (item.lower.startsWith(q)) starts.push(item);
+        else if (item.lower.includes(q)) contains.push(item);
+        if (starts.length >= limit) break;
+      }
+      return starts.concat(contains).slice(0, limit);
+    }
+
+    function acEscape(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function renderSuggestions(query) {
+      const list = document.getElementById('autocomplete-list');
+      acActiveIndex = -1;
+
+      if (!query || wordIndex.length === 0) return closeSuggestions();
+
+      acItems = getSuggestions(query);
+      if (acItems.length === 0) return closeSuggestions();
+
+      const q = query.toLowerCase();
+      list.innerHTML = acItems.map((item, i) => {
+        const pos = item.lower.indexOf(q);
+        const w = item.word;
+        const wordHtml =
+          acEscape(w.slice(0, pos)) +
+          '<span class="ac-match">' + acEscape(w.slice(pos, pos + q.length)) + '</span>' +
+          acEscape(w.slice(pos + q.length));
+        return `
+          <li class="autocomplete-item" role="option" id="ac-item-${i}" data-index="${i}">
+            <span class="ac-word">${wordHtml}</span>
+            <span class="ac-def">${acEscape(item.definition)}</span>
+          </li>`;
+      }).join('');
+
+      list.classList.remove('hidden');
+      document.getElementById('search').setAttribute('aria-expanded', 'true');
+    }
+
+    function closeSuggestions() {
+      const list = document.getElementById('autocomplete-list');
+      const input = document.getElementById('search');
+      if (!list || !input) return;
+      list.classList.add('hidden');
+      list.innerHTML = '';
+      acItems = [];
+      acActiveIndex = -1;
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    }
+
+    function setActiveSuggestion(index) {
+      const n = acItems.length;
+      if (n === 0) return;
+      acActiveIndex = (index + n) % n; // wrap around top/bottom
+
+      document.querySelectorAll('.autocomplete-item').forEach((el, i) => {
+        el.classList.toggle('active', i === acActiveIndex);
+      });
+
+      const activeEl = document.getElementById(`ac-item-${acActiveIndex}`);
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: 'nearest' });
+        document.getElementById('search').setAttribute('aria-activedescendant', activeEl.id);
+      }
+    }
+
+    function selectSuggestion(index) {
+      const item = acItems[index];
+      if (!item) return;
+      document.getElementById('search').value = item.word;
+      searchWord(); // searchWord() also closes the list
+    }
+
+    (function setupAutocomplete() {
+      const input = document.getElementById('search');
+      const list = document.getElementById('autocomplete-list');
+
+      input.addEventListener('input', () => renderSuggestions(input.value.trim()));
+
+      input.addEventListener('focus', () => {
+        if (input.value.trim()) renderSuggestions(input.value.trim());
+      });
+
+      input.addEventListener('blur', closeSuggestions);
+
+      input.addEventListener('keydown', (e) => {
+        const isOpen = !list.classList.contains('hidden');
+
+        if (e.key === 'ArrowDown' && isOpen) {
+          e.preventDefault();
+          setActiveSuggestion(acActiveIndex + 1);
+        } else if (e.key === 'ArrowUp' && isOpen) {
+          e.preventDefault();
+          setActiveSuggestion(acActiveIndex - 1);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (isOpen && acActiveIndex >= 0) selectSuggestion(acActiveIndex);
+          else searchWord();
+        } else if (e.key === 'Escape') {
+          closeSuggestions();
+        }
+      });
+
+      // mousedown (not click) fires before the input's blur, so the tap registers.
+      // preventDefault keeps focus in the input.
+      list.addEventListener('mousedown', (e) => {
+        const li = e.target.closest('.autocomplete-item');
+        if (!li) return;
+        e.preventDefault();
+        selectSuggestion(parseInt(li.dataset.index, 10));
+      });
+    })();
   </script>
 
   <!-- NAVIGATION & QUIZ APP SCRIPT -->
