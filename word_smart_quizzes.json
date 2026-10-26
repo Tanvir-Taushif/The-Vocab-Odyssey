@@ -15530,7 +15530,8 @@
       "articulate",
       "artisan",
       "ascribe",
-      "ascertain askance",
+      "ascertain",
+      "askance",
       "aspersion",
       "assail",
       "assert",
@@ -19945,7 +19946,8 @@
     "instructions": "Fill in the gaps using the appropriate words from the box. No word should be used twice.",
     "display_word_bank": [
       "embroil",
-      "imbroglio embryonic",
+      "imbroglio",
+      "embryonic",
       "emissary",
       "empathy",
       "empower",
@@ -27205,6 +27207,7 @@
           "veneer",
           "verdant",
           "verge",
+          "verity",
           "vie",
           "vigilant",
           "vignette"
@@ -27268,7 +27271,7 @@
           {
             "question_number": 12,
             "text": "The concept of ____________ is essential in scientific discussions, as it refers to truth or reality.",
-            "correct_answer": ""
+            "correct_answer": "verity"
           }
         ]
       },
@@ -27277,6 +27280,7 @@
         "set_title": "Set B",
         "dropdown_options": [
           "converge",
+          "diverge",
           "vacuous",
           "vagaries",
           "vanquish",
@@ -27347,7 +27351,7 @@
           {
             "question_number": 12,
             "text": "Over time, their political views began to ____________, leading to heated debates at family dinners.",
-            "correct_answer": ""
+            "correct_answer": "diverge"
           }
         ]
       }
@@ -27626,7 +27630,7 @@
       }
     ]
   },
-    {
+  {
     "quiz_id": "IBA_QQ_01",
     "section": "IBA Question",
     "quiz_title": "IBA: Quick Quiz 01",
