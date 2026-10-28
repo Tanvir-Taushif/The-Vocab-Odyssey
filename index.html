@@ -2202,6 +2202,200 @@
       }
     }
 
+    /* ==========================================================================
+       FLASHCARDS: browse by quiz or by meaning (Vocab Gangs)
+       ========================================================================== */
+    .fc-mode-tabs {
+      margin-bottom: 14px;
+    }
+
+    .fc-gang-head {
+      margin-top: 22px;
+    }
+
+    .fc-gang-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .fc-gang-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 12px 12px 12px 14px;
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .fc-gang-row:hover {
+      border-color: var(--primary);
+    }
+
+    .fc-gang-row:active {
+      transform: scale(0.99);
+    }
+
+    .fc-gang-row > .icon {
+      color: var(--faint);
+    }
+
+    .fc-gang-num {
+      flex: none;
+      min-width: 42px;
+      height: 32px;
+      padding: 0 8px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--r-sm);
+      background: var(--surface-2);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fc-gang-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .fc-gang-title {
+      display: block;
+      font-size: 0.98rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .fc-gang-meta {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-family: var(--font-word);
+      font-size: 0.86rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .fc-gang-meta strong {
+      color: var(--gold-ink);
+    }
+
+    /* "Flashcards" shortcut on each Vocab Gang in Search */
+    .group-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .group-head-text {
+      min-width: 0;
+    }
+
+    .group-study {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-pill);
+      background: var(--surface);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .group-study:hover {
+      border-color: var(--primary);
+    }
+
+    .group-study .icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* ==========================================================================
+       SEARCH: "Did you mean…?"
+       ========================================================================== */
+    .dym-empty {
+      padding: 28px 20px;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+    }
+
+    .dym-title {
+      color: var(--text);
+      font-size: 1.02rem;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .dym-label {
+      margin: 14px 0 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .dym-hint {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .dym-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .dym-chip {
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: var(--r-pill);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-family: var(--font-word);
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .dym-chip:hover {
+      border-color: var(--primary);
+    }
+
+    .dym-inline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .dym-inline .dym-chip {
+      min-height: 36px;
+      padding: 0 14px;
+      font-size: 1rem;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -2270,7 +2464,7 @@
           <span class="mode-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="14" height="14" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg></span>
           <span class="mode-text">
             <span class="mode-title">Flashcards</span>
-            <span class="mode-desc">Flip through each quiz’s words and hear them read aloud.</span>
+            <span class="mode-desc">Study by quiz or by Vocab Gang, and hear words read aloud.</span>
           </span>
           <span class="mode-chev"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
         </button>
@@ -2322,11 +2516,15 @@
     <div id="cards-app-tab" class="tab-content">
       <div class="header">
         <h1>Flashcards</h1>
-        <p>Pick a group, tap a card to flip it, and swipe to turn the page.</p>
+        <p>Study by quiz or by meaning. Tap a card to flip it, and swipe to turn the page.</p>
       </div>
 
       <!-- Group list -->
       <div id="fc-groups-view">
+        <div class="set-tabs fc-mode-tabs" role="tablist" aria-label="Browse flashcards">
+          <button class="set-btn active" id="fc-mode-quiz" role="tab" aria-selected="true" onclick="setBrowseMode('quiz')">By quiz</button>
+          <button class="set-btn" id="fc-mode-gang" role="tab" aria-selected="false" onclick="setBrowseMode('gang')">By meaning</button>
+        </div>
         <div class="field">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <input type="text" id="fc-filter" class="field-input" autocomplete="off"
@@ -2544,6 +2742,7 @@
         csvData = results.data;
         buildWordIndex();
         buildGangIndex();
+        if (window.onGangsReady) window.onGangsReady(); // refresh "By meaning" flashcards if open
       }
     });
 
@@ -2594,8 +2793,13 @@
         return wholeWordRegex.test(wordsContent) || wholeWordRegex.test(groupContent);
       });
 
+      // Gangs named after the query ("praise") come before gangs that only mention it
+      matchingGroups.sort((a, b) =>
+        (wholeWordRegex.test(b['Group Meaning & Context'] || '') ? 1 : 0)
+        - (wholeWordRegex.test(a['Group Meaning & Context'] || '') ? 1 : 0));
+
       if (matchingGroups.length === 0) {
-        resultsContainer.innerHTML = '<div class="no-results">No matching words or groups found.</div>';
+        resultsContainer.innerHTML = renderDidYouMean(query, getSpellingSuggestions(query), true);
         return;
       }
 
@@ -2621,6 +2825,12 @@
       });
 
       let finalHtml = '';
+
+      // Not an exact word, but one letter away from one? Offer it above the results.
+      if (exactMainMatches.length === 0) {
+        const close = getSpellingSuggestions(query).filter(s => s.d <= 1);
+        if (close.length) finalHtml += renderDidYouMean(query, close, false);
+      }
 
       // 2. RENDER THE SINGLE MAIN WORD CARD AT THE VERY TOP FIRST
       if (exactMainMatches.length > 0) {
@@ -2649,8 +2859,11 @@
         finalHtml += `
           <div class="group-card">
             <div class="group-header">
-              <div class="group-num">Vocab Gang ${groupNo}</div>
-              <div class="group-title">${highlightedGroupMeaning}</div>
+              <div class="group-head-text">
+                <div class="group-num">Vocab Gang ${groupNo}</div>
+                <div class="group-title">${highlightedGroupMeaning}</div>
+              </div>
+              <button class="group-study" data-gang="${acEscape(String(groupNo))}" onclick="studyGang(this.dataset.gang)" aria-label="Study Vocab Gang ${acEscape(String(groupNo))} as flashcards"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="14" height="14" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg><span>Flashcards</span></button>
             </div>
             <div class="word-list">
         `;
@@ -2741,6 +2954,76 @@
       });
     }
 
+    // ==========================================================================
+    // "DID YOU MEAN…?" — spelling suggestions for typos
+    // ==========================================================================
+    // Edit distance where a swapped pair of letters counts as one edit ("mednacious").
+    // Stops early once the distance is already over the limit.
+    function editDistance(a, b, limit) {
+      if (Math.abs(a.length - b.length) > limit) return limit + 1;
+      let prev2 = null;
+      let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+      for (let i = 1; i <= a.length; i++) {
+        const cur = [i];
+        let rowMin = i;
+        for (let j = 1; j <= b.length; j++) {
+          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+          let v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+          if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+            v = Math.min(v, prev2[j - 2] + 1);
+          }
+          cur.push(v);
+          if (v < rowMin) rowMin = v;
+        }
+        if (rowMin > limit) return limit + 1;
+        prev2 = prev;
+        prev = cur;
+      }
+      return prev[b.length];
+    }
+
+    // How many mistakes to forgive: 1 for short words, 2 for medium, 3 for long
+    function typoLimit(length) {
+      return length <= 4 ? 1 : length <= 8 ? 2 : 3;
+    }
+
+    function getSpellingSuggestions(query, max = 4) {
+      const q = query.trim().toLowerCase();
+      if (q.length < 3) return [];
+      const limit = typoLimit(q.length);
+      const hits = [];
+      for (const item of wordIndex) {
+        if (item.lower === q) return []; // it's a real word: nothing to suggest
+        const d = editDistance(q, item.lower, limit);
+        if (d <= limit) hits.push({ item, d });
+      }
+      hits.sort((x, y) => x.d - y.d
+        || (y.item.lower[0] === q[0]) - (x.item.lower[0] === q[0])
+        || Math.abs(x.item.lower.length - q.length) - Math.abs(y.item.lower.length - q.length)
+        || x.item.lower.localeCompare(y.item.lower));
+      return hits.slice(0, max);
+    }
+
+    function renderDidYouMean(query, suggestions, noResults) {
+      const chips = suggestions.map(s =>
+        `<button class="dym-chip" data-word="${acEscape(s.item.word)}" onclick="searchSuggested(this.dataset.word)">${acEscape(s.item.word)}</button>`
+      ).join('');
+      if (!noResults) return `<div class="dym-inline"><span>Did you mean</span>${chips}</div>`;
+      return `
+        <div class="dym-empty">
+          <div class="dym-title">No results for “${acEscape(query)}”</div>
+          ${suggestions.length
+            ? `<div class="dym-label">Did you mean</div><div class="dym-chips">${chips}</div>`
+            : '<p class="dym-hint">Check the spelling, or type the first few letters to see suggestions.</p>'}
+        </div>`;
+    }
+
+    function searchSuggested(word) {
+      document.getElementById('search').value = word;
+      searchWord();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     // Words that START with the query come first, then words that merely CONTAIN it
     function getSuggestions(query, limit = 8) {
       const q = query.toLowerCase();
@@ -2767,16 +3050,21 @@
       if (!query || wordIndex.length === 0) return closeSuggestions();
 
       acItems = getSuggestions(query);
+      // No match while typing? Offer close spellings instead ("mendacous" -> "mendacious")
+      if (acItems.length === 0 && query.length >= 4) {
+        acItems = getSpellingSuggestions(query, 5).map(s => s.item);
+      }
       if (acItems.length === 0) return closeSuggestions();
 
       const q = query.toLowerCase();
       list.innerHTML = acItems.map((item, i) => {
         const pos = item.lower.indexOf(q);
         const w = item.word;
-        const wordHtml =
-          acEscape(w.slice(0, pos)) +
-          '<span class="ac-match">' + acEscape(w.slice(pos, pos + q.length)) + '</span>' +
-          acEscape(w.slice(pos + q.length));
+        const wordHtml = pos < 0
+          ? acEscape(w) // spelling suggestion: nothing to underline
+          : acEscape(w.slice(0, pos)) +
+            '<span class="ac-match">' + acEscape(w.slice(pos, pos + q.length)) + '</span>' +
+            acEscape(w.slice(pos + q.length));
         return `
           <li class="autocomplete-item" role="option" id="ac-item-${i}" data-index="${i}">
             <span class="ac-word">${wordHtml}</span>
@@ -2871,6 +3159,7 @@
     const ICON_STOP = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" stroke="none"/></svg>';
     const ICON_PLAY = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor" stroke="none"/></svg>';
     const ICON_PAUSE = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/></svg>';
+    const ICON_CHEV_R = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>';
     const ICON_CHECK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
 
     // Tab Navigation Switcher
@@ -3232,7 +3521,109 @@
       }).filter(g => g.words.length > 0);
     }
 
+    // ---- Browse by quiz or by meaning (Vocab Gangs) ----
+    let fcBrowseMode = 'quiz';
+    let fcDisplayMap = new Map();
+
+    // "laud" -> "Laud", the spelling used in gangs.csv
+    function displayWord(lower) {
+      if (fcDisplayMap.size !== wordIndex.length) {
+        fcDisplayMap = new Map(wordIndex.map(item => [item.lower, item.word]));
+      }
+      return fcDisplayMap.get(lower) || lower;
+    }
+
+    function setBrowseMode(mode) {
+      fcBrowseMode = mode;
+      ['quiz', 'gang'].forEach(m => {
+        const btn = document.getElementById(`fc-mode-${m}`);
+        btn.classList.toggle('active', m === mode);
+        btn.setAttribute('aria-selected', String(m === mode));
+      });
+      const filter = document.getElementById('fc-filter');
+      filter.value = '';
+      filter.placeholder = mode === 'quiz' ? 'Filter groups, e.g. IBA 05' : 'Search meanings or words, e.g. praise';
+      renderFlashcardGroups();
+    }
+
+    // Called by the search script once gangs.csv has loaded
+    window.onGangsReady = () => {
+      if (fcBrowseMode === 'gang') renderFlashcardGroups();
+    };
+
+    function renderGangGroups() {
+      const container = document.getElementById('fc-groups');
+      if (gangList.length === 0) {
+        container.innerHTML = '<div class="no-results">Loading Vocab Gangs...</div>';
+        return;
+      }
+
+      const tokens = document.getElementById('fc-filter').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const rows = [];
+      gangList.forEach((g, idx) => {
+        const title = g.meaning.toLowerCase();
+        let matchedWord = null;
+        let rank = 0; // 0: matched by its title or number, 1: by a word starting with it, 2: by a word containing it
+        const ok = tokens.every(t => {
+          if (title.includes(t) || String(g.no) === t) return true;
+          const starts = g.words.find(x => x.startsWith(t));
+          const w = starts || g.words.find(x => x.includes(t));
+          if (w && !matchedWord) matchedWord = w;
+          if (w) rank = Math.max(rank, starts ? 1 : 2);
+          return !!w;
+        });
+        if (ok) rows.push({ g, idx, matchedWord: rank > 0 ? matchedWord : null, rank });
+      });
+      rows.sort((a, b) => a.rank - b.rank); // stable: keeps gang order within each rank
+
+      if (rows.length === 0) {
+        container.innerHTML = '<div class="no-results">No Vocab Gangs match your search.</div>';
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="fc-section-head fc-gang-head">
+          <h2 class="fc-section-title">Vocab Gangs</h2>
+          <span class="fc-section-count">${rows.length} ${rows.length === 1 ? 'gang' : 'gangs'}</span>
+        </div>
+        <div class="fc-gang-list">${rows.map(({ g, idx, matchedWord }) => {
+          const extra = g.words.length > 3 ? ` and ${g.words.length - 3} more` : '';
+          const meta = matchedWord
+            ? `Includes <strong>${escapeHtml(displayWord(matchedWord))}</strong>, ${g.words.length} words`
+            : escapeHtml(g.words.slice(0, 3).map(displayWord).join(', ')) + extra;
+          return `
+            <button class="fc-gang-row" onclick="openGangDeck(${idx})" aria-label="Vocab Gang ${escapeHtml(String(g.no))}: ${escapeHtml(g.meaning)}, ${g.words.length} words">
+              <span class="fc-gang-num">${escapeHtml(String(g.no))}</span>
+              <span class="fc-gang-text">
+                <span class="fc-gang-title">${escapeHtml(g.meaning)}</span>
+                <span class="fc-gang-meta">${meta}</span>
+              </span>
+              ${ICON_CHEV_R}
+            </button>`;
+        }).join('')}</div>`;
+    }
+
+    function openGangDeck(idx) {
+      const g = gangList[idx];
+      if (!g) return;
+      openDeckWith({
+        title: `Vocab Gang ${g.no}: ${g.meaning}`,
+        category: 'gang',
+        words: g.words.map(displayWord)
+      });
+    }
+
+    // From a Vocab Gang in Search straight to its flashcards
+    function studyGang(no) {
+      const idx = gangList.findIndex(g => String(g.no) === String(no));
+      if (idx < 0) return;
+      switchMainTab('cards');
+      setBrowseMode('gang');
+      openGangDeck(idx);
+    }
+
     function renderFlashcardGroups() {
+      if (fcBrowseMode === 'gang') return renderGangGroups();
       const container = document.getElementById('fc-groups');
       const tokens = document.getElementById('fc-filter').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const visible = fcGroups.filter(g => tokens.every(t => g.title.toLowerCase().includes(t)));
@@ -3283,8 +3674,12 @@
     }
 
     function openDeck(groupIndex) {
+      openDeckWith(fcGroups[groupIndex]);
+    }
+
+    function openDeckWith(group) {
       stopListening();
-      fcCurrentGroup = fcGroups[groupIndex];
+      fcCurrentGroup = group;
       if (!fcCurrentGroup) return;
       fcShuffled = false;
       fcOrder = fcCurrentGroup.words.slice();
